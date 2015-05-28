@@ -1,0 +1,418 @@
+/*************** VILLAINS CARACTERISTICS ****************/
+
+// Variables
+var blackMask = {name: "Black Mask", maxlife: 500, life: 500, reward: 25, cover: "http://img42.com/9EwYX+"},
+    deadshot = {name: "Deadshot", maxlife: 8000, life: 8000, reward: 400, cover: "http://img42.com/8SHc3+"},
+    poisonIvy = {name: "Poison Ivy", maxlife: 15000, life: 15000, reward: 1300, cover: "http://img42.com/3dCR1+"},
+    killerCroc = {name: "Killer Croc", maxlife: 38000, life: 38000, reward: 3200, cover: "http://img42.com/s6Q8p+"},
+    harleyQuinn = {name: "Harley Quinn", maxlife: 100000, life: 100000, reward: 14000, cover: "http://img42.com/iSTt2+"},
+    hugoStrange = {name: "Hugo Strange", maxlife: 350000, life: 350000, reward: 50000, cover: "http://img42.com/kxB0r+"},
+    mrFreeze = {name: "Mr Freeze", maxlife: 800000, life: 800000, reward: 250000, cover: "http://img42.com/XHxWp+"},
+    pengouin = {name: "The Penguin", maxlife: 200000, life: 200000, reward: 900000, cover: "http://img42.com/102Gj+"},
+    deathstroke = {name: "Deathstroke", maxlife: 600000, life: 600000, reward: 2500000, cover: "http://img42.com/FFPOc+"},
+    bane = {name: "Bane", maxlife: 2000000, life: 2000000, reward: 12000000, cover: "http://img42.com/cMaXv+"},
+    rasAlGhul = {name: "Ra's Al Ghul", maxlife: 50000000, life: 50000000, reward: 50000000, cover: "http://img42.com/NruNR+"},
+    joker = {name: "The Joker", maxlife: 999999999, life: 999999999, reward: 999999999, cover: "http://img42.com/ZKfo6+"};
+
+var villainOn = blackMask;
+var villainOnId = 0;
+
+
+/*************** SUPERHEROES CARACTERISTICS ****************/
+
+// Variables
+var batgirl = {amount: 0, cost: 10, increment: 0.5},
+    robin = {amount: 0, cost: 25, increment: 1.5},
+    gordon = {amount: 0, cost: 50, increment: 3.5},
+    batwing = {amount: 0, cost: 100, increment: 6},
+    azrael = {amount: 0, cost: 320, increment: 16},
+    catwoman = {amount: 0, cost: 1000, increment: 35},
+    alfred = {amount: 0, cost: 5000, increment: 80};
+
+$('#robin').hide();
+$('#gordon').hide();
+$('#batwing').hide();
+$('#azrael').hide();
+$('#catwoman').hide();
+$('#alfred').hide();
+
+
+/*************** GAME MECHANICS ****************/
+
+/* Variables */
+var powerClick = 1;
+var powerGain = 1;
+var power_indicator = 0;
+var tick = 1000;
+
+/* Attack the supervillain with power */
+$('#power').click(function(){
+    power_indicator = power_indicator + powerGain;
+    villainLifePercentage();
+    villainOn.life = villainOn.life - powerClick;
+    updateData();
+    while (villainOn.life <= 0) {
+        power_indicator = power_indicator + villainOn.reward;
+        villainOn.life = villainOn.maxlife;
+        if($("#right").hide()){
+            $("#right").show();
+        }
+        nextVillain();
+        updateData();
+    }
+});
+
+/* Villain Life Percentage */
+function villainLifePercentage(){
+    $(".villain_life_jauge").css({width : (villainOn.life / villainOn.maxlife) * 100 + "%"});
+}
+
+/* Run the superheroes attack */
+setInterval(function(){
+    villainOn.life = villainOn.life - (batgirl.increment * batgirl.amount) - (robin.increment * robin.amount) - (gordon.increment * gordon.amount) - (batwing.increment * batwing.amount) - (azrael.increment * azrael.amount) - (catwoman.increment * catwoman.amount);
+    updateData();
+    if (villainOn.life < 0) {
+        villainOn.life = 0;
+    }
+    while (villainOn.life <= 0) {
+        power_indicator = power_indicator + villainOn.reward;
+        if($("#right").hide()){
+            $("#right").show();
+        }
+        updateData();
+        villainOn.life = villainOn.maxlife;
+    }
+}, tick)
+
+/* Change villain */
+$("#left").hide();
+$("#right").hide();
+
+function changeVillain(){
+    if(villainOnId == 0){
+        villainOn = blackMask;
+    }else if(villainOnId == 1){
+        villainOn = deadshot;
+        $("#left").show();
+    }else if(villainOnId == 2){
+        villainOn = poisonIvy;
+    }else if(villainOnId == 3){
+        villainOn = killerCroc;
+    }else if(villainOnId == 4){
+        villainOn = harleyQuinn;
+    }else if(villainOnId == 5){
+        villainOn = hugoStrange;
+    }else if(villainOnId == 6){
+        villainOn = mrFreeze;
+    }else if(villainOnId == 7){
+        villainOn = pengouin;
+    }else if(villainOnId == 8){
+        villainOn = deathstroke;
+    }else if(villainOnId == 9){
+        villainOn = bane;
+    }else if(villainOnId == 10){
+        villainOn = rasAlGhul;
+    }else if(villainOnId == 11){
+        villainOn = joker;
+    }
+    return villainOnId;
+}
+
+/* Next villain */
+function nextVillain(){
+    villainOnId += 1;
+    changeVillain();
+    $("#right").hide();
+    $("#left").show();
+}
+
+$("#right").click(nextVillain);
+
+
+/* Previous villain */
+function previousVillain(){
+    villainOnId -= 1;
+    changeVillain();
+    $("#right").show();
+    if(villainOnId == 0){
+        $("#left").hide();
+    }
+}
+
+$("#left").click(previousVillain);
+
+
+/*************** BUY SUPERHEROES ****************/
+
+/* Buy batgirl */
+$('#batgirl').click(function(){
+	if(power_indicator >= batgirl.cost){
+		power_indicator = power_indicator - batgirl.cost;
+	    batgirl.amount++;
+	    batgirl.cost = Math.round(batgirl.cost * 1.4);
+        updateData();
+        $('#robin').show();
+	}
+});
+
+/* Buy Robin */
+$('#robin').click(function(){
+	if(power_indicator >= robin.cost){
+		power_indicator = power_indicator - robin.cost;
+	    robin.amount++;
+        robin.cost = Math.round(robin.cost * 1.6);
+	    updateData();
+        $('#gordon').show();
+	}
+});
+
+/* Buy Gordon */
+$('#gordon').click(function(){
+	if(power_indicator >= gordon.cost){
+		power_indicator = power_indicator - gordon.cost;
+	    gordon.amount++;
+        gordon.cost = Math.round(gordon.cost * 1.8);
+	    updateData();
+        $('#batwing').show();
+	}
+});
+
+/* Buy Batwing */
+$('#batwing').click(function(){
+	if(power_indicator >= batwing.cost){
+		power_indicator = power_indicator - batwing.cost;
+	    batwing.amount++;
+        batwing.cost = Math.round(batwing.cost * 2);
+	    updateData();
+        $('#azrael').show();
+	}
+});
+
+/* Buy Azrael */
+$('#azrael').click(function(){
+	if(power_indicator >= azrael.cost){
+		power_indicator = power_indicator - azrael.cost;
+	    azrael.amount++;
+        azrael.cost = Math.round(azrael.cost * 2.2);
+	    updateData();
+        $('#catwoman').show();
+	}
+});
+
+/* Buy Catwoman */
+$('#catwoman').click(function(){
+	if(power_indicator >= catwoman.cost){
+		power_indicator = power_indicator - catwoman.cost;
+	    catwoman.amount++;
+        catwoman.cost = Math.round(catwoman.cost * 2.4);
+	    updateData();
+        $('#alfred').show();
+	}
+});
+
+/* Buy Alfred */
+$('#alfred').click(function(){
+    if(power_indicator >= alfred.cost){
+        power_indicator = power_indicator - alfred.cost;
+        alfred.amount++;
+        alfred.cost = Math.round(alfred.cost * 2.6);
+        updateData();
+        // $('#robin').show();
+    }
+});
+
+// All OnLoad Functions
+// Modal Commented out during development
+//$(document).ready(function () {
+//
+//    function beginTick() {
+//        nIntervId = setInterval(tick, 100);
+//    }
+//
+//    function tick() {
+//        gatherblackMask();
+//        gatherStone();
+//        gatherFood();
+//    }
+//
+//});
+
+
+/*************** UPGRADES ****************/
+
+// Variables
+var powerclick_x2 = {amount: 0, cost: 10, multiplier: 2};
+
+/* Buy Powerclick x2 */
+$('#powerclick_2').click(function(){
+	if(power_indicator >= powerclick_x2.cost){
+		power_indicator = power_indicator - powerclick_x2.cost;
+	    powerclick_x2.amount++;
+        powerClick = powerClick * powerclick_x2.multiplier;
+        powerclick_x2.cost = powerclick_x2.cost * 2.8;
+        updateData();
+	}
+});
+
+
+/*************** ONLOAD UPDATE & TEST ****************/
+
+function updateData(){
+    // update power
+    $("#power_indicator").html(Math.round(power_indicator));
+    
+    // update villain
+    $(".villain_life_stats").html(villainOn.life);
+    $(".villain_maxlife_stats").html(villainOn.maxlife);
+    $(".villain_name").html(villainOn.name);
+    villainLifePercentage();
+    $(".villain_pic").css({"background" : "url(" + villainOn.cover + ") no-repeat center center fixed", "-webkit-background-size" : "cover", "-moz-background-size" : "cover", "-o-background-size" : "cover", "background-size" : "cover"});
+    
+    // update batgirl
+    $("#batgirl_cost").html(batgirl.cost);
+    $("#batgirl_damage").html(batgirl.increment * batgirl.amount);
+    $("#batgirl_amount").html(batgirl.amount);
+    
+    // update robin
+    $("#robin_cost").html(robin.cost);
+    $("#robin_damage").html(robin.increment * robin.amount);
+    $("#robin_amount").html(robin.amount);
+    
+    // update gordon
+    $("#gordon_cost").html(gordon.cost);
+    $("#gordon_damage").html(gordon.increment * gordon.amount);
+    $("#gordon_amount").html(gordon.amount);
+    
+    // update batwing
+    $("#batwing_cost").html(batwing.cost);
+    $("#batwing_damage").html(batwing.increment * batwing.amount);
+    $("#batwing_amount").html(batwing.amount);
+    
+    // update azrael
+    $("#azrael_cost").html(azrael.cost);
+    $("#azrael_damage").html(azrael.increment * azrael.amount);
+    $("#azrael_amount").html(azrael.amount);
+    
+    // update catwoman
+    $("#catwoman_cost").html(catwoman.cost);
+    $("#catwoman_damage").html(catwoman.increment * catwoman.amount);
+    $("#catwoman_amount").html(catwoman.amount);
+
+    // update alfred
+    $("#alfred_cost").html(alfred.cost);
+    $("#alfred_damage").html(alfred.increment * alfred.amount);
+    $("#alfred_amount").html(alfred.amount);
+    
+    // update upgrades
+    $("#powerclick_2_amount").text(powerclick_x2.amount);
+    $("#powerclick_2_cost").text(Math.round(powerclick_x2.cost));
+
+    save_game();
+}
+
+// function villainOnTest(){
+//     if(villainOn != blackMask){
+//         $("#left").show();
+//         $("#right").show();
+//     }
+// }
+
+function heroTeamTest(){
+    if(batgirl.amount > 0){
+        $('#robin').show();
+    }
+
+    if(robin.amount > 0){
+        $('#gordon').show();
+    }
+
+    if(gordon.amount > 0){
+        $('#batwing').show();
+    }
+
+    if(batwing.amount > 0){
+        $('#azrael').show();
+    }
+
+    if(azrael.amount > 0){
+        $('#catwoman').show();
+    }
+
+    if(catwoman.amount > 0){
+        $('#alfred').show();
+    }
+}
+
+
+/*************** SAVING & LOADING GAME ****************/
+
+function save_game() {
+
+   // save power stats
+   localStorage['btv_save[power_indicator]'] = btoa(JSON.stringify(power_indicator));
+   // localStorage['btv_save[villainOn]'] = btoa(JSON.stringify(villainOn));
+   // localStorage['btv_save[villainOnLife]'] = btoa(JSON.stringify(villainOn.life));
+
+   // save heroes
+   localStorage['btv_save[batgirl]'] = btoa(JSON.stringify(batgirl));
+   localStorage['btv_save[robin]'] = btoa(JSON.stringify(robin));
+   localStorage['btv_save[gordon]'] = btoa(JSON.stringify(gordon));
+   localStorage['btv_save[batwing]'] = btoa(JSON.stringify(batwing));
+   localStorage['btv_save[azrael]'] = btoa(JSON.stringify(azrael));
+   localStorage['btv_save[catwoman]'] = btoa(JSON.stringify(catwoman));
+   localStorage['btv_save[alfred]'] = btoa(JSON.stringify(alfred));
+
+   // save upgrades
+   localStorage['btv_save[powerclick_x2]'] = btoa(JSON.stringify(powerclick_x2));
+
+}
+
+function load_game() {
+
+   if (!localStorage['btv_save[power_indicator]']) return;
+   
+   // load power stats
+   var power_indicator_save = JSON.parse(atob(localStorage['btv_save[power_indicator]']));
+   // var villainOn_save = JSON.parse(atob(localStorage['btv_save[villainOn]']));
+   // var villainOnLife_save = JSON.parse(atob(localStorage['btv_save[villainOn.life]']));
+
+   // load heroes
+   var batgirl_save = JSON.parse(atob(localStorage['btv_save[batgirl]']));
+   var robin_save = JSON.parse(atob(localStorage['btv_save[robin]']));
+   var gordon_save = JSON.parse(atob(localStorage['btv_save[gordon]']));
+   var batwing_save = JSON.parse(atob(localStorage['btv_save[batwing]']));
+   var azrael_save = JSON.parse(atob(localStorage['btv_save[azrael]']));
+   var catwoman_save = JSON.parse(atob(localStorage['btv_save[catwoman]']));
+   var alfred_save = JSON.parse(atob(localStorage['btv_save[alfred]']));
+
+   // load upgrades
+   var powerclick_x2_save = JSON.parse(atob(localStorage['btv_save[powerclick_x2]']));
+
+   // show power stats
+   power_indicator = power_indicator_save;
+
+   // villainOn = villainOn_save
+   // villainOn.life = villainOnLife_save
+
+   // show heroes stats
+   batgirl = batgirl_save;
+   robin = robin_save;
+   gordon = gordon_save;
+   batwing = batwing_save;
+   azrael = azrael_save;
+   catwoman = catwoman_save;
+   alfred = alfred_save;
+
+   // show upgrade stats
+   powerclick_x2 = powerclick_x2_save;
+   
+   updateData();
+
+}
+
+
+/*************** ONLOAD ****************/
+
+$(window).load(load_game());
+$(window).load(heroTeamTest());
+// $(window).load(villainOnTest());

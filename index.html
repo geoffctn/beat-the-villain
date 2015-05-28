@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--  
+BSV project
+
+Name: Geoff Couten
+-->
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Beat the Super Villain</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body>
+    
+    <div class="header">
+        <div class="villain_pic" id="power">
+            <span class="villain_name">Name</span>
+            <div class="stopfloat"></div>
+<!--        <img class="villain_on" id="power" src="img/venom1.jpg" />    -->
+        </div>
+        <div class="villain_life">
+            <span class="villain_life_jauge"></span>
+            <p><span class="villain_life_stats">0</span> / <span class="villain_maxlife_stats">0</span> HP</p>
+        </div>
+        <div class="change_villain">
+            <button id="left">Previous villain</button>
+            <button id="right">Next villain</button>
+            <div class="stopfloat"></div>
+        </div>
+    </div>
+    
+	<div class="container">
+	
+	    <div class="stats_block">
+            <h1>Power</h1>
+            <span id="power_indicator">0</span><br />
+		</div>
+		
+		<div class="line"></div>
+		
+		<div class="heroes_block">
+		    <h2>Heroes team :</h2>
+		    
+		    <!---------------- Batgirl ---------------->
+		    <div class="hero_card" id="batgirl">
+                <div class="superhero_pic">
+                    <img src="img/batgirl1.jpg" alt="batgirl" />
+                </div>
+                <div class="superhero_carac">
+                    <h3>Batgirl</h3>
+                    <p><span class="cost" id="batgirl_cost">0</span> P / <span class="damage" id="batgirl_damage">0</span> DPS</p>
+                </div>
+                <div class="superhero_stats">
+                    <p>Level</p>
+                    <span class="superhero_number" id="batgirl_amount">0</span>
+                </div>
+                <div class="stopfloat"></div>
+            </div>
+            
+            <!---------------- Robin ---------------->
+            <div class="hero_card" id="robin">
+                <div class="superhero_pic">
+                    <img src="img/robin1.jpg" alt="robin" />
+                </div>
+                <div class="superhero_carac">
+                    <h3>Robin</h3>
+                    <p><span class="cost" id="robin_cost">0</span> P / <span class="damage" id="robin_damage">0</span> DPS</p>
+                </div>
+                <div class="superhero_stats">
+                    <p>Level</p>
+                    <span class="superhero_number" id="robin_amount">0</span>
+                </div>
+                <div class="stopfloat"></div>
+            </div>
+            
+            <!---------------- Gordon ---------------->
+            <div class="hero_card" id="gordon">
+                <div class="superhero_pic">
+                    <img src="img/gordon1.jpg" alt="james gordon" />
+                </div>
+                <div class="superhero_carac">
+                    <h3>James Gordon</h3>
+                    <p><span class="cost" id="gordon_cost">0</span> P / <span class="damage" id="gordon_damage">0</span> DPS</p>
+                </div>
+                <div class="superhero_stats">
+                    <p>Level</p>
+                    <span class="superhero_number" id="gordon_amount">0</span>
+                </div>
+                <div class="stopfloat"></div>
+            </div>
+            
+            <!---------------- Batwing ---------------->
+            <div class="hero_card" id="batwing">
+                <div class="superhero_pic">
+                    <img src="img/batwing1.jpg" alt="batwing" />
+                </div>
+                <div class="superhero_carac">
+                    <h3>Batwing</h3>
+                    <p><span class="cost" id="batwing_cost">0</span> P / <span class="damage" id="batwing_damage">0</span> DPS</p>
+                </div>
+                <div class="superhero_stats">
+                    <p>Level</p>
+                    <span class="superhero_number" id="batwing_amount">0</span>
+                </div>
+                <div class="stopfloat"></div>
+            </div>
+            
+            <!---------------- Azrael ---------------->
+            <div class="hero_card" id="azrael">
+                <div class="superhero_pic">
+                    <img src="img/azrael1.jpg" alt="azrael" />
+                </div>
+                <div class="superhero_carac">
+                    <h3>Azrael</h3>
+                    <p><span class="cost" id="azrael_cost">0</span> P / <span class="damage" id="azrael_damage">0</span> DPS</p>
+                </div>
+                <div class="superhero_stats">
+                    <p>Level</p>
+                    <span class="superhero_number" id="azrael_amount">0</span>
+                </div>
+                <div class="stopfloat"></div>
+            </div>
+            
+            <!---------------- Catwoman ---------------->
+            <div class="hero_card" id="catwoman">
+                <div class="superhero_pic">
+                    <img src="img/catwoman1.jpg" alt="catwoman" />
+                </div>
+                <div class="superhero_carac">
+                    <h3>Catwoman</h3>
+                    <p><span class="cost" id="catwoman_cost">0</span> P / <span class="damage" id="catwoman_damage">0</span> DPS</p>
+                </div>
+                <div class="superhero_stats">
+                    <p>Level</p>
+                    <span class="superhero_number" id="catwoman_amount">0</span>
+                </div>
+                <div class="stopfloat"></div>
+            </div>
+
+            <!---------------- Alfred ---------------->
+            <div class="hero_card" id="alfred">
+                <div class="superhero_pic">
+                    <img src="img/alfred1.jpg" alt="alfred" />
+                </div>
+                <div class="superhero_carac">
+                    <h3>Alfred Pennyworth</h3>
+                    <p><span class="cost" id="alfred_cost">0</span> P / <span class="damage" id="alfred_damage">0</span> DPS</p>
+                </div>
+                <div class="superhero_stats">
+                    <p>Level</p>
+                    <span class="superhero_number" id="alfred_amount">0</span>
+                </div>
+                <div class="stopfloat"></div>
+            </div>
+            
+		</div>
+		
+		<div class="upgrade_block">
+		    <h2>Upgrades :</h2>
+		    <!---------------- Double the Powerclicker ---------------->
+		    <div class="upgrade_card" id="powerclick_2">
+                <div class="upgrade_carac" id="powerlick_2">
+                    <h3>Double the power of your attack</h3>
+                    <p><span class="upgrade_cost" id="powerclick_2_cost">0</span> P</p>
+                </div>
+                <div class="upgrade_stats">
+                    <p>x<span class="upgrade_number" id="powerclick_2_amount">0</span></p>
+                </div>
+                <div class="stopfloat"></div>
+            </div>
+		</div>
+		
+		<div class="stopfloat"></div>
+	</div>
+
+</body>
+
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/animation.js"></script>
+
+</html>

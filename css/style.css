@@ -1,0 +1,410 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+/**************************************************************** BASIC ****************************************************************/
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+	background:#222222;
+}
+
+.stopfloat {
+	clear:both;
+}
+
+span {
+	font-family: 'Open Sans', sans-serif;
+	font-size:30px;
+	color:#ffffff;
+	font-weight:bold;
+}
+
+h1{
+	font-family: 'Open Sans', sans-serif;
+	font-size:150%;
+	font-weight:300;
+	text-transform:uppercase;
+	margin:10px 0;
+    color:#ffffff;
+}
+
+h2{
+	font-family: 'Open Sans', sans-serif;
+	line-height:160%;
+	font-size:120%;
+	font-weight:normal;
+	text-transform:uppercase;
+	margin-bottom:0.714em; /* 100 / 140 */
+    color:#ffffff;
+}
+
+h3{
+	font-family: 'Open Sans', sans-serif;
+	line-height:120%;
+	font-size:120%;
+	font-weight:normal;
+	margin:46px 0 10px 0;
+    color:#ffffff;
+}
+
+button {
+	display:block;
+	width:100%;
+	height:100px;
+	padding:0;
+	border:none;
+	box-shadow:none;
+	cursor:pointer;
+	box-sizing:border-box;
+	overflow:hidden;
+	background:#222222;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+button:hover {
+	background:#333333;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+a{
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+p{
+	margin-bottom:1em;
+}
+
+.container {
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+
+.line {
+    width:50%;
+    height:1px;
+    background:#333333;
+    opacity:.5;
+    margin:0 auto 30px auto;
+}
+
+
+/**************************************************************** SUPERVILLAIN ****************************************************************/
+
+.villain_pic {
+    width:100%;
+    height:300px;
+    overflow:hidden;
+    cursor:url(../img/fist_cursor.png), auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*
+.villain_pic img {
+    width:100%;
+    position:relative;
+    top:-200px;
+}
+*/
+
+.villain_life {
+/*    width:100%;*/
+    height:40px;
+    background:#cccccc;
+    display:block;
+    margin:0 auto;
+    text-align:center;
+}
+
+.villain_life p {
+    position: relative;
+    z-index: 999999;
+    top: -39px;
+}
+
+.villain_life_jauge {
+    width:100%;
+    position:relative;
+    height:40px;
+    background:linear-gradient(#15bde0, #1d62f0);
+    display:block;
+    z-index:1;
+}
+
+.villain_life_stats, .villain_maxlife_stats {
+    font-family: 'Open Sans', sans-serif;
+	line-height:330%;
+	font-size:90%;
+	font-weight:lighter;
+	text-transform:uppercase;
+    color:#111111;
+    z-index:999999;
+    text-align:center;
+}
+
+.villain_name{
+    position:relative;
+    float:right;
+    top:224px;
+    right:1%;
+	font-family:'Open Sans', sans-serif;
+	font-size:150%;
+	font-weight:300;
+	text-transform:uppercase;
+    color:#ffffff;
+    background:#111111;
+    z-index:999999;
+    padding:20px;
+}
+
+.change_villain{
+    width:100%;
+    margin:0 auto;
+}
+
+#left{
+    width:150px;
+    height:40px;
+    float:left;
+	font-family:'Open Sans', sans-serif;
+	font-size:150%;
+	font-weight:300;
+	text-transform:uppercase;
+    color:#ffffff;
+    background:#111111;
+    z-index:999999;
+    padding:6px;
+    opacity:.6;
+    font-size:80%;
+    margin:0 auto;
+}
+
+#right{
+    width:150px;
+    height:40px;
+    float:right;
+	font-family:'Open Sans', sans-serif;
+	font-size:150%;
+	font-weight:300;
+	text-transform:uppercase;
+    color:#ffffff;
+    background:#111111;
+    z-index:999999;
+    padding:6px;
+    opacity:.6;
+    font-size:80%;
+}
+
+#left:hover {
+    opacity:1;
+}
+
+#right:hover {
+    opacity:1;
+}
+
+
+/**************************************************************** STATS ****************************************************************/
+
+.stats_block {
+	width:100%;
+    height:80px;
+    background:#222222;
+    padding:30px 0;
+}
+
+
+/**************************************************************** SUPERHEROES & UPGRADES ****************************************************************/
+
+.heroes_block {
+	width:48%;
+	height:300px;
+	float:left;
+    padding:0 1%;
+}
+
+.upgrade_block {
+	width:48%;
+	height:300px;
+	float:left;
+    padding:0 1%;
+}
+
+.hero_card {
+  cursor:pointer;
+  width:100%;
+  height:140px;
+  background:#333 no-repeat center center fixed;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  float:left;
+  opacity:.6;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.hero_card:hover {
+  opacity:1;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.superhero_pic {
+  cursor:pointer;
+  width:25%;
+  height:100%;
+  background:#111;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  float:left;
+}
+
+.superhero_carac {
+  cursor:pointer;
+  width:50%;
+  height:100%;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  float:left;
+}
+
+.superhero_number {
+  line-height:1.4;
+}
+
+.superhero_stats {
+  cursor:pointer;
+  width:25%;
+  height:100%;
+  background:#111;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  float:left;
+}
+
+.hero_card img {
+  width:100%;
+}
+
+.upgrade_card {
+  cursor:pointer;
+  width:100%;
+  height:140px;
+  background:#333 no-repeat center center fixed;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  float:left;
+  opacity:.6;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.upgrade_card:hover {
+  opacity:1;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+span.cost {
+    font-family: 'Open Sans', sans-serif;
+	font-size:20px;
+	color:#ffffff;
+	font-weight:bold;
+}
+
+span.upgrade_cost {
+    font-family: 'Open Sans', sans-serif;
+	font-size:20px;
+	color:#ffffff;
+	font-weight:bold;
+}
+
+span.damage {
+    font-family: 'Open Sans', sans-serif;
+	font-size:20px;
+	color:#ffffff;
+	font-weight:bold;
+}
+
+.superhero_carac p {
+    font-family: 'Open Sans', sans-serif;
+	font-size:20px;
+	color:#ffffff;
+	font-weight:lighter;
+}
+
+.superhero_stats p {
+    font-family: 'Open Sans', sans-serif;
+	font-size:20px;
+	color:#ffffff;
+	font-weight:bold;
+    margin:46px 0 0 0;
+}
+
+.upgrade_carac p {
+    font-family: 'Open Sans', sans-serif;
+	font-size:20px;
+	color:#ffffff;
+	font-weight:lighter;
+}
+
+.upgrade_stats p {
+    font-family: 'Open Sans', sans-serif;
+	font-size:20px;
+	color:#ffffff;
+	font-weight:bold;
+    margin:50px 0 0 0;
+}
+
+.upgrade_carac {
+  cursor:pointer;
+  width:75%;
+  height:100%;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  float:left;
+}
+
+.upgrade_stats {
+  cursor:pointer;
+  width:25%;
+  height:100%;
+  background:#111;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  float:left;
+}
