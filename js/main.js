@@ -28,10 +28,10 @@ var batgirl = {amount: 0, cost: 10, increment: 0.5},
     azrael = {amount: 0, cost: 320, increment: 16},
     catwoman = {amount: 0, cost: 1000, increment: 35},
     alfred = {amount: 0, cost: 5000, increment: 80},
-    batwoman = {amount: 0, cost: 5000, increment: 80},
-    redHood = {amount: 0, cost: 8000, increment: 150},
-    nightWing = {amount: 0, cost: 15000, increment: 310},
-    batman = {amount: 0, cost: 50000, increment: 1000};
+    batwoman = {amount: 0, cost: 8000, increment: 150},
+    redHood = {amount: 0, cost: 15000, increment: 310},
+    nightWing = {amount: 0, cost: 50000, increment: 640},
+    batman = {amount: 0, cost: 200000, increment: 4000};
 
 $('#robin').hide();
 $('#gordon').hide();
