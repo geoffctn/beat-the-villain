@@ -2,17 +2,17 @@
 
 // Variables
 var blackMask = {name: "Black Mask", maxlife: 500, life: 500, reward: 25, cover: "http://lykon.github.io/beat-the-villain/img/blackmask1.jpg"},
-    deadshot = {name: "Deadshot", maxlife: 8000, life: 8000, reward: 400, cover: "http://img42.com/8SHc3+"},
-    poisonIvy = {name: "Poison Ivy", maxlife: 15000, life: 15000, reward: 1300, cover: "http://img42.com/3dCR1+"},
-    killerCroc = {name: "Killer Croc", maxlife: 38000, life: 38000, reward: 3200, cover: "http://img42.com/s6Q8p+"},
-    harleyQuinn = {name: "Harley Quinn", maxlife: 100000, life: 100000, reward: 14000, cover: "http://img42.com/iSTt2+"},
-    hugoStrange = {name: "Hugo Strange", maxlife: 350000, life: 350000, reward: 50000, cover: "http://img42.com/kxB0r+"},
-    mrFreeze = {name: "Mr Freeze", maxlife: 800000, life: 800000, reward: 250000, cover: "http://img42.com/XHxWp+"},
-    pengouin = {name: "The Penguin", maxlife: 200000, life: 200000, reward: 900000, cover: "http://img42.com/102Gj+"},
-    deathstroke = {name: "Deathstroke", maxlife: 600000, life: 600000, reward: 2500000, cover: "http://img42.com/FFPOc+"},
-    bane = {name: "Bane", maxlife: 2000000, life: 2000000, reward: 12000000, cover: "http://img42.com/cMaXv+"},
-    rasAlGhul = {name: "Ra's Al Ghul", maxlife: 50000000, life: 50000000, reward: 50000000, cover: "http://img42.com/NruNR+"},
-    joker = {name: "The Joker", maxlife: 999999999, life: 999999999, reward: 999999999, cover: "http://img42.com/ZKfo6+"};
+    deadshot = {name: "Deadshot", maxlife: 8000, life: 8000, reward: 400, cover: "http://lykon.github.io/beat-the-villain/img/deadshot1.jpg"},
+    poisonIvy = {name: "Poison Ivy", maxlife: 15000, life: 15000, reward: 1300, cover: "http://lykon.github.io/beat-the-villain/img/poisonivy1.jpg"},
+    killerCroc = {name: "Killer Croc", maxlife: 38000, life: 38000, reward: 3200, cover: "http://lykon.github.io/beat-the-villain/img/killercroc1.jpg"},
+    harleyQuinn = {name: "Harley Quinn", maxlife: 100000, life: 100000, reward: 14000, cover: "http://lykon.github.io/beat-the-villain/img/harleyquinn1.jpg"},
+    hugoStrange = {name: "Hugo Strange", maxlife: 350000, life: 350000, reward: 50000, cover: "http://lykon.github.io/beat-the-villain/img/hugostrange1.jpg"},
+    mrFreeze = {name: "Mr Freeze", maxlife: 800000, life: 800000, reward: 250000, cover: "http://lykon.github.io/beat-the-villain/img/mrfreeze1.jpg"},
+    pengouin = {name: "The Penguin", maxlife: 200000, life: 200000, reward: 900000, cover: "http://lykon.github.io/beat-the-villain/img/pengouin1.jpg"},
+    deathstroke = {name: "Deathstroke", maxlife: 600000, life: 600000, reward: 2500000, cover: "http://lykon.github.io/beat-the-villain/img/deathstroke1.jpg"},
+    bane = {name: "Bane", maxlife: 2000000, life: 2000000, reward: 12000000, cover: "http://lykon.github.io/beat-the-villain/img/bane1.jpg"},
+    rasAlGhul = {name: "Ra's Al Ghul", maxlife: 50000000, life: 50000000, reward: 50000000, cover: "http://lykon.github.io/beat-the-villain/img/rasalghul1.jpg"},
+    joker = {name: "The Joker", maxlife: 999999999, life: 999999999, reward: 999999999, cover: "http://lykon.github.io/beat-the-villain/img/joker1.jpg"};
 
 var villainOn = blackMask;
 var villainOnId = 0;
