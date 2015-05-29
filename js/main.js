@@ -243,10 +243,10 @@ $('#batwoman').click(function(){
 
 /* Buy Alfred */
 $('#redhood').click(function(){
-    if(power_indicator >= redhood.cost){
-        power_indicator = power_indicator - redhood.cost;
-        redhood.amount++;
-        redhood.cost = Math.round(redhood.cost * 2.6);
+    if(power_indicator >= redHood.cost){
+        power_indicator = power_indicator - redHood.cost;
+        redHood.amount++;
+        redHood.cost = Math.round(redHood.cost * 2.6);
         updateData();
         $('#nightwing').show();
     }
