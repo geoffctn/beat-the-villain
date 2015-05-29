@@ -78,6 +78,7 @@ function villainLifePercentage(){
 /* Run the superheroes attack */
 setInterval(function(){
     villainOn.life = villainOn.life - (batgirl.increment * batgirl.amount) - (robin.increment * robin.amount) - (gordon.increment * gordon.amount) - (batwing.increment * batwing.amount) - (azrael.increment * azrael.amount) - (catwoman.increment * catwoman.amount);
+    power_indicator = power_indicator - (batgirl.increment * batgirl.amount) - (robin.increment * robin.amount) - (gordon.increment * gordon.amount) - (batwing.increment * batwing.amount) - (azrael.increment * azrael.amount) - (catwoman.increment * catwoman.amount)
     updateData();
     if (villainOn.life < 0) {
         villainOn.life = 0;
