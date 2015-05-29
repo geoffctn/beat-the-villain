@@ -346,9 +346,9 @@ function updateData(){
     $("#batwoman_amount").html(batwoman.amount);
     
     // update redhood
-    $("#redhood_cost").html(redhood.cost);
-    $("#redhood_damage").html(redhood.increment * redhood.amount);
-    $("#redhood_amount").html(redhood.amount);
+    $("#redhood_cost").html(redHood.cost);
+    $("#redhood_damage").html(redHood.increment * redHood.amount);
+    $("#redhood_amount").html(redHood.amount);
     
     // update nightwing
     $("#nightwing_cost").html(nightwing.cost);
@@ -437,7 +437,7 @@ function save_game() {
    localStorage['btv_save[catwoman]'] = btoa(JSON.stringify(catwoman));
    localStorage['btv_save[alfred]'] = btoa(JSON.stringify(alfred));
    localStorage['btv_save[batwoman]'] = btoa(JSON.stringify(batwoman));
-   localStorage['btv_save[redhood]'] = btoa(JSON.stringify(redhood));
+   localStorage['btv_save[redHood]'] = btoa(JSON.stringify(redHood));
    localStorage['btv_save[nightwing]'] = btoa(JSON.stringify(nightwing));
    localStorage['btv_save[batman]'] = btoa(JSON.stringify(batman));
 
@@ -465,7 +465,7 @@ function load_game() {
    var catwoman_save = JSON.parse(atob(localStorage['btv_save[catwoman]']));
    var alfred_save = JSON.parse(atob(localStorage['btv_save[alfred]']));
    var batwoman_save = JSON.parse(atob(localStorage['btv_save[batwoman]']));
-   var redhood_save = JSON.parse(atob(localStorage['btv_save[redhood]']));
+   var redHood_save = JSON.parse(atob(localStorage['btv_save[redHood]']));
    var nightwing_save = JSON.parse(atob(localStorage['btv_save[nightwing]']));
    var batman_save = JSON.parse(atob(localStorage['btv_save[batman]']));
 
@@ -488,7 +488,7 @@ function load_game() {
    catwoman = catwoman_save;
    alfred = alfred_save;
    batwoman = batwoman_save;
-   redHood = redhood_save;
+   redHood = redHood_save;
    nightwing = nightwing_save;
    batman = batman_save;
 
