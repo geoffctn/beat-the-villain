@@ -1,7 +1,7 @@
 /*************** VILLAINS CARACTERISTICS ****************/
 
 // Variables
-var blackMask = {name: "Black Mask", maxlife: 500, life: 500, reward: 25, cover: "beat-the-villain/img/blackmask1.jpg"},
+var blackMask = {name: "Black Mask", maxlife: 500, life: 500, reward: 25, cover: "/img/blackmask1.jpg"},
     deadshot = {name: "Deadshot", maxlife: 8000, life: 8000, reward: 400, cover: "http://img42.com/8SHc3+"},
     poisonIvy = {name: "Poison Ivy", maxlife: 15000, life: 15000, reward: 1300, cover: "http://img42.com/3dCR1+"},
     killerCroc = {name: "Killer Croc", maxlife: 38000, life: 38000, reward: 3200, cover: "http://img42.com/s6Q8p+"},
