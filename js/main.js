@@ -1,7 +1,7 @@
 /*************** VILLAINS CARACTERISTICS ****************/
 
 // Variables
-var blackMask = {name: "Black Mask", maxlife: 500, life: 500, reward: 25, cover: "http://img42.com/9EwYX+"},
+var blackMask = {name: "Black Mask", maxlife: 500, life: 500, reward: 25, cover: "../img/blackmask1.jpg"},
     deadshot = {name: "Deadshot", maxlife: 8000, life: 8000, reward: 400, cover: "http://img42.com/8SHc3+"},
     poisonIvy = {name: "Poison Ivy", maxlife: 15000, life: 15000, reward: 1300, cover: "http://img42.com/3dCR1+"},
     killerCroc = {name: "Killer Croc", maxlife: 38000, life: 38000, reward: 3200, cover: "http://img42.com/s6Q8p+"},
@@ -27,7 +27,11 @@ var batgirl = {amount: 0, cost: 10, increment: 0.5},
     batwing = {amount: 0, cost: 100, increment: 6},
     azrael = {amount: 0, cost: 320, increment: 16},
     catwoman = {amount: 0, cost: 1000, increment: 35},
-    alfred = {amount: 0, cost: 5000, increment: 80};
+    alfred = {amount: 0, cost: 5000, increment: 80},
+    batwoman = {amount: 0, cost: 5000, increment: 80},
+    redHood = {amount: 0, cost: 8000, increment: 150},
+    nightWing = {amount: 0, cost: 15000, increment: 310},
+    batman = {amount: 0, cost: 50000, increment: 1000};
 
 $('#robin').hide();
 $('#gordon').hide();
@@ -35,6 +39,10 @@ $('#batwing').hide();
 $('#azrael').hide();
 $('#catwoman').hide();
 $('#alfred').hide();
+$('#batwoman').hide();
+$('#redhood').hide();
+$('#nightwing').hide();
+$('#batman').hide();
 
 
 /*************** GAME MECHANICS ****************/
@@ -221,22 +229,6 @@ $('#alfred').click(function(){
     }
 });
 
-// All OnLoad Functions
-// Modal Commented out during development
-//$(document).ready(function () {
-//
-//    function beginTick() {
-//        nIntervId = setInterval(tick, 100);
-//    }
-//
-//    function tick() {
-//        gatherblackMask();
-//        gatherStone();
-//        gatherFood();
-//    }
-//
-//});
-
 
 /*************** UPGRADES ****************/
 
@@ -250,6 +242,7 @@ $('#powerclick_2').click(function(){
 	    powerclick_x2.amount++;
         powerClick = powerClick * powerclick_x2.multiplier;
         powerclick_x2.cost = powerclick_x2.cost * 2.8;
+        powerGain = powerGain * powerclick_x2.multiplier;
         updateData();
 	}
 });
@@ -350,6 +343,7 @@ function save_game() {
 
    // save power stats
    localStorage['btv_save[power_indicator]'] = btoa(JSON.stringify(power_indicator));
+   localStorage['btv_save[powerGain]'] = btoa(JSON.stringify(powerGain));
    // localStorage['btv_save[villainOn]'] = btoa(JSON.stringify(villainOn));
    // localStorage['btv_save[villainOnLife]'] = btoa(JSON.stringify(villainOn.life));
 
@@ -373,6 +367,7 @@ function load_game() {
    
    // load power stats
    var power_indicator_save = JSON.parse(atob(localStorage['btv_save[power_indicator]']));
+   var powerGain_save = JSON.parse(atob(localStorage['btv_save[powerGain]']));
    // var villainOn_save = JSON.parse(atob(localStorage['btv_save[villainOn]']));
    // var villainOnLife_save = JSON.parse(atob(localStorage['btv_save[villainOn.life]']));
 
@@ -390,6 +385,7 @@ function load_game() {
 
    // show power stats
    power_indicator = power_indicator_save;
+   powerGain = powerGain_save;
 
    // villainOn = villainOn_save
    // villainOn.life = villainOnLife_save
