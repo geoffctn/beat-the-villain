@@ -30,7 +30,7 @@ var batgirl = {amount: 0, cost: 10, increment: 0.5},
     alfred = {amount: 0, cost: 5000, increment: 80},
     batwoman = {amount: 0, cost: 8000, increment: 150},
     redHood = {amount: 0, cost: 15000, increment: 310},
-    nightWing = {amount: 0, cost: 50000, increment: 640},
+    nightwing = {amount: 0, cost: 50000, increment: 640},
     batman = {amount: 0, cost: 200000, increment: 4000};
 
 $('#robin').hide();
@@ -230,7 +230,7 @@ $('#alfred').click(function(){
     }
 });
 
-/* Buy Alfred */
+/* Buy Batwoming */
 $('#batwoman').click(function(){
     if(power_indicator >= batwoman.cost){
         power_indicator = power_indicator - batwoman.cost;
@@ -241,7 +241,7 @@ $('#batwoman').click(function(){
     }
 });
 
-/* Buy Alfred */
+/* Buy Red Hood */
 $('#redhood').click(function(){
     if(power_indicator >= redHood.cost){
         power_indicator = power_indicator - redHood.cost;
@@ -252,7 +252,7 @@ $('#redhood').click(function(){
     }
 });
 
-/* Buy Alfred */
+/* Buy Nightwing */
 $('#nightwing').click(function(){
     if(power_indicator >= nightwing.cost){
         power_indicator = power_indicator - nightwing.cost;
