@@ -1,3 +1,8 @@
+// Game UI
+//$(".hero_card").click(function(){
+//    $(this).children(".superhero_number").animate({opacity:.2}, 5000);
+//});
+
 // SmoothScroll for websites v1.2.1
  
 (function(){
