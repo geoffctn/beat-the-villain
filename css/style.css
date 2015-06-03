@@ -104,46 +104,68 @@ p {
 /**************************************************************** SUPERVILLAIN ****************************************************************/
 
 .villain_pic {
-    width: 100%;
-    height: 300px;
+    margin: 40px auto 6px auto;
+    width: 160px;
+    height: 160px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
     overflow: hidden;
     cursor: url(../img/fist_cursor.png), auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    opacity:.9;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
-/*
-.villain_pic img {
-    width:100%;
-    position:relative;
-    top:-200px;
+
+.villain_pic:hover {
+    opacity:1;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
-*/
 
 .villain_life {
-    /*    width:100%;*/
-    
-    height: 40px;
-    background: #cccccc;
+    width:360px;
+    height:5px;
+    background: #444444;
     display: block;
     margin: 0 auto;
     text-align: center;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
 }
 
 .villain_life p {
     position: relative;
     z-index: 999999;
-    top: -39px;
+    top: -40px;
+    color:#ffffff;
+}
+
+.villain_life span {
+    color:#ffffff;
 }
 
 .villain_life_jauge {
     width: 100%;
     position: relative;
-    height: 40px;
+    height: 5px;
     background: linear-gradient(#15bde0, #1d62f0);
     display: block;
     z-index: 1;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
 }
 
 .villain_life_stats,
@@ -159,27 +181,23 @@ p {
 }
 
 .villain_name {
-    position: relative;
-    float: right;
-    top: 224px;
-    right: 1%;
     font-family: 'Open Sans', sans-serif;
-    font-size: 150%;
+    font-size: 120%;
     font-weight: 300;
     text-transform: uppercase;
-    color: #ffffff;
-    background: #111111;
+    color: #15bde0;
     z-index: 999999;
-    padding: 20px;
+    margin: 30px;
+    text-align:center;
 }
 
 .change_villain {
-    width: 100%;
+    width: 260px;
     margin: 0 auto;
 }
 
 #left {
-    width: 150px;
+    width: 130px;
     height: 40px;
     float: left;
     font-family: 'Open Sans', sans-serif;
@@ -192,11 +210,10 @@ p {
     padding: 6px;
     opacity: .6;
     font-size: 80%;
-    margin: 0 auto;
 }
 
 #right {
-    width: 150px;
+    width: 130px;
     height: 40px;
     float: right;
     font-family: 'Open Sans', sans-serif;
