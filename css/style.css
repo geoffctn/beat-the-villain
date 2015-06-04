@@ -5,6 +5,12 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     background: #222222;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .stopfloat {
@@ -112,12 +118,6 @@ p {
     border-radius: 200px;
     overflow: hidden;
     cursor: url(../img/fist_cursor.png), auto;
-/*
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-*/
     opacity:.9;
     -webkit-transition: all 200ms ease-in-out;
     -moz-transition: all 200ms ease-in-out;
@@ -135,8 +135,12 @@ p {
     transition: all 200ms ease-in-out;
 }
 
+#villain_avatar {
+    height:100%;
+}
+
 .villain_life {
-    width:360px;
+    width:320px;
     height:5px;
     background: #444444;
     display: block;
