@@ -281,7 +281,7 @@ function villainLifePercentage() {
 /* Run the superheroes attack */
 setInterval(function () {
     villainOn.life = villainOn.life - (batgirl.increment * batgirl.amount) - (robin.increment * robin.amount) - (gordon.increment * gordon.amount) - (batwing.increment * batwing.amount) - (azrael.increment * azrael.amount) - (catwoman.increment * catwoman.amount) - (alfred.increment * alfred.amount) - (batwoman.increment * batwoman.amount) - (redHood.increment * redHood.amount) - (nightwing.increment * nightwing.amount) - (batman.increment * batman.amount);
-    power_indicator = power_indicator + (hawkman.increment * hawkman.amount);
+    power_indicator = power_indicator + (hawkman.increment * hawkman.amount) + (huntress.increment * huntress.amount) + (greenArrow.increment * greenArrow.amount) + (flash.increment * flash.amount) + (aquaman.increment * aquaman.amount) + (cyborg.increment * cyborg.amount) + (greenLantern.increment * greenLantern.amount) + (jonnJonzz.increment * jonnJonzz.amount) + (wonderWoman.increment * wonderWoman.amount) + (superman.increment * superman.amount);
     updateData();
     if (villainOn.life < 0) {
         villainOn.life = 0;
