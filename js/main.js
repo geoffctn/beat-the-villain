@@ -291,6 +291,7 @@ setInterval(function () {
 //        if ($("#right").hide()) {
 //            $("#right").show();
 //        }
+        nextVillain();
         updateData();
         villainOn.life = villainOn.maxlife;
     }
@@ -305,7 +306,7 @@ function changeVillain() {
         villainOn = blackMask;
     } else if (villainOnId == 1) {
         villainOn = deadshot;
-        $("#left").show();
+//        $("#left").show();
     } else if (villainOnId == 2) {
         villainOn = poisonIvy;
     } else if (villainOnId == 3) {
@@ -331,12 +332,12 @@ function changeVillain() {
 }
 
 /* Next villain */
-//function nextVillain() {
-//    villainOnId += 1;
-//    changeVillain();
+function nextVillain() {
+    villainOnId += 1;
+    changeVillain();
 //    $("#right").hide();
 //    $("#left").show();
-//}
+}
 //
 //$("#right").click(nextVillain);
 
