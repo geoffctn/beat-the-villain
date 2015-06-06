@@ -1,18 +1,102 @@
 /*************** VILLAINS CARACTERISTICS ****************/
 
 // Variables
-var blackMask = {name: "Black Mask",color: "#ffffff", maxlife: 500, life: 500, reward: 25, cover: "img/blackmask1.jpg"},
-    deadshot = {name: "Deadshot",color: "#af5838", maxlife: 8000, life: 8000, reward: 400, cover: "img/deadshot1.jpg"},
-    poisonIvy = {name: "Poison Ivy",color: "#7ad321", maxlife: 15000, life: 15000, reward: 1300, cover: "img/poisonivy1.jpg"},
-    killerCroc = {name: "Killer Croc",color: "#306d3c", maxlife: 38000, life: 38000, reward: 3200, cover: "img/killercroc1.jpg"},
-    harleyQuinn = {name: "Harley Quinn",color: "#ff3333", maxlife: 100000, life: 100000, reward: 14000, cover: "img/harleyquinn1.jpg"},
-    hugoStrange = {name: "Hugo Strange",color: "#d1d1d1", maxlife: 350000, life: 350000, reward: 50000, cover: "img/hugostrange1.jpg"},
-    mrFreeze = {name: "Mr Freeze",color: "#5dd3ff", maxlife: 800000, life: 800000, reward: 250000, cover: "img/mrfreeze1.jpg"},
-    pengouin = {name: "The Penguin",color: "#6f6f6f", maxlife: 200000, life: 200000, reward: 900000, cover: "img/penguin1.jpg"},
-    deathstroke = {name: "Deathstroke",color: "#f0db36", maxlife: 600000, life: 600000, reward: 2500000, cover: "img/deathstroke1.jpg"},
-    bane = {name: "Bane",color: "#47f413", maxlife: 2000000, life: 2000000, reward: 12000000, cover: "img/bane1.jpg"},
-    rasAlGhul = {name: "Ra's Al Ghul",color: "#7cbc3b", maxlife: 50000000, life: 50000000, reward: 50000000, cover: "img/rasalghul1.jpg"},
-    joker = {name: "The Joker",color: "#ff0000", maxlife: 999999999, life: 999999999, reward: 999999999, cover: "img/joker1.jpg"};
+var blackMask = {
+        name: "Black Mask",
+        color: "#ffffff",
+        maxlife: 500,
+        life: 500,
+        reward: 25,
+        cover: "img/blackmask1.jpg"
+    },
+    deadshot = {
+        name: "Deadshot",
+        color: "#af5838",
+        maxlife: 8000,
+        life: 8000,
+        reward: 400,
+        cover: "img/deadshot1.jpg"
+    },
+    poisonIvy = {
+        name: "Poison Ivy",
+        color: "#7ad321",
+        maxlife: 15000,
+        life: 15000,
+        reward: 1300,
+        cover: "img/poisonivy1.jpg"
+    },
+    killerCroc = {
+        name: "Killer Croc",
+        color: "#306d3c",
+        maxlife: 38000,
+        life: 38000,
+        reward: 3200,
+        cover: "img/killercroc1.jpg"
+    },
+    harleyQuinn = {
+        name: "Harley Quinn",
+        color: "#ff3333",
+        maxlife: 100000,
+        life: 100000,
+        reward: 14000,
+        cover: "img/harleyquinn1.jpg"
+    },
+    hugoStrange = {
+        name: "Hugo Strange",
+        color: "#d1d1d1",
+        maxlife: 350000,
+        life: 350000,
+        reward: 50000,
+        cover: "img/hugostrange1.jpg"
+    },
+    mrFreeze = {
+        name: "Mr Freeze",
+        color: "#5dd3ff",
+        maxlife: 800000,
+        life: 800000,
+        reward: 250000,
+        cover: "img/mrfreeze1.jpg"
+    },
+    pengouin = {
+        name: "The Penguin",
+        color: "#6f6f6f",
+        maxlife: 200000,
+        life: 200000,
+        reward: 900000,
+        cover: "img/penguin1.jpg"
+    },
+    deathstroke = {
+        name: "Deathstroke",
+        color: "#f0db36",
+        maxlife: 600000,
+        life: 600000,
+        reward: 2500000,
+        cover: "img/deathstroke1.jpg"
+    },
+    bane = {
+        name: "Bane",
+        color: "#47f413",
+        maxlife: 2000000,
+        life: 2000000,
+        reward: 12000000,
+        cover: "img/bane1.jpg"
+    },
+    rasAlGhul = {
+        name: "Ra's Al Ghul",
+        color: "#7cbc3b",
+        maxlife: 50000000,
+        life: 50000000,
+        reward: 50000000,
+        cover: "img/rasalghul1.jpg"
+    },
+    joker = {
+        name: "The Joker",
+        color: "#ff0000",
+        maxlife: 999999999,
+        life: 999999999,
+        reward: 999999999,
+        cover: "img/joker1.jpg"
+    };
 
 var villainOn = blackMask;
 var villainOnId = 0;
@@ -21,17 +105,61 @@ var villainOnId = 0;
 /*************** SUPERHEROES CARACTERISTICS ****************/
 
 // Variables
-var batgirl = {amount: 0, cost: 10, increment: 0.5},
-    robin = {amount: 0, cost: 25, increment: 1.5},
-    gordon = {amount: 0, cost: 50, increment: 3.5},
-    batwing = {amount: 0, cost: 100, increment: 6},
-    azrael = {amount: 0, cost: 320, increment: 16},
-    catwoman = {amount: 0, cost: 1000, increment: 35},
-    alfred = {amount: 0, cost: 5000, increment: 80},
-    batwoman = {amount: 0, cost: 8000, increment: 150},
-    redHood = {amount: 0, cost: 15000, increment: 310},
-    nightwing = {amount: 0, cost: 50000, increment: 640},
-    batman = {amount: 0, cost: 200000, increment: 4000};
+var batgirl = {
+        amount: 0,
+        cost: 15,
+        increment: 0.2
+    },
+    robin = {
+        amount: 0,
+        cost: 120,
+        increment: 1
+    },
+    gordon = {
+        amount: 0,
+        cost: 800,
+        increment: 2.5
+    },
+    batwing = {
+        amount: 0,
+        cost: 3500,
+        increment: 6
+    },
+    azrael = {
+        amount: 0,
+        cost: 10000,
+        increment: 16
+    },
+    catwoman = {
+        amount: 0,
+        cost: 25000,
+        increment: 35
+    },
+    alfred = {
+        amount: 0,
+        cost: 100000,
+        increment: 80
+    },
+    batwoman = {
+        amount: 0,
+        cost: 500000,
+        increment: 150
+    },
+    redHood = {
+        amount: 0,
+        cost: 1500000,
+        increment: 310
+    },
+    nightwing = {
+        amount: 0,
+        cost: 5000000,
+        increment: 640
+    },
+    batman = {
+        amount: 0,
+        cost: 20000000,
+        increment: 4000
+    };
 
 $('#robin').hide();
 $('#gordon').hide();
@@ -45,56 +173,124 @@ $('#nightwing').hide();
 $('#batman').hide();
 
 
+/*************** ALLIES CARACTERISTICS ****************/
+
+// Variables
+var hawkman = {
+        amount: 0,
+        cost: 10,
+        increment: 0.5
+    },
+    huntress = {
+        amount: 0,
+        cost: 80,
+        increment: 2
+    },
+    greenArrow = {
+        amount: 0,
+        cost: 500,
+        increment: 8
+    },
+    flash = {
+        amount: 0,
+        cost: 3000,
+        increment: 20
+    },
+    aquaman = {
+        amount: 0,
+        cost: 15000,
+        increment: 80
+    },
+    cyborg = {
+        amount: 0,
+        cost: 50000,
+        increment: 300
+    },
+    greenLantern = {
+        amount: 0,
+        cost: 200000,
+        increment: 1000
+    },
+    jonnJonzz = {
+        amount: 0,
+        cost: 1000000,
+        increment: 8000
+    },
+    wonderWoman = {
+        amount: 0,
+        cost: 15000000,
+        increment: 50000
+    },
+    superman = {
+        amount: 0,
+        cost: 800000000,
+        increment: 200000
+    };
+
+$('#huntress').hide();
+$('#greenarrow').hide();
+$('#flash').hide();
+$('#aquaman').hide();
+$('#cyborg').hide();
+$('#greenlantern').hide();
+$('#jonnjonzz').hide();
+$('#wonderwoman').hide();
+$('#superman').hide();
+
+
 /*************** GAME MECHANICS ****************/
 
-$.fn.digits = function(){ 
-    return this.each(function(){ 
-        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+$.fn.digits = function () {
+    return this.each(function () {
+        $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
     })
 }
 
 /* Variables */
-var powerClick = 1;
+var powerClick = 0.5;
 var powerGain = 1;
 var power_indicator = 0;
 var tick = 1000;
 var heroesTeamDps = 0;
+var PPS = 0;
 
 /* Attack the supervillain with power */
-$('#power').click(function(){
-    power_indicator = power_indicator + powerGain;
+$('#power').click(function () {
+    power_indicator = power_indicator + powerClick;
     villainLifePercentage();
     villainOn.life = villainOn.life - powerClick;
     updateData();
-    while (villainOn.life <= 0) {
+    while (villainOn.life <= 0){
         power_indicator = power_indicator + villainOn.reward;
         villainOn.life = villainOn.maxlife;
-        if($("#right").hide()){
-            $("#right").show();
-        }
+//        if ($("#right").hide()) {
+//            $("#right").show();
+//        }
         nextVillain();
         updateData();
     }
 });
 
 /* Villain Life Percentage */
-function villainLifePercentage(){
-    $(".villain_life_jauge").css({width : (villainOn.life / villainOn.maxlife) * 100 + "%"});
+function villainLifePercentage() {
+    $(".villain_life_jauge").css({
+        width: (villainOn.life / villainOn.maxlife) * 100 + "%"
+    });
 }
 
 /* Run the superheroes attack */
-setInterval(function(){
+setInterval(function () {
     villainOn.life = villainOn.life - (batgirl.increment * batgirl.amount) - (robin.increment * robin.amount) - (gordon.increment * gordon.amount) - (batwing.increment * batwing.amount) - (azrael.increment * azrael.amount) - (catwoman.increment * catwoman.amount) - (alfred.increment * alfred.amount) - (batwoman.increment * batwoman.amount) - (redHood.increment * redHood.amount) - (nightwing.increment * nightwing.amount) - (batman.increment * batman.amount);
-    power_indicator = power_indicator + (batgirl.increment * batgirl.amount) + (robin.increment * robin.amount) + (gordon.increment * gordon.amount) + (batwing.increment * batwing.amount) + (azrael.increment * azrael.amount) + (alfred.increment * alfred.amount) + (catwoman.increment * catwoman.amount) + (batwoman.increment * batwoman.amount) + (redHood.increment * redHood.amount) + (nightwing.increment * nightwing.amount) + (batman.increment * batman.amount);
+    power_indicator = power_indicator + (hawkman.increment * hawkman.amount);
     updateData();
     if (villainOn.life < 0) {
         villainOn.life = 0;
     }
     while (villainOn.life <= 0) {
         power_indicator = power_indicator + villainOn.reward;
-        if($("#right").hide()){
-            $("#right").show();
-        }
+//        if ($("#right").hide()) {
+//            $("#right").show();
+//        }
         updateData();
         villainOn.life = villainOn.maxlife;
     }
@@ -104,188 +300,359 @@ setInterval(function(){
 $("#left").hide();
 $("#right").hide();
 
-function changeVillain(){
-    if(villainOnId == 0){
+function changeVillain() {
+    if (villainOnId == 0) {
         villainOn = blackMask;
-    }else if(villainOnId == 1){
+    } else if (villainOnId == 1) {
         villainOn = deadshot;
         $("#left").show();
-    }else if(villainOnId == 2){
+    } else if (villainOnId == 2) {
         villainOn = poisonIvy;
-    }else if(villainOnId == 3){
+    } else if (villainOnId == 3) {
         villainOn = killerCroc;
-    }else if(villainOnId == 4){
+    } else if (villainOnId == 4) {
         villainOn = harleyQuinn;
-    }else if(villainOnId == 5){
+    } else if (villainOnId == 5) {
         villainOn = hugoStrange;
-    }else if(villainOnId == 6){
+    } else if (villainOnId == 6) {
         villainOn = mrFreeze;
-    }else if(villainOnId == 7){
+    } else if (villainOnId == 7) {
         villainOn = pengouin;
-    }else if(villainOnId == 8){
+    } else if (villainOnId == 8) {
         villainOn = deathstroke;
-    }else if(villainOnId == 9){
+    } else if (villainOnId == 9) {
         villainOn = bane;
-    }else if(villainOnId == 10){
+    } else if (villainOnId == 10) {
         villainOn = rasAlGhul;
-    }else if(villainOnId == 11){
+    } else if (villainOnId == 11) {
         villainOn = joker;
     }
     return villainOnId;
 }
 
 /* Next villain */
-function nextVillain(){
-    villainOnId += 1;
-    changeVillain();
-    $("#right").hide();
-    $("#left").show();
-}
-
-$("#right").click(nextVillain);
+//function nextVillain() {
+//    villainOnId += 1;
+//    changeVillain();
+//    $("#right").hide();
+//    $("#left").show();
+//}
+//
+//$("#right").click(nextVillain);
 
 
 /* Previous villain */
-function previousVillain(){
-    villainOnId -= 1;
-    changeVillain();
-    $("#right").show();
-    if(villainOnId == 0){
-        $("#left").hide();
+//function previousVillain() {
+//    villainOnId -= 1;
+//    changeVillain();
+//    $("#right").show();
+//    if (villainOnId == 0) {
+//        $("#left").hide();
+//    }
+//}
+//
+//$("#left").click(previousVillain);
+
+
+/*************** BUY ALLIES ****************/
+
+/* Unlock allies */
+function alliesUnlock() {
+    if (power_indicator >= huntress.cost) {
+        $('#huntress').show();
+    }
+    if (power_indicator >= hawkman.cost) {
+        $('#hawkman').show();
+    }
+    if (power_indicator >= greenArrow.cost) {
+        $('#greenarrow').show();
+    }
+    if (power_indicator >= flash.cost) {
+        $('#flash').show();
+    }
+    if (power_indicator >= aquaman.cost) {
+        $('#aquaman').show();
+    }
+    if (power_indicator >= cyborg.cost) {
+        $('#cyborg').show();
+    }
+    if (power_indicator >= greenLantern.cost) {
+        $('#greenlantern').show();
+    }
+    if (power_indicator >= jonnJonzz.cost) {
+        $('#jonnjonzz').show();
+    }
+    if (power_indicator >= wonderWoman.cost) {
+        $('#wonderwoman').show();
+    }
+    if (power_indicator >= superman.cost) {
+        $('#superman').show();
     }
 }
 
-$("#left").click(previousVillain);
+/* Buy hawkman */
+$('#hawkman').click(function () {
+    if (power_indicator >= hawkman.cost) {
+        power_indicator = power_indicator - hawkman.cost;
+        hawkman.amount++;
+        hawkman.cost = Math.round(hawkman.cost * 1.1);
+        PPS += hawkman.increment;
+        updateData();
+    }
+});
+
+/* Buy hawkgirl */
+$('#huntress').click(function () {
+    if (power_indicator >= huntress.cost) {
+        power_indicator = power_indicator - huntress.cost;
+        huntress.amount++;
+        huntress.cost = Math.round(huntress.cost * 1.1);
+        PPS += huntress.increment;
+        updateData();
+    }
+});
+
+/* Buy green arrow */
+$('#greenarrow').click(function () {
+    if (power_indicator >= greenArrow.cost) {
+        power_indicator = power_indicator - greenArrow.cost;
+        greenArrow.amount++;
+        greenArrow.cost = Math.round(greenArrow.cost * 1.1);
+        PPS += greenArrow.increment;
+        updateData();
+    }
+});
+
+/* Buy green arrow */
+$('#flash').click(function () {
+    if (power_indicator >= flash.cost) {
+        power_indicator = power_indicator - flash.cost;
+        flash.amount++;
+        flash.cost = Math.round(flash.cost * 1.1);
+        PPS += flash.increment;
+        updateData();
+    }
+});
+
+/* Buy aquaman */
+$('#aquaman').click(function () {
+    if (power_indicator >= aquaman.cost) {
+        power_indicator = power_indicator - aquaman.cost;
+        aquaman.amount++;
+        aquaman.cost = Math.round(aquaman.cost * 1.1);
+        PPS += aquaman.increment;
+        updateData();
+    }
+});
+
+/* Buy cyborg */
+$('#cyborg').click(function () {
+    if (power_indicator >= cyborg.cost) {
+        power_indicator = power_indicator - cyborg.cost;
+        cyborg.amount++;
+        cyborg.cost = Math.round(cyborg.cost * 1.1);
+        PPS += cyborg.increment;
+        updateData();
+    }
+});
+
+/* Buy green lantern */
+$('#greenlantern').click(function () {
+    if (power_indicator >= greenLantern.cost) {
+        power_indicator = power_indicator - greenLantern.cost;
+        greenLantern.amount++;
+        greenLantern.cost = Math.round(greenLantern.cost * 1.1);
+        PPS += greenLantern.increment;
+        updateData();
+    }
+});
+
+/* Buy jonn jonzz */
+$('#jonnjonzz').click(function () {
+    if (power_indicator >= jonnJonzz.cost) {
+        power_indicator = power_indicator - jonnJonzz.cost;
+        jonnJonzz.amount++;
+        jonnJonzz.cost = Math.round(jonnJonzz.cost * 1.1);
+        PPS += jonnJonzz.increment;
+        updateData();
+    }
+});
+
+/* Buy wonder woman */
+$('#wonderwoman').click(function () {
+    if (power_indicator >= wonderWoman.cost) {
+        power_indicator = power_indicator - wonderWoman.cost;
+        wonderWoman.amount++;
+        wonderWoman.cost = Math.round(wonderWoman.cost * 1.1);
+        PPS += wonderWoman.increment;
+        updateData();
+    }
+});
+
+/* Buy superman */
+$('#superman').click(function () {
+    if (power_indicator >= superman.cost) {
+        power_indicator = power_indicator - superman.cost;
+        superman.amount++;
+        superman.cost = Math.round(superman.cost * 1.1);
+        PPS += superman.increment;
+        updateData();
+    }
+});
 
 
 /*************** BUY SUPERHEROES ****************/
 
+/* Unlock superheroes */
+function superheroesUnlock() {
+    if (power_indicator >= robin.cost) {
+        $('#robin').show();
+    }
+    if (power_indicator >= gordon.cost) {
+        $('#gordon').show();
+    }
+    if (power_indicator >= batwing.cost) {
+        $('#batwing').show();
+    }
+    if (power_indicator >= azrael.cost) {
+        $('#azrael').show();
+    }
+    if (power_indicator >= catwoman.cost) {
+        $('#catwoman').show();
+    }
+    if (power_indicator >= alfred.cost) {
+        $('#alfred').show();
+    }
+    if (power_indicator >= batwoman.cost) {
+        $('#batwoman').show();
+    }
+    if (power_indicator >= redhood.cost) {
+        $('#redhood').show();
+    }
+    if (power_indicator >= nightwing.cost) {
+        $('#nightwing').show();
+    }
+    if (power_indicator >= batman.cost) {
+        $('#batman').show();
+    }
+}
+
 /* Buy batgirl */
-$('#batgirl').click(function(){
-	if(power_indicator >= batgirl.cost){
-		power_indicator = power_indicator - batgirl.cost;
-	    batgirl.amount++;
-	    batgirl.cost = Math.round(batgirl.cost * 1.4);
+$('#batgirl').click(function () {
+    if (power_indicator >= batgirl.cost) {
+        power_indicator = power_indicator - batgirl.cost;
+        batgirl.amount++;
+        batgirl.cost = Math.round(batgirl.cost * 1.1);
         heroesTeamDps += batgirl.increment;
         updateData();
-        $('#robin').show();
-	}
+    }
 });
 
 /* Buy Robin */
-$('#robin').click(function(){
-	if(power_indicator >= robin.cost){
-		power_indicator = power_indicator - robin.cost;
-	    robin.amount++;
-        robin.cost = Math.round(robin.cost * 1.6);
+$('#robin').click(function () {
+    if (power_indicator >= robin.cost) {
+        power_indicator = power_indicator - robin.cost;
+        robin.amount++;
+        robin.cost = Math.round(robin.cost * 1.2);
         heroesTeamDps += robin.increment;
-	    updateData();
-        $('#gordon').show();
-	}
+        updateData();
+    }
 });
 
 /* Buy Gordon */
-$('#gordon').click(function(){
-	if(power_indicator >= gordon.cost){
-		power_indicator = power_indicator - gordon.cost;
-	    gordon.amount++;
-        gordon.cost = Math.round(gordon.cost * 1.8);
+$('#gordon').click(function () {
+    if (power_indicator >= gordon.cost) {
+        power_indicator = power_indicator - gordon.cost;
+        gordon.amount++;
+        gordon.cost = Math.round(gordon.cost * 1.3);
         heroesTeamDps += gordon.increment;
-	    updateData();
-        $('#batwing').show();
-	}
+        updateData();
+    }
 });
 
 /* Buy Batwing */
-$('#batwing').click(function(){
-	if(power_indicator >= batwing.cost){
-		power_indicator = power_indicator - batwing.cost;
-	    batwing.amount++;
-        batwing.cost = Math.round(batwing.cost * 2);
+$('#batwing').click(function () {
+    if (power_indicator >= batwing.cost) {
+        power_indicator = power_indicator - batwing.cost;
+        batwing.amount++;
+        batwing.cost = Math.round(batwing.cost * 1.4);
         heroesTeamDps += batwing.increment;
-	    updateData();
-        $('#azrael').show();
-	}
+        updateData();
+    }
 });
 
 /* Buy Azrael */
-$('#azrael').click(function(){
-	if(power_indicator >= azrael.cost){
-		power_indicator = power_indicator - azrael.cost;
-	    azrael.amount++;
-        azrael.cost = Math.round(azrael.cost * 2.2);
+$('#azrael').click(function () {
+    if (power_indicator >= azrael.cost) {
+        power_indicator = power_indicator - azrael.cost;
+        azrael.amount++;
+        azrael.cost = Math.round(azrael.cost * 1.5);
         heroesTeamDps += azrael.increment;
-	    updateData();
-        $('#catwoman').show();
-	}
+        updateData();
+    }
 });
 
 /* Buy Catwoman */
-$('#catwoman').click(function(){
-	if(power_indicator >= catwoman.cost){
-		power_indicator = power_indicator - catwoman.cost;
-	    catwoman.amount++;
-        catwoman.cost = Math.round(catwoman.cost * 2.4);
+$('#catwoman').click(function () {
+    if (power_indicator >= catwoman.cost) {
+        power_indicator = power_indicator - catwoman.cost;
+        catwoman.amount++;
+        catwoman.cost = Math.round(catwoman.cost * 1.6);
         heroesTeamDps += catwoman.increment;
-	    updateData();
-        $('#alfred').show();
-	}
+        updateData();
+    }
 });
 
 /* Buy Alfred */
-$('#alfred').click(function(){
-    if(power_indicator >= alfred.cost){
+$('#alfred').click(function () {
+    if (power_indicator >= alfred.cost) {
         power_indicator = power_indicator - alfred.cost;
         alfred.amount++;
-        alfred.cost = Math.round(alfred.cost * 2.6);
+        alfred.cost = Math.round(alfred.cost * 1.7);
         heroesTeamDps += alfred.increment;
         updateData();
-        $('#batwoman').show();
     }
 });
 
 /* Buy Batwoming */
-$('#batwoman').click(function(){
-    if(power_indicator >= batwoman.cost){
+$('#batwoman').click(function () {
+    if (power_indicator >= batwoman.cost) {
         power_indicator = power_indicator - batwoman.cost;
         batwoman.amount++;
-        batwoman.cost = Math.round(batwoman.cost * 2.6);
+        batwoman.cost = Math.round(batwoman.cost * 1.8);
         heroesTeamDps += batwoman.increment;
         updateData();
-        $('#redhood').show();
     }
 });
 
 /* Buy Red Hood */
-$('#redhood').click(function(){
-    if(power_indicator >= redHood.cost){
+$('#redhood').click(function () {
+    if (power_indicator >= redHood.cost) {
         power_indicator = power_indicator - redHood.cost;
         redHood.amount++;
-        redHood.cost = Math.round(redHood.cost * 2.6);
+        redHood.cost = Math.round(redHood.cost * 1.9);
         heroesTeamDps += redHood.increment;
         updateData();
-        $('#nightwing').show();
     }
 });
 
 /* Buy Nightwing */
-$('#nightwing').click(function(){
-    if(power_indicator >= nightwing.cost){
+$('#nightwing').click(function () {
+    if (power_indicator >= nightwing.cost) {
         power_indicator = power_indicator - nightwing.cost;
         nightwing.amount++;
-        nightwing.cost = Math.round(nightwing.cost * 2.6);
+        nightwing.cost = Math.round(nightwing.cost * 2);
         heroesTeamDps += nightwing.increment;
         updateData();
-        $('#batman').show();
     }
 });
 
 /* Buy Batman */
-$('#batman').click(function(){
-    if(power_indicator >= batman.cost){
+$('#batman').click(function () {
+    if (power_indicator >= batman.cost) {
         power_indicator = power_indicator - batman.cost;
         batman.amount++;
-        batman.cost = Math.round(batman.cost * 2.6);
+        batman.cost = Math.round(batman.cost * 2.1);
         heroesTeamDps += batman.increment;
         updateData();
     }
@@ -295,148 +662,176 @@ $('#batman').click(function(){
 /*************** UPGRADES ****************/
 
 // Variables
-var powerclick_x2 = {amount: 0, cost: 10, multiplier: 2};
+var powerclick_x2 = {
+    amount: 0,
+    cost: 5,
+    multiplier: 2
+};
+
+$('#powerclick_2').hide();
+
+/* Unlock upgrades */
+function upgradesUnlock() {
+    if (power_indicator >= powerclick_x2.cost) {
+        $('#powerclick_2').show();
+    }
+}
 
 /* Buy Powerclick x2 */
-$('#powerclick_2').click(function(){
-	if(power_indicator >= powerclick_x2.cost){
-		power_indicator = power_indicator - powerclick_x2.cost;
-	    powerclick_x2.amount++;
+$('#powerclick_2').click(function () {
+    if (power_indicator >= powerclick_x2.cost) {
+        power_indicator = power_indicator - powerclick_x2.cost;
+        powerclick_x2.amount++;
         powerClick = powerClick * powerclick_x2.multiplier;
-        powerclick_x2.cost = powerclick_x2.cost * 2.8;
+        powerclick_x2.cost = powerclick_x2.cost * 5;
         powerGain = powerGain * powerclick_x2.multiplier;
         updateData();
-	}
+        $('#powerclick_2').hide();
+    }
 });
 
 
 /*************** ONLOAD UPDATE & TEST ****************/
 
-function updateData(){
+function updateData() {
     // update power
-    $("#power_indicator").html(Math.round(power_indicator)).digits();
-    
+    $("#power_indicator").html(Math.floor(power_indicator)).digits();
+    $("#power_click").html(Math.round(powerClick * 10)/10).digits();
+
     // update villain
-    $(".villain_life_stats").html(villainOn.life).digits();
+    $(".villain_life_stats").html(Math.round(villainOn.life)).digits();
     $(".villain_maxlife_stats").html(villainOn.maxlife).digits();
     $(".villain_name").html(villainOn.name);
     villainLifePercentage();
-    $("#villain_avatar").attr("src",villainOn.cover);
+    $("#villain_avatar").attr("src", villainOn.cover);
     $(".villain_name").css("color", villainOn.color);
+    while(villainOn == joker){
+        alert("Well played, you beat the last villain of the game. More features will be added soon. Stay connected !");
+    }
     
+    
+    // update allies
+    $("#power_seconde").html(Math.round(PPS * 10)/10).digits();
+    alliesUnlock();
+
     // update heroes
-    $("#heroes_DPS").html(heroesTeamDps).digits();
+    $("#heroes_DPS").html(Math.round(heroesTeamDps * 10)/10).digits();
+    superheroesUnlock();
     
+    
+    // update hawkman
+    $("#hawkman_cost").html(hawkman.cost).digits();
+    $("#hawkman_damage").html(Math.round(hawkman.increment * hawkman.amount * 10)/10).digits();
+    $("#hawkman_amount").html(hawkman.amount);
+    
+    // update huntress
+    $("#huntress_cost").html(huntress.cost).digits();
+    $("#huntress_damage").html(Math.round(huntress.increment * huntress.amount * 10)/10).digits();
+    $("#huntress_amount").html(huntress.amount);
+    
+    // update hawkman
+    $("#hawkman_cost").html(hawkman.cost).digits();
+    $("#hawkman_damage").html(Math.round(hawkman.increment * hawkman.amount * 10)/10).digits();
+    $("#hawkman_amount").html(hawkman.amount);
+    
+    // update green arrow
+    $("#greenarrow_cost").html(greenArrow.cost).digits();
+    $("#greenarrow_damage").html(Math.round(greenArrow.increment * greenArrow.amount * 10)/10).digits();
+    $("#greenarrow_amount").html(greenArrow.amount);
+    
+    // update flash
+    $("#flash_cost").html(flash.cost).digits();
+    $("#flash_damage").html(Math.round(flash.increment * flash.amount * 10)/10).digits();
+    $("#flash_amount").html(flash.amount);
+    
+    // update aquaman
+    $("#aquaman_cost").html(aquaman.cost).digits();
+    $("#aquaman_damage").html(Math.round(aquaman.increment * aquaman.amount * 10)/10).digits();
+    $("#aquaman_amount").html(aquaman.amount);
+    
+    // update cyborg
+    $("#cyborg_cost").html(cyborg.cost).digits();
+    $("#cyborg_damage").html(Math.round(cyborg.increment * cyborg.amount * 10)/10).digits();
+    $("#cyborg_amount").html(cyborg.amount);
+    
+    // update jonn jonzz
+    $("#jonnjonzz_cost").html(jonnJonzz.cost).digits();
+    $("#jonnjonzz_damage").html(Math.round(jonnJonzz.increment * jonnJonzz.amount * 10)/10).digits();
+    $("#jonnjonzz_amount").html(jonnJonzz.amount);
+    
+    // update wonder woman
+    $("#wonderwoman_cost").html(wonderWoman.cost).digits();
+    $("#wonderwoman_damage").html(Math.round(wonderWoman.increment * wonderWoman.amount * 10)/10).digits();
+    $("#wonderwoman_amount").html(wonderWoman.amount);
+    
+    // update superman
+    $("#superman_cost").html(superman.cost).digits();
+    $("#superman_damage").html(Math.round(superman.increment * superman.amount * 10)/10).digits();
+    $("#superman_amount").html(superman.amount);
+    
+
     // update batgirl
     $("#batgirl_cost").html(batgirl.cost).digits();
-    $("#batgirl_damage").html(batgirl.increment * batgirl.amount).digits();
+    $("#batgirl_damage").html(Math.round(batgirl.increment * batgirl.amount * 10)/10).digits();
     $("#batgirl_amount").html(batgirl.amount);
-    
+
     // update robin
     $("#robin_cost").html(robin.cost).digits();
-    $("#robin_damage").html(robin.increment * robin.amount).digits();
+    $("#robin_damage").html(Math.round(robin.increment * robin.amount * 10)/10).digits();
     $("#robin_amount").html(robin.amount);
-    
+
     // update gordon
     $("#gordon_cost").html(gordon.cost).digits();
-    $("#gordon_damage").html(gordon.increment * gordon.amount).digits();
+    $("#gordon_damage").html(Math.round(gordon.increment * gordon.amount * 10)/10).digits();
     $("#gordon_amount").html(gordon.amount);
-    
+
     // update batwing
     $("#batwing_cost").html(batwing.cost).digits();
-    $("#batwing_damage").html(batwing.increment * batwing.amount).digits();
+    $("#batwing_damage").html(Math.round(batwing.increment * batwing.amount)).digits();
     $("#batwing_amount").html(batwing.amount);
-    
+
     // update azrael
     $("#azrael_cost").html(azrael.cost).digits();
-    $("#azrael_damage").html(azrael.increment * azrael.amount).digits();
+    $("#azrael_damage").html(Math.round(azrael.increment * azrael.amount)).digits();
     $("#azrael_amount").html(azrael.amount);
-    
+
     // update catwoman
     $("#catwoman_cost").html(catwoman.cost).digits();
-    $("#catwoman_damage").html(catwoman.increment * catwoman.amount).digits();
+    $("#catwoman_damage").html(Math.round(catwoman.increment * catwoman.amount)).digits();
     $("#catwoman_amount").html(catwoman.amount);
 
     // update alfred
     $("#alfred_cost").html(alfred.cost).digits();
-    $("#alfred_damage").html(alfred.increment * alfred.amount).digits();
+    $("#alfred_damage").html(Math.round(alfred.increment * alfred.amount)).digits();
     $("#alfred_amount").html(alfred.amount);
-    
+
     // update alfred
     $("#batwoman_cost").html(batwoman.cost).digits();
-    $("#batwoman_damage").html(batwoman.increment * batwoman.amount).digits();
+    $("#batwoman_damage").html(Math.round(batwoman.increment * batwoman.amount)).digits();
     $("#batwoman_amount").html(batwoman.amount);
-    
+
     // update redhood
     $("#redhood_cost").html(redHood.cost).digits();
-    $("#redhood_damage").html(redHood.increment * redHood.amount).digits();
+    $("#redhood_damage").html(Math.round(redHood.increment * redHood.amount)).digits();
     $("#redhood_amount").html(redHood.amount);
-    
+
     // update nightwing
     $("#nightwing_cost").html(nightwing.cost).digits();
-    $("#nightwing_damage").html(nightwing.increment * nightwing.amount).digits();
+    $("#nightwing_damage").html(Math.round(nightwing.increment * nightwing.amount)).digits();
     $("#nightwing_amount").html(nightwing.amount);
-    
+
     // update batman
     $("#batman_cost").html(batman.cost).digits();
-    $("#batman_damage").html(batman.increment * batman.amount).digits();
+    $("#batman_damage").html(Math.round(batman.increment * batman.amount)).digits();
     $("#batman_amount").html(batman.amount);
-    
-    
+
+
     // update upgrades
     $("#powerclick_2_amount").html(powerclick_x2.amount).digits();
     $("#powerclick_2_cost").html(Math.round(powerclick_x2.cost)).digits();
+    upgradesUnlock();
 
     save_game();
-}
-
-// function villainOnTest(){
-//     if(villainOn != blackMask){
-//         $("#left").show();
-//         $("#right").show();
-//     }
-// }
-
-function heroTeamTest(){
-    if(batgirl.amount > 0){
-        $('#robin').show();
-    }
-
-    if(robin.amount > 0){
-        $('#gordon').show();
-    }
-
-    if(gordon.amount > 0){
-        $('#batwing').show();
-    }
-
-    if(batwing.amount > 0){
-        $('#azrael').show();
-    }
-
-    if(azrael.amount > 0){
-        $('#catwoman').show();
-    }
-
-    if(catwoman.amount > 0){
-        $('#alfred').show();
-    }
-    
-    if(alfred.amount > 0){
-        $('#batwoman').show();
-    }
-    
-    if(batwoman.amount > 0){
-        $('#redhood').show();
-    }
-    
-    if(redHood.amount > 0){
-        $('#nightwing').show();
-    }
-    
-    if(nightwing.amount > 0){
-        $('#batman').show();
-    }
 }
 
 
@@ -444,86 +839,101 @@ function heroTeamTest(){
 
 function save_game() {
 
-   // save power stats
-   localStorage['btv_save[power_indicator]'] = btoa(JSON.stringify(power_indicator));
-   localStorage['btv_save[powerGain]'] = btoa(JSON.stringify(powerGain));
-   localStorage['btv_save[powerClick]'] = btoa(JSON.stringify(powerClick));
-   // localStorage['btv_save[villainOn]'] = btoa(JSON.stringify(villainOn));
-   // localStorage['btv_save[villainOnLife]'] = btoa(JSON.stringify(villainOn.life));
+    // save power stats
+    localStorage['btv_save[power_indicator]'] = btoa(JSON.stringify(power_indicator));
+    localStorage['btv_save[powerGain]'] = btoa(JSON.stringify(powerGain));
+    localStorage['btv_save[powerClick]'] = btoa(JSON.stringify(powerClick));
+    localStorage['btv_save[villainOn]'] = btoa(JSON.stringify(villainOn));
+    localStorage['btv_save[villainOnLife]'] = btoa(JSON.stringify(villainOn.life));
+    
+    // save allies
+    localStorage['btv_save[hawkman]'] = btoa(JSON.stringify(hawkman));
+    localStorage['btv_save[huntress]'] = btoa(JSON.stringify(huntress));
+    localStorage['btv_save[PPS]'] = btoa(JSON.stringify(PPS));
 
-   // save heroes
-   localStorage['btv_save[batgirl]'] = btoa(JSON.stringify(batgirl));
-   localStorage['btv_save[robin]'] = btoa(JSON.stringify(robin));
-   localStorage['btv_save[gordon]'] = btoa(JSON.stringify(gordon));
-   localStorage['btv_save[batwing]'] = btoa(JSON.stringify(batwing));
-   localStorage['btv_save[azrael]'] = btoa(JSON.stringify(azrael));
-   localStorage['btv_save[catwoman]'] = btoa(JSON.stringify(catwoman));
-   localStorage['btv_save[alfred]'] = btoa(JSON.stringify(alfred));
-   localStorage['btv_save[batwoman]'] = btoa(JSON.stringify(batwoman));
-   localStorage['btv_save[redHood]'] = btoa(JSON.stringify(redHood));
-   localStorage['btv_save[nightwing]'] = btoa(JSON.stringify(nightwing));
-   localStorage['btv_save[batman]'] = btoa(JSON.stringify(batman));
-   localStorage['btv_save[heroesTeamDps]'] = btoa(JSON.stringify(heroesTeamDps));
+    // save heroes
+    localStorage['btv_save[batgirl]'] = btoa(JSON.stringify(batgirl));
+    localStorage['btv_save[robin]'] = btoa(JSON.stringify(robin));
+    localStorage['btv_save[gordon]'] = btoa(JSON.stringify(gordon));
+    localStorage['btv_save[batwing]'] = btoa(JSON.stringify(batwing));
+    localStorage['btv_save[azrael]'] = btoa(JSON.stringify(azrael));
+    localStorage['btv_save[catwoman]'] = btoa(JSON.stringify(catwoman));
+    localStorage['btv_save[alfred]'] = btoa(JSON.stringify(alfred));
+    localStorage['btv_save[batwoman]'] = btoa(JSON.stringify(batwoman));
+    localStorage['btv_save[redHood]'] = btoa(JSON.stringify(redHood));
+    localStorage['btv_save[nightwing]'] = btoa(JSON.stringify(nightwing));
+    localStorage['btv_save[batman]'] = btoa(JSON.stringify(batman));
+    localStorage['btv_save[heroesTeamDps]'] = btoa(JSON.stringify(heroesTeamDps));
 
-   // save upgrades
-   localStorage['btv_save[powerclick_x2]'] = btoa(JSON.stringify(powerclick_x2));
+    // save upgrades
+    localStorage['btv_save[powerclick_x2]'] = btoa(JSON.stringify(powerclick_x2));
 
 }
 
 function load_game() {
 
-   if (!localStorage['btv_save[power_indicator]']) return;
-   
-   // load power stats
-   var power_indicator_save = JSON.parse(atob(localStorage['btv_save[power_indicator]']));
-   var powerGain_save = JSON.parse(atob(localStorage['btv_save[powerGain]']));
-   var powerClick_save = JSON.parse(atob(localStorage['btv_save[powerClick]']));
-   // var villainOn_save = JSON.parse(atob(localStorage['btv_save[villainOn]']));
-   // var villainOnLife_save = JSON.parse(atob(localStorage['btv_save[villainOn.life]']));
+    if (!localStorage['btv_save[power_indicator]']) return;
 
-   // load heroes
-   var batgirl_save = JSON.parse(atob(localStorage['btv_save[batgirl]']));
-   var robin_save = JSON.parse(atob(localStorage['btv_save[robin]']));
-   var gordon_save = JSON.parse(atob(localStorage['btv_save[gordon]']));
-   var batwing_save = JSON.parse(atob(localStorage['btv_save[batwing]']));
-   var azrael_save = JSON.parse(atob(localStorage['btv_save[azrael]']));
-   var catwoman_save = JSON.parse(atob(localStorage['btv_save[catwoman]']));
-   var alfred_save = JSON.parse(atob(localStorage['btv_save[alfred]']));
-   var batwoman_save = JSON.parse(atob(localStorage['btv_save[batwoman]']));
-   var redHood_save = JSON.parse(atob(localStorage['btv_save[redHood]']));
-   var nightwing_save = JSON.parse(atob(localStorage['btv_save[nightwing]']));
-   var batman_save = JSON.parse(atob(localStorage['btv_save[batman]']));
-   var heroesTeamDps_save = JSON.parse(atob(localStorage['btv_save[heroesTeamDps]']));
+    // load power stats
+    var power_indicator_save = JSON.parse(atob(localStorage['btv_save[power_indicator]']));
+    var powerGain_save = JSON.parse(atob(localStorage['btv_save[powerGain]']));
+    var powerClick_save = JSON.parse(atob(localStorage['btv_save[powerClick]']));
+    var villainOn_save = JSON.parse(atob(localStorage['btv_save[villainOn]']));
+    var villainOnLife_save = JSON.parse(atob(localStorage['btv_save[villainOnLife]']));
+    
+    // load allies
+    var hawkman_save = JSON.parse(atob(localStorage['btv_save[hawkman]']));
+    var huntress_save = JSON.parse(atob(localStorage['btv_save[huntress]']));
+    var PPS_save = JSON.parse(atob(localStorage['btv_save[PPS]']));
 
-   // load upgrades
-   var powerclick_x2_save = JSON.parse(atob(localStorage['btv_save[powerclick_x2]']));
+    // load heroes
+    var batgirl_save = JSON.parse(atob(localStorage['btv_save[batgirl]']));
+    var robin_save = JSON.parse(atob(localStorage['btv_save[robin]']));
+    var gordon_save = JSON.parse(atob(localStorage['btv_save[gordon]']));
+    var batwing_save = JSON.parse(atob(localStorage['btv_save[batwing]']));
+    var azrael_save = JSON.parse(atob(localStorage['btv_save[azrael]']));
+    var catwoman_save = JSON.parse(atob(localStorage['btv_save[catwoman]']));
+    var alfred_save = JSON.parse(atob(localStorage['btv_save[alfred]']));
+    var batwoman_save = JSON.parse(atob(localStorage['btv_save[batwoman]']));
+    var redHood_save = JSON.parse(atob(localStorage['btv_save[redHood]']));
+    var nightwing_save = JSON.parse(atob(localStorage['btv_save[nightwing]']));
+    var batman_save = JSON.parse(atob(localStorage['btv_save[batman]']));
+    var heroesTeamDps_save = JSON.parse(atob(localStorage['btv_save[heroesTeamDps]']));
 
-   // show power stats
-   power_indicator = power_indicator_save;
-   powerGain = powerGain_save;
-   powerClick = powerClick_save;
+    // load upgrades
+    var powerclick_x2_save = JSON.parse(atob(localStorage['btv_save[powerclick_x2]']));
 
-   // villainOn = villainOn_save
-   // villainOn.life = villainOnLife_save
+    // show power stats
+    power_indicator = power_indicator_save;
+    powerGain = powerGain_save;
+    powerClick = powerClick_save;
 
-   // show heroes stats
-   batgirl = batgirl_save;
-   robin = robin_save;
-   gordon = gordon_save;
-   batwing = batwing_save;
-   azrael = azrael_save;
-   catwoman = catwoman_save;
-   alfred = alfred_save;
-   batwoman = batwoman_save;
-   redHood = redHood_save;
-   nightwing = nightwing_save;
-   batman = batman_save;
-   heroesTeamDps = heroesTeamDps_save;
+    villainOn = villainOn_save;
+    villainOn.life = villainOnLife_save;
+    
+    // show item stats
+    hawkman = hawkman_save;
+    huntress = huntress_save;
+    PPS = PPS_save;
 
-   // show upgrade stats
-   powerclick_x2 = powerclick_x2_save;
-   
-   updateData();
+    // show heroes stats
+    batgirl = batgirl_save;
+    robin = robin_save;
+    gordon = gordon_save;
+    batwing = batwing_save;
+    azrael = azrael_save;
+    catwoman = catwoman_save;
+    alfred = alfred_save;
+    batwoman = batwoman_save;
+    redHood = redHood_save;
+    nightwing = nightwing_save;
+    batman = batman_save;
+    heroesTeamDps = heroesTeamDps_save;
+
+    // show upgrade stats
+    powerclick_x2 = powerclick_x2_save;
+
+    updateData();
 
 }
 
@@ -531,5 +941,4 @@ function load_game() {
 /*************** ONLOAD ****************/
 
 $(window).load(load_game());
-$(window).load(heroTeamTest());
-// $(window).load(villainOnTest());
+$(window).load(load_game());

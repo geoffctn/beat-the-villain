@@ -1,23 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--  
-BSV project
+BTV project
 
 Name: Geoff Couten
 -->
 <html>
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Beat the Super Villain</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<script type="text/javascript" src="js/jquery.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Beat the Villain | The Idle Game</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 
 <body>
-    
+
     <div class="header">
         <div class="villain_pic" id="power">
             <img id="villain_avatar" src="" alt="villain cover" />
@@ -32,243 +32,437 @@ Name: Geoff Couten
             <button id="right">Next villain</button>
             <div class="stopfloat"></div>
         </div>
+
+        <div class="container">
+
+            <div class="stats_block">
+                <div class="stats_block_1">
+                    <h1>Power</h1>
+                    <span id="power_indicator">0</span>
+                    <br />
+                </div>
+
+                <div class="stats_block_2">
+                    <h1>Power/s</h1>
+                    <span id="power_seconde">0</span>
+                    <br />
+                </div>
+
+                <div class="stats_block_3">
+                    <h1>Clicking Power</h1>
+                    <span id="power_click">0</span>
+                    <br />
+                </div>
+
+                <div class="stats_block_4">
+                    <h1>DPS</h1>
+                    <span id="heroes_DPS">0</span>
+                    <br />
+                </div>
+
+                <div class="stopfloat"></div>
+            </div>
+
+        </div>
     </div>
     
-	<div class="container">
-	
-	    <div class="stats_block">
-            <h1>Power</h1>
-            <span id="power_indicator">0</span><br />
-		</div>
-		
-		<div class="line"></div>
-		
-		<div class="heroes_block">
-		    <h2>Heroes team (<span id="heroes_DPS">0</span> DPS)</h2>
-		    
-		    <!---------------- Batgirl ---------------->
-		    <button class="hero_card" id="batgirl">
-                <div class="superhero_pic">
-                    <img src="img/batgirl1.jpg" alt="batgirl" />
-                </div>
-                <div class="superhero_carac">
-                    <h3>Batgirl</h3>
-                    <p><span class="cost" id="batgirl_cost">0</span> P / <span class="damage" id="batgirl_damage">0</span> DPS</p>
-                </div>
-                <div class="superhero_stats">
-                    <p>Level</p>
-                    <span class="superhero_number" id="batgirl_amount">0</span>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-            <!---------------- Robin ---------------->
-            <button class="hero_card" id="robin">
-                <div class="superhero_pic">
-                    <img src="img/robin1.jpg" alt="robin" />
-                </div>
-                <div class="superhero_carac">
-                    <h3>Robin</h3>
-                    <p><span class="cost" id="robin_cost">0</span> P / <span class="damage" id="robin_damage">0</span> DPS</p>
-                </div>
-                <div class="superhero_stats">
-                    <p>Level</p>
-                    <span class="superhero_number" id="robin_amount">0</span>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-            <!---------------- Gordon ---------------->
-            <button class="hero_card" id="gordon">
-                <div class="superhero_pic">
-                    <img src="img/gordon1.jpg" alt="james gordon" />
-                </div>
-                <div class="superhero_carac">
-                    <h3>James Gordon</h3>
-                    <p><span class="cost" id="gordon_cost">0</span> P / <span class="damage" id="gordon_damage">0</span> DPS</p>
-                </div>
-                <div class="superhero_stats">
-                    <p>Level</p>
-                    <span class="superhero_number" id="gordon_amount">0</span>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-            <!---------------- Batwing ---------------->
-            <button class="hero_card" id="batwing">
-                <div class="superhero_pic">
-                    <img src="img/batwing1.jpg" alt="batwing" />
-                </div>
-                <div class="superhero_carac">
-                    <h3>Batwing</h3>
-                    <p><span class="cost" id="batwing_cost">0</span> P / <span class="damage" id="batwing_damage">0</span> DPS</p>
-                </div>
-                <div class="superhero_stats">
-                    <p>Level</p>
-                    <span class="superhero_number" id="batwing_amount">0</span>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-            <!---------------- Azrael ---------------->
-            <button class="hero_card" id="azrael">
-                <div class="superhero_pic">
-                    <img src="img/azrael1.jpg" alt="azrael" />
-                </div>
-                <div class="superhero_carac">
-                    <h3>Azrael</h3>
-                    <p><span class="cost" id="azrael_cost">0</span> P / <span class="damage" id="azrael_damage">0</span> DPS</p>
-                </div>
-                <div class="superhero_stats">
-                    <p>Level</p>
-                    <span class="superhero_number" id="azrael_amount">0</span>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-            <!---------------- Catwoman ---------------->
-            <button class="hero_card" id="catwoman">
-                <div class="superhero_pic">
-                    <img src="img/catwoman1.jpg" alt="catwoman" />
-                </div>
-                <div class="superhero_carac">
-                    <h3>Catwoman</h3>
-                    <p><span class="cost" id="catwoman_cost">0</span> P / <span class="damage" id="catwoman_damage">0</span> DPS</p>
-                </div>
-                <div class="superhero_stats">
-                    <p>Level</p>
-                    <span class="superhero_number" id="catwoman_amount">0</span>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
+<!--    <div class="line"></div>-->
 
-            <!---------------- Alfred ---------------->
-            <button class="hero_card" id="alfred">
-                <div class="superhero_pic">
-                    <img src="img/alfred1.jpg" alt="alfred" />
-                </div>
-                <div class="superhero_carac">
-                    <h3>Alfred Pennyworth</h3>
-                    <p><span class="cost" id="alfred_cost">0</span> P / <span class="damage" id="alfred_damage">0</span> DPS</p>
-                </div>
-                <div class="superhero_stats">
-                    <p>Level</p>
-                    <span class="superhero_number" id="alfred_amount">0</span>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-            <!---------------- Batwoman ---------------->
-            <button class="hero_card" id="batwoman">
-                <div class="superhero_pic">
-                    <img src="img/batwoman1.jpg" alt="batwoman" />
-                </div>
-                <div class="superhero_carac">
-                    <h3>Batwoman</h3>
-                    <p><span class="cost" id="batwoman_cost">0</span> P / <span class="damage" id="batwoman_damage">0</span> DPS</p>
-                </div>
-                <div class="superhero_stats">
-                    <p>Level</p>
-                    <span class="superhero_number" id="batwoman_amount">0</span>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-            <!---------------- Red Hood ---------------->
-            <button class="hero_card" id="redhood">
-                <div class="superhero_pic">
-                    <img src="img/redhood1.jpg" alt="redhood" />
-                </div>
-                <div class="superhero_carac">
-                    <h3>Red Hood</h3>
-                    <p><span class="cost" id="redhood_cost">0</span> P / <span class="damage" id="redhood_damage">0</span> DPS</p>
-                </div>
-                <div class="superhero_stats">
-                    <p>Level</p>
-                    <span class="superhero_number" id="redhood_amount">0</span>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-            <!---------------- Nightwing ---------------->
-            <button class="hero_card" id="nightwing">
-                <div class="superhero_pic">
-                    <img src="img/nightwing1.jpg" alt="nightwing" />
-                </div>
-                <div class="superhero_carac">
-                    <h3>Nightwing</h3>
-                    <p><span class="cost" id="nightwing_cost">0</span> P / <span class="damage" id="nightwing_damage">0</span> DPS</p>
-                </div>
-                <div class="superhero_stats">
-                    <p>Level</p>
-                    <span class="superhero_number" id="nightwing_amount">0</span>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-            <!---------------- Batman ---------------->
-            <button class="hero_card" id="batman">
-                <div class="superhero_pic">
-                    <img src="img/batman1.jpg" alt="batman" />
-                </div>
-                <div class="superhero_carac">
-                    <h3>Batman</h3>
-                    <p><span class="cost" id="batman_cost">0</span> P / <span class="damage" id="batman_damage">0</span> DPS</p>
-                </div>
-                <div class="superhero_stats">
-                    <p>Level</p>
-                    <span class="superhero_number" id="batman_amount">0</span>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-		</div>
-		
-		<div class="upgrade_block">
-		    <h2>Upgrades :</h2>
-		    
-		    <!---------------- Double the Powerclicker ---------------->
-		    <button class="upgrade_card" id="powerclick_2">
-                <div class="upgrade_carac">
-                    <h3>Double the power of your attack</h3>
-                    <p><span class="upgrade_cost" id="powerclick_2_cost">0</span> P</p>
-                </div>
-                <div class="upgrade_stats">
-                    <p>x<span class="upgrade_number" id="powerclick_2_amount">0</span></p>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-            <!---------------- Upgrade PowerGain ---------------->
-		    <button class="upgrade_card" id="powergain_plus">
-                <div class="upgrade_carac">
-                    <h3>Add Power gain per click</h3>
-                    <p><span class="upgrade_cost" id="powergain_plus_cost">0</span> P</p>
-                </div>
-                <div class="upgrade_stats">
-                    <p>x<span class="upgrade_number" id="powergain_plus_amount">0</span></p>
-                </div>
-                <div class="stopfloat"></div>
-            </button>
-            
-		</div>
-		
-		<div class="stopfloat"></div>
-	</div>
+    <div id="game_items" class="mCustomScrollbar" data-mcs-theme="dark">
+        <div class="container">
+
+            <div class="idle_block">
+                <h2>Allies</h2>
+
+                <!---------------- hawkman ---------------->
+                <button class="idle_card" id="hawkman">
+                    <div class="idle_pic">
+                        <img src="img/hawkman1.jpg" alt="hawkman" />
+                    </div>
+                    <div class="idle_carac">
+                        <h3>Hawkman</h3>
+                        <p><span class="cost" id="hawkman_cost">0</span> P / <span class="damage" id="hawkman_damage">0</span> P/S</p>
+                    </div>
+                    <div class="idle_stats">
+                        <p>Level</p>
+                        <span class="idle_number" id="hawkman_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- huntress ---------------->
+                <button class="idle_card" id="huntress">
+                    <div class="idle_pic">
+                        <img src="img/huntress1.jpg" alt="huntress" />
+                    </div>
+                    <div class="idle_carac">
+                        <h3>Huntress</h3>
+                        <p><span class="cost" id="huntress_cost">0</span> P / <span class="damage" id="huntress_damage">0</span> P/S</p>
+                    </div>
+                    <div class="idle_stats">
+                        <p>Level</p>
+                        <span class="idle_number" id="huntress_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- green arrow ---------------->
+                <button class="idle_card" id="greenarrow">
+                    <div class="idle_pic">
+                        <img src="img/greenarrow1.jpg" alt="greenarrow" />
+                    </div>
+                    <div class="idle_carac">
+                        <h3>Green Arrow</h3>
+                        <p><span class="cost" id="greenarrow_cost">0</span> P / <span class="damage" id="greenarrow_damage">0</span> P/S</p>
+                    </div>
+                    <div class="idle_stats">
+                        <p>Level</p>
+                        <span class="idle_number" id="greenarrow_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- flash ---------------->
+                <button class="idle_card" id="flash">
+                    <div class="idle_pic">
+                        <img src="img/flash1.jpg" alt="flash" />
+                    </div>
+                    <div class="idle_carac">
+                        <h3>Flash</h3>
+                        <p><span class="cost" id="flash_cost">0</span> P / <span class="damage" id="flash_damage">0</span> P/S</p>
+                    </div>
+                    <div class="idle_stats">
+                        <p>Level</p>
+                        <span class="idle_number" id="flash_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- aquaman ---------------->
+                <button class="idle_card" id="aquaman">
+                    <div class="idle_pic">
+                        <img src="img/aquaman1.jpg" alt="aquaman" />
+                    </div>
+                    <div class="idle_carac">
+                        <h3>Aquaman</h3>
+                        <p><span class="cost" id="aquaman_cost">0</span> P / <span class="damage" id="aquaman_damage">0</span> P/S</p>
+                    </div>
+                    <div class="idle_stats">
+                        <p>Level</p>
+                        <span class="idle_number" id="aquaman_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- cyborg ---------------->
+                <button class="idle_card" id="cyborg">
+                    <div class="idle_pic">
+                        <img src="img/cyborg1.jpg" alt="cyborg" />
+                    </div>
+                    <div class="idle_carac">
+                        <h3>Cyborg</h3>
+                        <p><span class="cost" id="cyborg_cost">0</span> P / <span class="damage" id="cyborg_damage">0</span> P/S</p>
+                    </div>
+                    <div class="idle_stats">
+                        <p>Level</p>
+                        <span class="idle_number" id="cyborg_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- green lantern ---------------->
+                <button class="idle_card" id="greenlantern">
+                    <div class="idle_pic">
+                        <img src="img/greenlantern1.jpg" alt="greenlantern" />
+                    </div>
+                    <div class="idle_carac">
+                        <h3>Green Lantern</h3>
+                        <p><span class="cost" id="greenlantern_cost">0</span> P / <span class="damage" id="greenlantern_damage">0</span> P/S</p>
+                    </div>
+                    <div class="idle_stats">
+                        <p>Level</p>
+                        <span class="idle_number" id="greenlantern_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- jonn jonzz ---------------->
+                <button class="idle_card" id="jonnjonzz">
+                    <div class="idle_pic">
+                        <img src="img/jonnjonzz1.jpg" alt="jonnjonzz" />
+                    </div>
+                    <div class="idle_carac">
+                        <h3>J'onn J'onzz</h3>
+                        <p><span class="cost" id="jonnjonzz_cost">0</span> P / <span class="damage" id="jonnjonzz_damage">0</span> P/S</p>
+                    </div>
+                    <div class="idle_stats">
+                        <p>Level</p>
+                        <span class="idle_number" id="jonnjonzz_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- wonder woman ---------------->
+                <button class="idle_card" id="wonderwoman">
+                    <div class="idle_pic">
+                        <img src="img/wonderwoman1.jpg" alt="wonderwoman" />
+                    </div>
+                    <div class="idle_carac">
+                        <h3>Wonder Woman</h3>
+                        <p><span class="cost" id="wonderwoman_cost">0</span> P / <span class="damage" id="wonderwoman_damage">0</span> P/S</p>
+                    </div>
+                    <div class="idle_stats">
+                        <p>Level</p>
+                        <span class="idle_number" id="wonderwoman_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- superman ---------------->
+                <button class="idle_card" id="superman">
+                    <div class="idle_pic">
+                        <img src="img/superman1.jpg" alt="superman" />
+                    </div>
+                    <div class="idle_carac">
+                        <h3>Superman</h3>
+                        <p><span class="cost" id="superman_cost">0</span> P / <span class="damage" id="superman_damage">0</span> P/S</p>
+                    </div>
+                    <div class="idle_stats">
+                        <p>Level</p>
+                        <span class="idle_number" id="superman_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+            </div>
+
+            <div class="heroes_block">
+                <h2>Heroes team</h2>
+
+                <!---------------- Batgirl ---------------->
+                <button class="hero_card" id="batgirl">
+                    <div class="superhero_pic">
+                        <img src="img/batgirl1.jpg" alt="batgirl" />
+                    </div>
+                    <div class="superhero_carac">
+                        <h3>Batgirl</h3>
+                        <p><span class="cost" id="batgirl_cost">0</span> P / <span class="damage" id="batgirl_damage">0</span> DPS</p>
+                    </div>
+                    <div class="superhero_stats">
+                        <p>Level</p>
+                        <span class="superhero_number" id="batgirl_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- Robin ---------------->
+                <button class="hero_card" id="robin">
+                    <div class="superhero_pic">
+                        <img src="img/robin1.jpg" alt="robin" />
+                    </div>
+                    <div class="superhero_carac">
+                        <h3>Robin</h3>
+                        <p><span class="cost" id="robin_cost">0</span> P / <span class="damage" id="robin_damage">0</span> DPS</p>
+                    </div>
+                    <div class="superhero_stats">
+                        <p>Level</p>
+                        <span class="superhero_number" id="robin_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- Gordon ---------------->
+                <button class="hero_card" id="gordon">
+                    <div class="superhero_pic">
+                        <img src="img/gordon1.jpg" alt="james gordon" />
+                    </div>
+                    <div class="superhero_carac">
+                        <h3>James Gordon</h3>
+                        <p><span class="cost" id="gordon_cost">0</span> P / <span class="damage" id="gordon_damage">0</span> DPS</p>
+                    </div>
+                    <div class="superhero_stats">
+                        <p>Level</p>
+                        <span class="superhero_number" id="gordon_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- Batwing ---------------->
+                <button class="hero_card" id="batwing">
+                    <div class="superhero_pic">
+                        <img src="img/batwing1.jpg" alt="batwing" />
+                    </div>
+                    <div class="superhero_carac">
+                        <h3>Batwing</h3>
+                        <p><span class="cost" id="batwing_cost">0</span> P / <span class="damage" id="batwing_damage">0</span> DPS</p>
+                    </div>
+                    <div class="superhero_stats">
+                        <p>Level</p>
+                        <span class="superhero_number" id="batwing_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- Azrael ---------------->
+                <button class="hero_card" id="azrael">
+                    <div class="superhero_pic">
+                        <img src="img/azrael1.jpg" alt="azrael" />
+                    </div>
+                    <div class="superhero_carac">
+                        <h3>Azrael</h3>
+                        <p><span class="cost" id="azrael_cost">0</span> P / <span class="damage" id="azrael_damage">0</span> DPS</p>
+                    </div>
+                    <div class="superhero_stats">
+                        <p>Level</p>
+                        <span class="superhero_number" id="azrael_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- Catwoman ---------------->
+                <button class="hero_card" id="catwoman">
+                    <div class="superhero_pic">
+                        <img src="img/catwoman1.jpg" alt="catwoman" />
+                    </div>
+                    <div class="superhero_carac">
+                        <h3>Catwoman</h3>
+                        <p><span class="cost" id="catwoman_cost">0</span> P / <span class="damage" id="catwoman_damage">0</span> DPS</p>
+                    </div>
+                    <div class="superhero_stats">
+                        <p>Level</p>
+                        <span class="superhero_number" id="catwoman_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- Alfred ---------------->
+                <button class="hero_card" id="alfred">
+                    <div class="superhero_pic">
+                        <img src="img/alfred1.jpg" alt="alfred" />
+                    </div>
+                    <div class="superhero_carac">
+                        <h3>Alfred Pennyworth</h3>
+                        <p><span class="cost" id="alfred_cost">0</span> P / <span class="damage" id="alfred_damage">0</span> DPS</p>
+                    </div>
+                    <div class="superhero_stats">
+                        <p>Level</p>
+                        <span class="superhero_number" id="alfred_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- Batwoman ---------------->
+                <button class="hero_card" id="batwoman">
+                    <div class="superhero_pic">
+                        <img src="img/batwoman1.jpg" alt="batwoman" />
+                    </div>
+                    <div class="superhero_carac">
+                        <h3>Batwoman</h3>
+                        <p><span class="cost" id="batwoman_cost">0</span> P / <span class="damage" id="batwoman_damage">0</span> DPS</p>
+                    </div>
+                    <div class="superhero_stats">
+                        <p>Level</p>
+                        <span class="superhero_number" id="batwoman_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- Red Hood ---------------->
+                <button class="hero_card" id="redhood">
+                    <div class="superhero_pic">
+                        <img src="img/redhood1.jpg" alt="redhood" />
+                    </div>
+                    <div class="superhero_carac">
+                        <h3>Red Hood</h3>
+                        <p><span class="cost" id="redhood_cost">0</span> P / <span class="damage" id="redhood_damage">0</span> DPS</p>
+                    </div>
+                    <div class="superhero_stats">
+                        <p>Level</p>
+                        <span class="superhero_number" id="redhood_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- Nightwing ---------------->
+                <button class="hero_card" id="nightwing">
+                    <div class="superhero_pic">
+                        <img src="img/nightwing1.jpg" alt="nightwing" />
+                    </div>
+                    <div class="superhero_carac">
+                        <h3>Nightwing</h3>
+                        <p><span class="cost" id="nightwing_cost">0</span> P / <span class="damage" id="nightwing_damage">0</span> DPS</p>
+                    </div>
+                    <div class="superhero_stats">
+                        <p>Level</p>
+                        <span class="superhero_number" id="nightwing_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- Batman ---------------->
+                <button class="hero_card" id="batman">
+                    <div class="superhero_pic">
+                        <img src="img/batman1.jpg" alt="batman" />
+                    </div>
+                    <div class="superhero_carac">
+                        <h3>Batman</h3>
+                        <p><span class="cost" id="batman_cost">0</span> P / <span class="damage" id="batman_damage">0</span> DPS</p>
+                    </div>
+                    <div class="superhero_stats">
+                        <p>Level</p>
+                        <span class="superhero_number" id="batman_amount">0</span>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+            </div>
+
+            <div class="upgrade_block">
+                <h2>Upgrades <span style="font-size:50%; font-weight:lighter;">(will be updated soon...)</span></h2>
+
+                <!---------------- Double the Powerclicker ---------------->
+                <button class="upgrade_card" id="powerclick_2">
+                    <div class="upgrade_carac">
+                        <h3>Double the power of your attack</h3>
+                        <p><span class="upgrade_cost" id="powerclick_2_cost">0</span> P</p>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+                <!---------------- Upgrade PowerGain ---------------->
+                <button class="upgrade_card" id="powergain_plus">
+                    <div class="upgrade_carac">
+                        <h3>Add Power gain per click</h3>
+                        <p><span class="upgrade_cost" id="powergain_plus_cost">0</span> P</p>
+                    </div>
+                    <div class="stopfloat"></div>
+                </button>
+
+            </div>
+
+            <div class="stopfloat"></div>
+        </div>
+    </div>
 
 </body>
 
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/animation.js"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-63646289-1', 'auto');
-  ga('send', 'pageview');
-
+    ga('create', 'UA-63646289-1', 'auto');
+    ga('send', 'pageview');
 </script>
 
 </html>
