@@ -846,6 +846,7 @@ function save_game() {
     localStorage['btv_save[powerGain]'] = btoa(JSON.stringify(powerGain));
     localStorage['btv_save[powerClick]'] = btoa(JSON.stringify(powerClick));
     localStorage['btv_save[villainOn]'] = btoa(JSON.stringify(villainOn));
+    localStorage['btv_save[villainOnId]'] = btoa(JSON.stringify(villainOnId));
     localStorage['btv_save[villainOnLife]'] = btoa(JSON.stringify(villainOn.life));
     
     // save allies
@@ -881,6 +882,7 @@ function load_game() {
     var powerGain_save = JSON.parse(atob(localStorage['btv_save[powerGain]']));
     var powerClick_save = JSON.parse(atob(localStorage['btv_save[powerClick]']));
     var villainOn_save = JSON.parse(atob(localStorage['btv_save[villainOn]']));
+    var villainOnId_save = JSON.parse(atob(localStorage['btv_save[villainOnId]']));
     var villainOnLife_save = JSON.parse(atob(localStorage['btv_save[villainOnLife]']));
     
     // load allies
@@ -911,6 +913,7 @@ function load_game() {
     powerClick = powerClick_save;
 
     villainOn = villainOn_save;
+    villainOnId = villainOnId_save;
     villainOn.life = villainOnLife_save;
     
     // show item stats
