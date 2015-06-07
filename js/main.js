@@ -161,6 +161,7 @@ var batgirl = {
         increment: 4000
     };
 
+$('#batgirl').hide();
 $('#robin').hide();
 $('#gordon').hide();
 $('#batwing').hide();
@@ -227,6 +228,7 @@ var hawkman = {
         increment: 200000
     };
 
+$('#hawkman').hide();
 $('#huntress').hide();
 $('#greenarrow').hide();
 $('#flash').hide();
@@ -359,34 +361,34 @@ function nextVillain() {
 
 /* Unlock allies */
 function alliesUnlock() {
-    if (power_indicator >= huntress.cost) {
-        $('#huntress').show();
-    }
-    if (power_indicator >= hawkman.cost) {
+    if (power_indicator >= hawkman.cost || hawkman.amount > 0) {
         $('#hawkman').show();
     }
-    if (power_indicator >= greenArrow.cost) {
+    if (power_indicator >= huntress.cost || huntress.amount > 0) {
+        $('#huntress').show();
+    }
+    if (power_indicator >= greenArrow.cost || greenArrow.amount > 0) {
         $('#greenarrow').show();
     }
-    if (power_indicator >= flash.cost) {
+    if (power_indicator >= flash.cost || flash.amount > 0) {
         $('#flash').show();
     }
-    if (power_indicator >= aquaman.cost) {
+    if (power_indicator >= aquaman.cost || aquaman.amount > 0) {
         $('#aquaman').show();
     }
-    if (power_indicator >= cyborg.cost) {
+    if (power_indicator >= cyborg.cost || cyborg.amount > 0) {
         $('#cyborg').show();
     }
-    if (power_indicator >= greenLantern.cost) {
+    if (power_indicator >= greenLantern.cost || greenLantern.amount > 0) {
         $('#greenlantern').show();
     }
-    if (power_indicator >= jonnJonzz.cost) {
+    if (power_indicator >= jonnJonzz.cost || jonnJonzz.amount > 0) {
         $('#jonnjonzz').show();
     }
-    if (power_indicator >= wonderWoman.cost) {
+    if (power_indicator >= wonderWoman.cost || wonderWoman.amount > 0) {
         $('#wonderwoman').show();
     }
-    if (power_indicator >= superman.cost) {
+    if (power_indicator >= superman.cost || superman.amount > 0) {
         $('#superman').show();
     }
 }
@@ -402,7 +404,7 @@ $('#hawkman').click(function () {
     }
 });
 
-/* Buy hawkgirl */
+/* Buy huntress */
 $('#huntress').click(function () {
     if (power_indicator >= huntress.cost) {
         power_indicator = power_indicator - huntress.cost;
@@ -506,34 +508,37 @@ $('#superman').click(function () {
 
 /* Unlock superheroes */
 function superheroesUnlock() {
-    if (power_indicator >= robin.cost) {
+    if (power_indicator >= batgirl.cost || batgirl.amount > 0) {
+        $('#batgirl').show();
+    }
+    if (power_indicator >= robin.cost || robin.amount > 0) {
         $('#robin').show();
     }
-    if (power_indicator >= gordon.cost) {
+    if (power_indicator >= gordon.cost|| gordon.amount > 0) {
         $('#gordon').show();
     }
-    if (power_indicator >= batwing.cost) {
+    if (power_indicator >= batwing.cost|| batwing.amount > 0) {
         $('#batwing').show();
     }
-    if (power_indicator >= azrael.cost) {
+    if (power_indicator >= azrael.cost|| azrael.amount > 0) {
         $('#azrael').show();
     }
-    if (power_indicator >= catwoman.cost) {
+    if (power_indicator >= catwoman.cost|| catwoman.amount > 0) {
         $('#catwoman').show();
     }
-    if (power_indicator >= alfred.cost) {
+    if (power_indicator >= alfred.cost|| alfred.amount > 0) {
         $('#alfred').show();
     }
-    if (power_indicator >= batwoman.cost) {
+    if (power_indicator >= batwoman.cost|| batwoman.amount > 0) {
         $('#batwoman').show();
     }
-    if (power_indicator >= redhood.cost) {
+    if (power_indicator >= redHood.cost|| redHood.amount > 0) {
         $('#redhood').show();
     }
-    if (power_indicator >= nightwing.cost) {
+    if (power_indicator >= nightwing.cost|| nightwing.amount > 0) {
         $('#nightwing').show();
     }
-    if (power_indicator >= batman.cost) {
+    if (power_indicator >= batman.cost|| batman.amount > 0) {
         $('#batman').show();
     }
 }
