@@ -731,11 +731,6 @@ function updateData() {
     $("#huntress_damage").html(Math.round(huntress.increment * huntress.amount * 10)/10).digits();
     $("#huntress_amount").html(huntress.amount);
     
-    // update hawkman
-    $("#hawkman_cost").html(hawkman.cost).digits();
-    $("#hawkman_damage").html(Math.round(hawkman.increment * hawkman.amount * 10)/10).digits();
-    $("#hawkman_amount").html(hawkman.amount);
-    
     // update green arrow
     $("#greenarrow_cost").html(greenArrow.cost).digits();
     $("#greenarrow_damage").html(Math.round(greenArrow.increment * greenArrow.amount * 10)/10).digits();
@@ -755,6 +750,11 @@ function updateData() {
     $("#cyborg_cost").html(cyborg.cost).digits();
     $("#cyborg_damage").html(Math.round(cyborg.increment * cyborg.amount * 10)/10).digits();
     $("#cyborg_amount").html(cyborg.amount);
+    
+    // update green lantern
+    $("#greenlantern_cost").html(greenLantern.cost).digits();
+    $("#greenlantern_damage").html(Math.round(greenLantern.increment * greenLantern.amount * 10)/10).digits();
+    $("#greenlantern_amount").html(greenLantern.amount);
     
     // update jonn jonzz
     $("#jonnjonzz_cost").html(jonnJonzz.cost).digits();
@@ -852,6 +852,14 @@ function save_game() {
     // save allies
     localStorage['btv_save[hawkman]'] = btoa(JSON.stringify(hawkman));
     localStorage['btv_save[huntress]'] = btoa(JSON.stringify(huntress));
+    localStorage['btv_save[greenArrow]'] = btoa(JSON.stringify(greenArrow));
+    localStorage['btv_save[flash]'] = btoa(JSON.stringify(flash));
+    localStorage['btv_save[aquaman]'] = btoa(JSON.stringify(aquaman));
+    localStorage['btv_save[cyborg]'] = btoa(JSON.stringify(cyborg));
+    localStorage['btv_save[greenLantern]'] = btoa(JSON.stringify(greenLantern));
+    localStorage['btv_save[jonnJonzz]'] = btoa(JSON.stringify(jonnJonzz));
+    localStorage['btv_save[wonderWoman]'] = btoa(JSON.stringify(wonderWoman));
+    localStorage['btv_save[superman]'] = btoa(JSON.stringify(superman));
     localStorage['btv_save[PPS]'] = btoa(JSON.stringify(PPS));
 
     // save heroes
@@ -888,6 +896,14 @@ function load_game() {
     // load allies
     var hawkman_save = JSON.parse(atob(localStorage['btv_save[hawkman]']));
     var huntress_save = JSON.parse(atob(localStorage['btv_save[huntress]']));
+    var greenArrow_save = JSON.parse(atob(localStorage['btv_save[greenArrow]']));
+    var flash_save = JSON.parse(atob(localStorage['btv_save[flash]']));
+    var aquaman_save = JSON.parse(atob(localStorage['btv_save[aquaman]']));
+    var cyborg_save = JSON.parse(atob(localStorage['btv_save[cyborg]']));
+    var greenLantern_save = JSON.parse(atob(localStorage['btv_save[greenLantern]']));
+    var jonnJonzz_save = JSON.parse(atob(localStorage['btv_save[jonnJonzz]']));
+    var wonderWoman_save = JSON.parse(atob(localStorage['btv_save[wonderWoman]']));
+    var superman_save = JSON.parse(atob(localStorage['btv_save[superman]']));
     var PPS_save = JSON.parse(atob(localStorage['btv_save[PPS]']));
 
     // load heroes
@@ -919,6 +935,14 @@ function load_game() {
     // show item stats
     hawkman = hawkman_save;
     huntress = huntress_save;
+    greenArrow = greenArrow_save;
+    flash = flash_save;
+    aquaman = aquaman_save;
+    cyborg = cyborg_save;
+    greenLantern = greenLantern_save;
+    jonnJonzz = jonnJonzz_save;
+    wonderWoman = wonderWoman_save;
+    superman = superman_save;
     PPS = PPS_save;
 
     // show heroes stats
