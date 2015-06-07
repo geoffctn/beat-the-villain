@@ -19,7 +19,7 @@ body {
 
 span {
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     color: #ffffff;
     font-weight: bold;
 }
@@ -465,21 +465,21 @@ p {
 
 span.cost {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
     font-weight: bold;
 }
 
 span.upgrade_cost {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
     font-weight: bold;
 }
 
 span.damage {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
     font-weight: bold;
 }
@@ -496,7 +496,7 @@ span.damage {
     font-size: 14px;
     color: #ffffff;
     font-weight: bold;
-    margin: 20px 0 0 0;
+    margin: 22px 0 0 0;
 }
 
 .superhero_carac p {
@@ -511,7 +511,7 @@ span.damage {
     font-size: 14px;
     color: #ffffff;
     font-weight: bold;
-    margin: 20px 0 0 0;
+    margin: 22px 0 0 0;
 }
 
 .upgrade_carac p {

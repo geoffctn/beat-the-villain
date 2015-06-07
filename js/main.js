@@ -107,57 +107,57 @@ var villainOnId = 0;
 // Variables
 var batgirl = {
         amount: 0,
-        cost: 15,
-        increment: 0.2
+        cost: 150,
+        increment: 0.5
     },
     robin = {
         amount: 0,
-        cost: 120,
+        cost: 1200,
         increment: 1
     },
     gordon = {
         amount: 0,
-        cost: 800,
+        cost: 8000,
         increment: 2.5
     },
     batwing = {
         amount: 0,
-        cost: 3500,
+        cost: 35000,
         increment: 6
     },
     azrael = {
         amount: 0,
-        cost: 10000,
+        cost: 100000,
         increment: 16
     },
     catwoman = {
         amount: 0,
-        cost: 25000,
+        cost: 250000,
         increment: 35
     },
     alfred = {
         amount: 0,
-        cost: 100000,
+        cost: 1000000,
         increment: 80
     },
     batwoman = {
         amount: 0,
-        cost: 500000,
+        cost: 5000000,
         increment: 150
     },
     redHood = {
         amount: 0,
-        cost: 1500000,
+        cost: 15000000,
         increment: 310
     },
     nightwing = {
         amount: 0,
-        cost: 5000000,
+        cost: 50000000,
         increment: 640
     },
     batman = {
         amount: 0,
-        cost: 20000000,
+        cost: 200000000,
         increment: 4000
     };
 
@@ -183,7 +183,7 @@ var hawkman = {
     },
     huntress = {
         amount: 0,
-        cost: 80,
+        cost: 100,
         increment: 2
     },
     greenArrow = {
@@ -247,7 +247,7 @@ $.fn.digits = function () {
 }
 
 /* Variables */
-var powerClick = 0.5;
+var powerClick = 0.25;
 var powerGain = 1;
 var power_indicator = 0;
 var tick = 1000;
@@ -280,7 +280,7 @@ function villainLifePercentage() {
 
 /* Run the superheroes attack */
 setInterval(function () {
-    villainOn.life = villainOn.life - (batgirl.increment * batgirl.amount) - (robin.increment * robin.amount) - (gordon.increment * gordon.amount) - (batwing.increment * batwing.amount) - (azrael.increment * azrael.amount) - (catwoman.increment * catwoman.amount) - (alfred.increment * alfred.amount) - (batwoman.increment * batwoman.amount) - (redHood.increment * redHood.amount) - (nightwing.increment * nightwing.amount) - (batman.increment * batman.amount);
+    villainOn.life = villainOn.life - heroesTeamDps;
     power_indicator = power_indicator + PPS;
     updateData();
     if (villainOn.life < 0) {
@@ -396,7 +396,7 @@ $('#hawkman').click(function () {
     if (power_indicator >= hawkman.cost) {
         power_indicator = power_indicator - hawkman.cost;
         hawkman.amount++;
-        hawkman.cost = Math.round(hawkman.cost * 1.1);
+        hawkman.cost = Math.round(hawkman.cost * 1.2);
         PPS += hawkman.increment;
         updateData();
     }
@@ -407,7 +407,7 @@ $('#huntress').click(function () {
     if (power_indicator >= huntress.cost) {
         power_indicator = power_indicator - huntress.cost;
         huntress.amount++;
-        huntress.cost = Math.round(huntress.cost * 1.1);
+        huntress.cost = Math.round(huntress.cost * 1.2);
         PPS += huntress.increment;
         updateData();
     }
@@ -418,7 +418,7 @@ $('#greenarrow').click(function () {
     if (power_indicator >= greenArrow.cost) {
         power_indicator = power_indicator - greenArrow.cost;
         greenArrow.amount++;
-        greenArrow.cost = Math.round(greenArrow.cost * 1.1);
+        greenArrow.cost = Math.round(greenArrow.cost * 1.2);
         PPS += greenArrow.increment;
         updateData();
     }
@@ -429,7 +429,7 @@ $('#flash').click(function () {
     if (power_indicator >= flash.cost) {
         power_indicator = power_indicator - flash.cost;
         flash.amount++;
-        flash.cost = Math.round(flash.cost * 1.1);
+        flash.cost = Math.round(flash.cost * 1.2);
         PPS += flash.increment;
         updateData();
     }
@@ -440,7 +440,7 @@ $('#aquaman').click(function () {
     if (power_indicator >= aquaman.cost) {
         power_indicator = power_indicator - aquaman.cost;
         aquaman.amount++;
-        aquaman.cost = Math.round(aquaman.cost * 1.1);
+        aquaman.cost = Math.round(aquaman.cost * 1.2);
         PPS += aquaman.increment;
         updateData();
     }
@@ -451,7 +451,7 @@ $('#cyborg').click(function () {
     if (power_indicator >= cyborg.cost) {
         power_indicator = power_indicator - cyborg.cost;
         cyborg.amount++;
-        cyborg.cost = Math.round(cyborg.cost * 1.1);
+        cyborg.cost = Math.round(cyborg.cost * 1.2);
         PPS += cyborg.increment;
         updateData();
     }
@@ -462,7 +462,7 @@ $('#greenlantern').click(function () {
     if (power_indicator >= greenLantern.cost) {
         power_indicator = power_indicator - greenLantern.cost;
         greenLantern.amount++;
-        greenLantern.cost = Math.round(greenLantern.cost * 1.1);
+        greenLantern.cost = Math.round(greenLantern.cost * 1.2);
         PPS += greenLantern.increment;
         updateData();
     }
@@ -473,7 +473,7 @@ $('#jonnjonzz').click(function () {
     if (power_indicator >= jonnJonzz.cost) {
         power_indicator = power_indicator - jonnJonzz.cost;
         jonnJonzz.amount++;
-        jonnJonzz.cost = Math.round(jonnJonzz.cost * 1.1);
+        jonnJonzz.cost = Math.round(jonnJonzz.cost * 1.2);
         PPS += jonnJonzz.increment;
         updateData();
     }
@@ -484,7 +484,7 @@ $('#wonderwoman').click(function () {
     if (power_indicator >= wonderWoman.cost) {
         power_indicator = power_indicator - wonderWoman.cost;
         wonderWoman.amount++;
-        wonderWoman.cost = Math.round(wonderWoman.cost * 1.1);
+        wonderWoman.cost = Math.round(wonderWoman.cost * 1.2);
         PPS += wonderWoman.increment;
         updateData();
     }
@@ -495,7 +495,7 @@ $('#superman').click(function () {
     if (power_indicator >= superman.cost) {
         power_indicator = power_indicator - superman.cost;
         superman.amount++;
-        superman.cost = Math.round(superman.cost * 1.1);
+        superman.cost = Math.round(superman.cost * 1.2);
         PPS += superman.increment;
         updateData();
     }
@@ -665,11 +665,12 @@ $('#batman').click(function () {
 // Variables
 var powerclick_x2 = {
     amount: 0,
-    cost: 5,
+    cost: 100,
     multiplier: 2
 };
 
 $('#powerclick_2').hide();
+$('#powergain_plus').hide();
 
 /* Unlock upgrades */
 function upgradesUnlock() {
@@ -684,7 +685,7 @@ $('#powerclick_2').click(function () {
         power_indicator = power_indicator - powerclick_x2.cost;
         powerclick_x2.amount++;
         powerClick = powerClick * powerclick_x2.multiplier;
-        powerclick_x2.cost = powerclick_x2.cost * 5;
+        powerclick_x2.cost = powerclick_x2.cost * 2;
         powerGain = powerGain * powerclick_x2.multiplier;
         updateData();
         $('#powerclick_2').hide();
