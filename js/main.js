@@ -61,7 +61,7 @@ var blackMask = {
         name: "The Penguin",
         color: "#6f6f6f",
         maxlife: 200000,
-        life: 200000,
+        life: 2000000,
         reward: 900000,
         cover: "img/penguin1.jpg"
     },
@@ -69,7 +69,7 @@ var blackMask = {
         name: "Deathstroke",
         color: "#f0db36",
         maxlife: 600000,
-        life: 600000,
+        life: 60000000,
         reward: 2500000,
         cover: "img/deathstroke1.jpg"
     },
@@ -77,7 +77,7 @@ var blackMask = {
         name: "Bane",
         color: "#47f413",
         maxlife: 2000000,
-        life: 2000000,
+        life: 200000000,
         reward: 12000000,
         cover: "img/bane1.jpg"
     },
@@ -85,7 +85,7 @@ var blackMask = {
         name: "Ra's Al Ghul",
         color: "#7cbc3b",
         maxlife: 50000000,
-        life: 50000000,
+        life: 5000000000,
         reward: 50000000,
         cover: "img/rasalghul1.jpg"
     },
@@ -93,7 +93,7 @@ var blackMask = {
         name: "The Joker",
         color: "#ff0000",
         maxlife: 999999999,
-        life: 999999999,
+        life: 9999999999,
         reward: 999999999,
         cover: "img/joker1.jpg"
     };
@@ -675,7 +675,11 @@ $('#powergain_plus').hide();
 /* Unlock upgrades */
 function upgradesUnlock() {
     if (power_indicator >= powerclick_x2.cost) {
-        $('#powerclick_2').show();
+        if (powerClick < 30000) {
+            $('#powerclick_2').show();
+        } else {
+            $('#powerclick_2').hide();
+        }
     }
 }
 
