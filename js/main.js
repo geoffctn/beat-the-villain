@@ -732,7 +732,7 @@ function updateData() {
     villainLifePercentage();
     $("#villain_avatar").attr("src", villainOn.cover);
     $(".villain_name").css("color", villainOn.color);
-    if(villainOn == joker){
+    if(villainOn == joker && villainOn.life == 0){
         alert("Well played, you've reached the last villain of the game. More features will be added soon. Stay connected !");
     }
     
