@@ -240,13 +240,29 @@ $('#wonderwoman').hide();
 $('#superman').hide();
 
 
-/*************** GAME MECHANICS ****************/
+/*************** NUMBERS FORMAT ****************/
 
 $.fn.digits = function () {
     return this.each(function () {
         $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
     })
 }
+
+function nFormatter(num) {
+    if (num >= 1000000000) {
+        return (num / 1000000000).toFixed(1) + 'G';
+    }
+    if (num >= 1000000) {
+        return (num / 1000000).toFixed(1) + 'M';
+    }
+    if (num >= 1000) {
+        return (num / 1000).toFixed(1) + 'K';
+    }
+    return num;
+}
+
+
+/*************** GAME MECHANICS ****************/
 
 /* Variables */
 var powerClick = 0.25;
@@ -706,8 +722,8 @@ $('#powerclick_2').click(function () {
 
 function updateData() {
     // update power
-    $("#power_indicator").html(Math.floor(power_indicator)).digits();
-    $("#power_click").html(Math.round(powerClick * 10)/10).digits();
+    $("#power_indicator").html(nFormatter(Math.floor(power_indicator))).digits();
+    $("#power_click").html(nFormatter(Math.round(powerClick * 10)/10)).digits();
 
     // update villain
     $(".villain_life_stats").html(Math.round(villainOn.life)).digits();
@@ -722,124 +738,124 @@ function updateData() {
     
     
     // update allies
-    $("#power_seconde").html(Math.round(PPS * 10)/10).digits();
+    $("#power_seconde").html(nFormatter(Math.round(PPS * 10)/10)).digits();
     alliesUnlock();
 
     // update heroes
-    $("#heroes_DPS").html(Math.round(heroesTeamDps * 10)/10).digits();
+    $("#heroes_DPS").html(nFormatter(Math.round(heroesTeamDps * 10)/10)).digits();
     superheroesUnlock();
     
     
     // update hawkman
-    $("#hawkman_cost").html(hawkman.cost).digits();
-    $("#hawkman_damage").html(Math.round(hawkman.increment * hawkman.amount * 10)/10).digits();
-    $("#hawkman_amount").html(hawkman.amount);
+    $("#hawkman_cost").html(nFormatter(hawkman.cost)).digits();
+    $("#hawkman_damage").html(nFormatter(Math.round(hawkman.increment * hawkman.amount * 10)/10)).digits();
+    $("#hawkman_amount").html(nFormatter(hawkman.amount));
     
     // update huntress
-    $("#huntress_cost").html(huntress.cost).digits();
-    $("#huntress_damage").html(Math.round(huntress.increment * huntress.amount * 10)/10).digits();
-    $("#huntress_amount").html(huntress.amount);
+    $("#huntress_cost").html(nFormatter(huntress.cost)).digits();
+    $("#huntress_damage").html(nFormatter(Math.round(huntress.increment * huntress.amount * 10)/10)).digits();
+    $("#huntress_amount").html(nFormatter(huntress.amount));
     
     // update green arrow
-    $("#greenarrow_cost").html(greenArrow.cost).digits();
-    $("#greenarrow_damage").html(Math.round(greenArrow.increment * greenArrow.amount * 10)/10).digits();
-    $("#greenarrow_amount").html(greenArrow.amount);
+    $("#greenarrow_cost").html(nFormatter(greenArrow.cost)).digits();
+    $("#greenarrow_damage").html(nFormatter(Math.round(greenArrow.increment * greenArrow.amount * 10)/10)).digits();
+    $("#greenarrow_amount").html(nFormatter(greenArrow.amount));
     
     // update flash
-    $("#flash_cost").html(flash.cost).digits();
-    $("#flash_damage").html(Math.round(flash.increment * flash.amount * 10)/10).digits();
-    $("#flash_amount").html(flash.amount);
+    $("#flash_cost").html(nFormatter(flash.cost)).digits();
+    $("#flash_damage").html(nFormatter(Math.round(flash.increment * flash.amount * 10)/10)).digits();
+    $("#flash_amount").html(nFormatter(flash.amount));
     
     // update aquaman
-    $("#aquaman_cost").html(aquaman.cost).digits();
-    $("#aquaman_damage").html(Math.round(aquaman.increment * aquaman.amount * 10)/10).digits();
-    $("#aquaman_amount").html(aquaman.amount);
+    $("#aquaman_cost").html(nFormatter(aquaman.cost)).digits();
+    $("#aquaman_damage").html(nFormatter(Math.round(aquaman.increment * aquaman.amount * 10)/10)).digits();
+    $("#aquaman_amount").html(nFormatter(aquaman.amount));
     
     // update cyborg
-    $("#cyborg_cost").html(cyborg.cost).digits();
-    $("#cyborg_damage").html(Math.round(cyborg.increment * cyborg.amount * 10)/10).digits();
-    $("#cyborg_amount").html(cyborg.amount);
+    $("#cyborg_cost").html(nFormatter(cyborg.cost)).digits();
+    $("#cyborg_damage").html(nFormatter(Math.round(cyborg.increment * cyborg.amount * 10)/10)).digits();
+    $("#cyborg_amount").html(nFormatter(cyborg.amount));
     
     // update green lantern
-    $("#greenlantern_cost").html(greenLantern.cost).digits();
-    $("#greenlantern_damage").html(Math.round(greenLantern.increment * greenLantern.amount * 10)/10).digits();
-    $("#greenlantern_amount").html(greenLantern.amount);
+    $("#greenlantern_cost").html(nFormatter(greenLantern.cost)).digits();
+    $("#greenlantern_damage").html(nFormatter(Math.round(greenLantern.increment * greenLantern.amount * 10)/10)).digits();
+    $("#greenlantern_amount").html(nFormatter(greenLantern.amount));
     
     // update jonn jonzz
-    $("#jonnjonzz_cost").html(jonnJonzz.cost).digits();
-    $("#jonnjonzz_damage").html(Math.round(jonnJonzz.increment * jonnJonzz.amount * 10)/10).digits();
-    $("#jonnjonzz_amount").html(jonnJonzz.amount);
+    $("#jonnjonzz_cost").html(nFormatter(jonnJonzz.cost)).digits();
+    $("#jonnjonzz_damage").html(nFormatter(Math.round(jonnJonzz.increment * jonnJonzz.amount * 10)/10)).digits();
+    $("#jonnjonzz_amount").html(nFormatter(jonnJonzz.amount));
     
     // update wonder woman
-    $("#wonderwoman_cost").html(wonderWoman.cost).digits();
-    $("#wonderwoman_damage").html(Math.round(wonderWoman.increment * wonderWoman.amount * 10)/10).digits();
-    $("#wonderwoman_amount").html(wonderWoman.amount);
+    $("#wonderwoman_cost").html(nFormatter(wonderWoman.cost)).digits();
+    $("#wonderwoman_damage").html(nFormatter(Math.round(wonderWoman.increment * wonderWoman.amount * 10)/10)).digits();
+    $("#wonderwoman_amount").html(nFormatter(wonderWoman.amount));
     
     // update superman
-    $("#superman_cost").html(superman.cost).digits();
-    $("#superman_damage").html(Math.round(superman.increment * superman.amount * 10)/10).digits();
-    $("#superman_amount").html(superman.amount);
+    $("#superman_cost").html(nFormatter(superman.cost)).digits();
+    $("#superman_damage").html(nFormatter(Math.round(superman.increment * superman.amount * 10)/10)).digits();
+    $("#superman_amount").html(nFormatter(superman.amount));
     
 
     // update batgirl
-    $("#batgirl_cost").html(batgirl.cost).digits();
-    $("#batgirl_damage").html(Math.round(batgirl.increment * batgirl.amount * 10)/10).digits();
-    $("#batgirl_amount").html(batgirl.amount);
+    $("#batgirl_cost").html(nFormatter(batgirl.cost)).digits();
+    $("#batgirl_damage").html(nFormatter(Math.round(batgirl.increment * batgirl.amount * 10)/10)).digits();
+    $("#batgirl_amount").html(nFormatter(batgirl.amount));
 
     // update robin
-    $("#robin_cost").html(robin.cost).digits();
-    $("#robin_damage").html(Math.round(robin.increment * robin.amount * 10)/10).digits();
-    $("#robin_amount").html(robin.amount);
+    $("#robin_cost").html(nFormatter(robin.cost)).digits();
+    $("#robin_damage").html(nFormatter(Math.round(robin.increment * robin.amount * 10)/10)).digits();
+    $("#robin_amount").html(nFormatter(robin.amount));
 
     // update gordon
-    $("#gordon_cost").html(gordon.cost).digits();
-    $("#gordon_damage").html(Math.round(gordon.increment * gordon.amount * 10)/10).digits();
-    $("#gordon_amount").html(gordon.amount);
+    $("#gordon_cost").html(nFormatter(gordon.cost)).digits();
+    $("#gordon_damage").html(nFormatter(Math.round(gordon.increment * gordon.amount * 10)/10)).digits();
+    $("#gordon_amount").html(nFormatter(gordon.amount));
 
     // update batwing
-    $("#batwing_cost").html(batwing.cost).digits();
-    $("#batwing_damage").html(Math.round(batwing.increment * batwing.amount)).digits();
-    $("#batwing_amount").html(batwing.amount);
+    $("#batwing_cost").html(nFormatter(batwing.cost)).digits();
+    $("#batwing_damage").html(nFormatter(Math.round(batwing.increment * batwing.amount))).digits();
+    $("#batwing_amount").html(nFormatter(batwing.amount));
 
     // update azrael
-    $("#azrael_cost").html(azrael.cost).digits();
-    $("#azrael_damage").html(Math.round(azrael.increment * azrael.amount)).digits();
-    $("#azrael_amount").html(azrael.amount);
+    $("#azrael_cost").html(nFormatter(azrael.cost)).digits();
+    $("#azrael_damage").html(nFormatter(Math.round(azrael.increment * azrael.amount))).digits();
+    $("#azrael_amount").html(nFormatter(azrael.amount));
 
     // update catwoman
-    $("#catwoman_cost").html(catwoman.cost).digits();
-    $("#catwoman_damage").html(Math.round(catwoman.increment * catwoman.amount)).digits();
-    $("#catwoman_amount").html(catwoman.amount);
+    $("#catwoman_cost").html(nFormatter(catwoman.cost)).digits();
+    $("#catwoman_damage").html(nFormatter(Math.round(catwoman.increment * catwoman.amount))).digits();
+    $("#catwoman_amount").html(nFormatter(catwoman.amount));
 
     // update alfred
-    $("#alfred_cost").html(alfred.cost).digits();
-    $("#alfred_damage").html(Math.round(alfred.increment * alfred.amount)).digits();
-    $("#alfred_amount").html(alfred.amount);
+    $("#alfred_cost").html(nFormatter(alfred.cost)).digits();
+    $("#alfred_damage").html(nFormatter(Math.round(alfred.increment * alfred.amount))).digits();
+    $("#alfred_amount").html(nFormatter(alfred.amount));
 
     // update alfred
-    $("#batwoman_cost").html(batwoman.cost).digits();
-    $("#batwoman_damage").html(Math.round(batwoman.increment * batwoman.amount)).digits();
-    $("#batwoman_amount").html(batwoman.amount);
+    $("#batwoman_cost").html(nFormatter(batwoman.cost)).digits();
+    $("#batwoman_damage").html(nFormatter(Math.round(batwoman.increment * batwoman.amount))).digits();
+    $("#batwoman_amount").html(nFormatter(batwoman.amount));
 
     // update redhood
-    $("#redhood_cost").html(redHood.cost).digits();
-    $("#redhood_damage").html(Math.round(redHood.increment * redHood.amount)).digits();
-    $("#redhood_amount").html(redHood.amount);
+    $("#redhood_cost").html(nFormatter(redHood.cost)).digits();
+    $("#redhood_damage").html(nFormatter(Math.round(redHood.increment * redHood.amount))).digits();
+    $("#redhood_amount").html(nFormatter(redHood.amount));
 
     // update nightwing
-    $("#nightwing_cost").html(nightwing.cost).digits();
-    $("#nightwing_damage").html(Math.round(nightwing.increment * nightwing.amount)).digits();
-    $("#nightwing_amount").html(nightwing.amount);
+    $("#nightwing_cost").html(nFormatter(nightwing.cost)).digits();
+    $("#nightwing_damage").html(nFormatter(Math.round(nightwing.increment * nightwing.amount))).digits();
+    $("#nightwing_amount").html(nFormatter(nightwing.amount));
 
     // update batman
-    $("#batman_cost").html(batman.cost).digits();
-    $("#batman_damage").html(Math.round(batman.increment * batman.amount)).digits();
-    $("#batman_amount").html(batman.amount);
+    $("#batman_cost").html(nFormatter(batman.cost)).digits();
+    $("#batman_damage").html(nFormatter(Math.round(batman.increment * batman.amount))).digits();
+    $("#batman_amount").html(nFormatter(batman.amount));
 
 
     // update upgrades
-    $("#powerclick_2_amount").html(powerclick_x2.amount).digits();
-    $("#powerclick_2_cost").html(Math.round(powerclick_x2.cost)).digits();
+    $("#powerclick_2_amount").html(nFormatter(powerclick_x2.amount)).digits();
+    $("#powerclick_2_cost").html(nFormatter(Math.round(powerclick_x2.cost))).digits();
     upgradesUnlock();
 
     save_game();
