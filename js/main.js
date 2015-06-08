@@ -92,8 +92,8 @@ var blackMask = {
     joker = {
         name: "The Joker",
         color: "#ff0000",
-        maxlife: 9999999999,
-        life: 9999999999,
+        maxlife: 999999999,
+        life: 999999999,
         reward: 999999999,
         cover: "img/joker1.jpg"
     };
