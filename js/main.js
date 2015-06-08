@@ -60,7 +60,7 @@ var blackMask = {
     pengouin = {
         name: "The Penguin",
         color: "#6f6f6f",
-        maxlife: 200000,
+        maxlife: 2000000,
         life: 2000000,
         reward: 900000,
         cover: "img/penguin1.jpg"
@@ -68,23 +68,23 @@ var blackMask = {
     deathstroke = {
         name: "Deathstroke",
         color: "#f0db36",
-        maxlife: 600000,
-        life: 60000000,
+        maxlife: 6000000,
+        life: 6000000,
         reward: 2500000,
         cover: "img/deathstroke1.jpg"
     },
     bane = {
         name: "Bane",
         color: "#47f413",
-        maxlife: 2000000,
-        life: 200000000,
+        maxlife: 20000000,
+        life: 20000000,
         reward: 12000000,
         cover: "img/bane1.jpg"
     },
     rasAlGhul = {
         name: "Ra's Al Ghul",
         color: "#7cbc3b",
-        maxlife: 50000000,
+        maxlife: 5000000000,
         life: 5000000000,
         reward: 50000000,
         cover: "img/rasalghul1.jpg"
