@@ -92,7 +92,7 @@ var blackMask = {
     joker = {
         name: "The Joker",
         color: "#ff0000",
-        maxlife: 999999999,
+        maxlife: 9999999999,
         life: 9999999999,
         reward: 999999999,
         cover: "img/joker1.jpg"
@@ -732,8 +732,8 @@ function updateData() {
     villainLifePercentage();
     $("#villain_avatar").attr("src", villainOn.cover);
     $(".villain_name").css("color", villainOn.color);
-    while(villainOn == joker){
-        alert("Well played, you beat the last villain of the game. More features will be added soon. Stay connected !");
+    if(villainOn == joker){
+        alert("Well played, you've reached the last villain of the game. More features will be added soon. Stay connected !");
     }
     
     
@@ -994,5 +994,4 @@ function load_game() {
 
 /*************** ONLOAD ****************/
 
-$(window).load(load_game());
 $(window).load(load_game());
