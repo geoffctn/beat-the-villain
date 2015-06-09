@@ -549,3 +549,56 @@ span.damage {
     margin: 0;
     float: left;
 }
+
+
+/**************************************************************** MEDIA QUERIES ****************************************************************/
+
+@media screen and (max-width: 1180px) {
+    
+    .idle_block {
+        width: 50%;
+    }
+
+    .heroes_block {
+        width: 100%;
+    }
+
+    .upgrade_block {
+        width: 50%;
+    }
+
+    .idle_block h2 {
+        margin-top:30px;
+    }
+    
+    .upgrade_block h2 {
+        margin-top:30px;
+    }
+    
+}
+
+@media screen and (max-width: 640px) {
+    
+    .idle_block {
+        width: 100%;
+    }
+
+    .heroes_block {
+        width: 100%;
+    }
+
+    .upgrade_block {
+        width: 100%;
+    }
+    
+    .upgrade_block h2 {
+        margin-top:30px;
+    }
+    
+    .hero_card {
+        width: 92%;
+        height: 80px;
+        margin: 4%;
+    }
+    
+}
