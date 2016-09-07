@@ -1,604 +1,568 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
 /**************************************************************** BASIC ****************************************************************/
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    background: #222222;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.stopfloat {
-    clear: both;
-}
-
-span {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 100%;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin: 10px 0;
-    color: #ffffff;
-}
-
-h2 {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 160%;
-    font-size: 120%;
-    font-weight: normal;
-    text-transform: uppercase;
-    margin-bottom: 0.714em;
-    /* 100 / 140 */
-    
-    color: #ffffff;
-}
-
-h3 {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 100%;
-    font-size: 110%;
-    font-weight: normal;
-    margin: 20px 0 10px 0;
-    color: #ffffff;
-}
-
-button {
-    display: block;
-    width: 100%;
-    height: 100px;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-    cursor: pointer;
-    box-sizing: border-box;
-    overflow: hidden;
-    background: #222222;
-    outline: none;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-
-button:hover {
-    background: #333333;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-p {
-    margin-bottom: 1em;
-}
-
-.header {
-    position:fixed;
-    width: 100%;
-    background:#111;
-    padding-top:20px;
-    top:0;
-    z-index:999999999;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background: #222222;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .container {
-    width: 100%;
-    height: 100%;
-    text-align: center;
+  display: flex;
+  width: 100%;
+}
+
+span {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+h2 {
+  line-height: 1.8;
+  font-size: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.714em;  /* 100 / 140 */
+  color: #ffffff;
+}
+
+h3 {
+  line-height: 100%;
+  font-size: 110%;
+  font-weight: normal;
+  margin: 20px 0 10px 0;
+  color: #ffffff;
+}
+
+button {
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+  background: #222222;
+  outline: none;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+button:hover {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background: #111;
+  padding: 24px 0;
+  top: 0;
+  z-index: 999999999;
 }
 
 #game_items {
-    position:relative;
-    top:390px;
+  position: relative;
+  top: 390px;
 }
 
-.line {
-    width: 50%;
-    height: 1px;
-    background: #333333;
-    opacity: .5;
-    margin: 0 auto 30px auto;
-}
+
 /**************************************************************** SUPERVILLAIN ****************************************************************/
 
 .villain_pic {
-    margin: 10px auto;
-    width: 140px;
-    height: 140px;
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-    border-radius: 200px;
-    overflow: hidden;
-    cursor: url(../img/fist_cursor.png), auto;
-    opacity:.9;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+  margin: 0 auto;
+  width: 140px;
+  height: 140px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+  overflow: hidden;
+  cursor: url(../img/fist_cursor.png), auto;
+  opacity: .9;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .villain_pic:hover {
-    opacity:1;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+  opacity: 1;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 #villain_avatar {
-    height:100%;
+  height: 100%;
 }
 
 .villain_life {
-    width:320px;
-    height:5px;
-    background: #444444;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-    border-radius: 200px;
+  width: 320px;
+  height: 5px;
+  background: #444444;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
 }
 
 .villain_life p {
-    position: relative;
-    z-index: 999999;
-    top: -40px;
-    color:#ffffff;
+  position: relative;
+  z-index: 999999;
+  top: -40px;
+  color: #ffffff;
 }
 
 .villain_life span {
-    color:#ffffff;
+  color: #ffffff;
 }
 
 .villain_life_jauge {
-    width: 100%;
-    position: relative;
-    height: 5px;
-    background: linear-gradient(#15bde0, #1d62f0);
-    display: block;
-    z-index: 1;
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-    border-radius: 200px;
+  width: 100%;
+  position: relative;
+  height: 5px;
+  background: linear-gradient(#15bde0, #1d62f0);
+  display: block;
+  z-index: 1;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
 }
 
-.villain_life_stats,
-.villain_maxlife_stats {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 330%;
-    font-size: 90%;
-    font-weight: lighter;
-    text-transform: uppercase;
-    color: #111111;
-    z-index: 999999;
-    text-align: center;
+.villain_life_stats, .villain_maxlife_stats {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 330%;
+  font-size: 90%;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #111111;
+  z-index: 999999;
+  text-align: center;
 }
 
 .villain_name {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 120%;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: #15bde0;
-    z-index: 999999;
-    margin: 20px 0 30px 0;
-    text-align:center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 120%;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #15bde0;
+  margin: 20px 0 30px 0;
+  text-align: center;
 }
 
 .change_villain {
-    width: 260px;
-    margin: 0 auto;
+  width: 260px;
+  margin: 0 auto;
 }
 
 #left {
-    width: 130px;
-    height: 40px;
-    float: left;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 150%;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: #ffffff;
-    background: #111111;
-    z-index: 999999;
-    padding: 6px;
-    opacity: .6;
-    font-size: 80%;
+  width: 130px;
+  height: 40px;
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 150%;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #111111;
+  z-index: 999999;
+  padding: 6px;
+  opacity: .6;
+  font-size: 80%;
 }
 
 #right {
-    width: 130px;
-    height: 40px;
-    float: right;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 150%;
-    font-weight: 300;
-    text-transform: uppercase;
-    color: #ffffff;
-    background: #111111;
-    z-index: 999999;
-    padding: 6px;
-    opacity: .6;
-    font-size: 80%;
+  width: 130px;
+  height: 40px;
+  float: right;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 150%;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #111111;
+  z-index: 999999;
+  padding: 6px;
+  opacity: .6;
+  font-size: 80%;
 }
 
 #left:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 #right:hover {
-    opacity: 1;
+  opacity: 1;
 }
+
+
 /**************************************************************** STATS ****************************************************************/
 
 .stats_block {
-    width: 600px;
-    padding: 30px 0;
-    display:inline-block;
+  display: flex;
+  flex-direction: row;
+  padding: 30px 50px;
 }
 
-.stats_block_1 {
-    width: 25%;
-    padding:0;
-    margin:0;
-    float:left;
+.stats_block > div {
+  width: 25%;
+  padding-left: 30px;
+  border-left: 1px solid #201f1f;
 }
 
-.stats_block_2 {
-    width: 25%;
-    padding:0;
-    margin:0;
-    float:left;
-}
-
-.stats_block_3 {
-    width: 25%;
-    padding:0;
-    margin:0;
-    float:left;
-}
-
-.stats_block_4 {
-    width: 25%;
-    padding:0;
-    margin:0;
-    float:left;
-}
 
 /**************************************************************** SUPERHEROES & UPGRADES ****************************************************************/
 
-
 .idle_block {
-    width: 25%;
-    float: left;
+  width: 25%;
+  float: left;
 }
 
 .heroes_block {
-    width: 50%;
-    float: left;
+  width: 50%;
+  float: left;
 }
 
 .upgrade_block {
-    width: 25%;
-    float: left;
+  width: 25%;
+  float: left;
 }
 
 .idle_card {
-    cursor: pointer;
-    width: 92%;
-    height: 80px;
-    background: #333 no-repeat center center fixed;
-    overflow: hidden;
-    padding: 0;
-    margin: 4%;
-    float: left;
-    opacity: .6;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+  cursor: pointer;
+  width: 92%;
+  height: 80px;
+  background: #333 no-repeat center center fixed;
+  overflow: hidden;
+  padding: 0;
+  margin: 4%;
+  float: left;
+  opacity: .6;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .idle_card:hover {
-    opacity: 1;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+  opacity: 1;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .hero_card {
-    cursor: pointer;
-    width: 46%;
-    height: 80px;
-    background: #333 no-repeat center center fixed;
-    overflow: hidden;
-    padding: 0;
-    margin: 2%;
-    float: left;
-    opacity: .6;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+  cursor: pointer;
+  width: 46%;
+  height: 80px;
+  background: #333 no-repeat center center fixed;
+  overflow: hidden;
+  padding: 0;
+  margin: 2%;
+  float: left;
+  opacity: .6;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .hero_card:hover {
-    opacity: 1;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+  opacity: 1;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .upgrade_card {
-    cursor: pointer;
-    width: 92%;
-    height: 80px;
-    background: #333 no-repeat center center fixed;
-    overflow: hidden;
-    padding: 0;
-    margin: 4%;
-    float: left;
-    opacity: .6;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+  cursor: pointer;
+  width: 92%;
+  height: 80px;
+  background: #333 no-repeat center center fixed;
+  overflow: hidden;
+  padding: 0;
+  margin: 4%;
+  float: left;
+  opacity: .6;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .upgrade_card:hover {
-    opacity: 1;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+  opacity: 1;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .idle_pic {
-    cursor: pointer;
-    width: 25%;
-    height: 100%;
-    background: #111;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    float: left;
+  cursor: pointer;
+  width: 25%;
+  height: 100%;
+  background: #111;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  float: left;
 }
 
 .idle_carac {
-    cursor: pointer;
-    width:50%;
-    height: 100%;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    float: left;
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  float: left;
 }
 
 .idle_stats {
-    display:block;
-    width: 25%;
-    height: 100%;
-    background: #111;
-    padding: 0;
-    margin: 0;
-    float: right;
-    line-height: 1.4;
+  display: block;
+  width: 25%;
+  height: 100%;
+  background: #111;
+  padding: 0;
+  margin: 0;
+  float: right;
+  line-height: 1.4;
 }
 
 .superhero_pic {
-    cursor: pointer;
-    width: 25%;
-    height: 100%;
-    background: #111;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    float: left;
+  cursor: pointer;
+  width: 25%;
+  height: 100%;
+  background: #111;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  float: left;
 }
 
 .superhero_carac {
-    cursor: pointer;
-    width:50%;
-    height: 100%;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    float: left;
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  float: left;
 }
 
 .superhero_number {
-    line-height: 1.4;
+  line-height: 1.4;
 }
 
 .superhero_stats {
-    cursor: pointer;
-    width: 25%;
-    height: 100%;
-    background: #111;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    float: right;
+  cursor: pointer;
+  width: 25%;
+  height: 100%;
+  background: #111;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  float: right;
 }
 
 .idle_card img {
-    width: 100%;
+  width: 100%;
 }
 
 .hero_card img {
-    width: 100%;
+  width: 100%;
 }
 
 span.cost {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 span.upgrade_cost {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 span.damage {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .idle_carac p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: lighter;
 }
 
 .idle_stats p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: bold;
-    margin: 22px 0 0 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 22px 0 0 0;
 }
 
 .superhero_carac p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: lighter;
 }
 
 .superhero_stats p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: bold;
-    margin: 22px 0 0 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 22px 0 0 0;
 }
 
 .upgrade_carac p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: lighter;
 }
 
 .upgrade_stats p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    color: #ffffff;
-    font-weight: bold;
-    margin: 30px 0 0 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 30px 0 0 0;
 }
 
 .upgrade_carac {
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    float: left;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  float: left;
 }
 
 .upgrade_stats {
-    cursor: pointer;
-    width: 25%;
-    height: 100%;
-    background: #111;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    float: left;
+  cursor: pointer;
+  width: 25%;
+  height: 100%;
+  background: #111;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  float: left;
 }
 
 
 /**************************************************************** MEDIA QUERIES ****************************************************************/
 
 @media screen and (max-width: 1180px) {
-    
-    .idle_block {
-        width: 50%;
-    }
-
-    .heroes_block {
-        width: 100%;
-    }
-
-    .upgrade_block {
-        width: 50%;
-    }
-
-    .idle_block h2 {
-        margin-top:30px;
-    }
-    
-    .upgrade_block h2 {
-        margin-top:30px;
-    }
-    
+  .idle_block {
+      width: 50%;
+  }
+  .heroes_block {
+      width: 100%;
+  }
+  .upgrade_block {
+      width: 50%;
+  }
+  .idle_block h2 {
+      margin-top: 30px;
+  }
+  .upgrade_block h2 {
+      margin-top: 30px;
+  }
 }
 
 @media screen and (max-width: 640px) {
-    
-    .idle_block {
-        width: 100%;
-    }
+  .idle_block {
+    width: 100%;
+  }
+  .heroes_block {
+    width: 100%;
+  }
+  .upgrade_block {
+    width: 100%;
+  }
+  .upgrade_block h2 {
+    margin-top: 30px;
+  }
+  .hero_card {
+    width: 92%;
+    height: 80px;
+    margin: 4%;
+  }
+}
 
-    .heroes_block {
-        width: 100%;
-    }
-
-    .upgrade_block {
-        width: 100%;
-    }
-    
-    .upgrade_block h2 {
-        margin-top:30px;
-    }
-    
-    .hero_card {
-        width: 92%;
-        height: 80px;
-        margin: 4%;
-    }
-    
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+  .header {
+    position: static;
+  }
+  #game_items {
+    position: static;
+    padding-top: 20px;
+  }
+  .stats_block {
+    flex-direction: column;
+    text-align: center;
+  }
+  .stats_block > div {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+    border: none;
+  }
 }
