@@ -105,6 +105,16 @@ var villainOnId = 0;
 /*************** SUPERHEROES CARACTERISTICS ****************/
 
 // Variables
+// function Superhero (name, amount, cost, increment, img) {
+//   this.name = name,
+//   this.amount = amount,
+//   this.cost = cost,
+//   this.increment = increment,
+//   this.img = img
+// }
+
+// var batgirl = new Superhero ("batgirl", 0, 150, 0.5);
+
 var batgirl = {
         amount: 0,
         cost: 150,
@@ -281,9 +291,6 @@ $('#power').click(function () {
     while (villainOn.life <= 0){
         power_indicator = power_indicator + villainOn.reward;
         villainOn.life = villainOn.maxlife;
-//        if ($("#right").hide()) {
-//            $("#right").show();
-//        }
         nextVillain();
         updateData();
     }
@@ -306,9 +313,6 @@ setInterval(function () {
     }
     while (villainOn.life <= 0) {
         power_indicator = power_indicator + villainOn.reward;
-//        if ($("#right").hide()) {
-//            $("#right").show();
-//        }
         nextVillain();
         updateData();
         villainOn.life = villainOn.maxlife;
@@ -348,29 +352,6 @@ function changeVillain() {
     }
     return villainOnId;
 }
-
-/* Next villain */
-function nextVillain() {
-    villainOnId += 1;
-    changeVillain();
-//    $("#right").hide();
-//    $("#left").show();
-}
-//
-//$("#right").click(nextVillain);
-
-
-/* Previous villain */
-//function previousVillain() {
-//    villainOnId -= 1;
-//    changeVillain();
-//    $("#right").show();
-//    if (villainOnId == 0) {
-//        $("#left").hide();
-//    }
-//}
-//
-//$("#left").click(previousVillain);
 
 
 /*************** BUY ALLIES ****************/
@@ -524,10 +505,10 @@ $('#superman').click(function () {
 
 /* Unlock superheroes */
 function superheroesUnlock() {
-    if (power_indicator >= batgirl.cost || batgirl.amount > 0) {
+    if (power_indicator >= batgirl.cost) {
         $('#batgirl').show();
     }
-    if (power_indicator >= robin.cost || robin.amount > 0) {
+    if (power_indicator >= robin.cost) {
         $('#robin').show();
     }
     if (power_indicator >= gordon.cost|| gordon.amount > 0) {
@@ -561,13 +542,13 @@ function superheroesUnlock() {
 
 /* Buy batgirl */
 $('#batgirl').click(function () {
-    if (power_indicator >= batgirl.cost) {
-        power_indicator = power_indicator - batgirl.cost;
-        batgirl.amount++;
-        batgirl.cost = Math.round(batgirl.cost * 1.1);
-        heroesTeamDps += batgirl.increment;
-        updateData();
-    }
+  if (power_indicator >= batgirl.cost) {
+      power_indicator -= batgirl.cost;
+      batgirl.amount++;
+      batgirl.cost = Math.round(batgirl.cost * 1.1);
+      heroesTeamDps += batgirl.increment;
+      updateData();
+  }
 });
 
 /* Buy Robin */
@@ -735,8 +716,8 @@ function updateData() {
     if(villainOn == joker && villainOn.life == 0){
         alert("Well played, you've reached the last villain of the game. More features will be added soon. Stay connected !");
     }
-    
-    
+
+
     // update allies
     $("#power_seconde").html(nFormatter(Math.round(PPS * 10)/10)).digits();
     alliesUnlock();
@@ -744,58 +725,58 @@ function updateData() {
     // update heroes
     $("#heroes_DPS").html(nFormatter(Math.round(heroesTeamDps * 10)/10)).digits();
     superheroesUnlock();
-    
-    
+
+
     // update hawkman
     $("#hawkman_cost").html(nFormatter(hawkman.cost)).digits();
     $("#hawkman_damage").html(nFormatter(Math.round(hawkman.increment * hawkman.amount * 10)/10)).digits();
     $("#hawkman_amount").html(nFormatter(hawkman.amount));
-    
+
     // update huntress
     $("#huntress_cost").html(nFormatter(huntress.cost)).digits();
     $("#huntress_damage").html(nFormatter(Math.round(huntress.increment * huntress.amount * 10)/10)).digits();
     $("#huntress_amount").html(nFormatter(huntress.amount));
-    
+
     // update green arrow
     $("#greenarrow_cost").html(nFormatter(greenArrow.cost)).digits();
     $("#greenarrow_damage").html(nFormatter(Math.round(greenArrow.increment * greenArrow.amount * 10)/10)).digits();
     $("#greenarrow_amount").html(nFormatter(greenArrow.amount));
-    
+
     // update flash
     $("#flash_cost").html(nFormatter(flash.cost)).digits();
     $("#flash_damage").html(nFormatter(Math.round(flash.increment * flash.amount * 10)/10)).digits();
     $("#flash_amount").html(nFormatter(flash.amount));
-    
+
     // update aquaman
     $("#aquaman_cost").html(nFormatter(aquaman.cost)).digits();
     $("#aquaman_damage").html(nFormatter(Math.round(aquaman.increment * aquaman.amount * 10)/10)).digits();
     $("#aquaman_amount").html(nFormatter(aquaman.amount));
-    
+
     // update cyborg
     $("#cyborg_cost").html(nFormatter(cyborg.cost)).digits();
     $("#cyborg_damage").html(nFormatter(Math.round(cyborg.increment * cyborg.amount * 10)/10)).digits();
     $("#cyborg_amount").html(nFormatter(cyborg.amount));
-    
+
     // update green lantern
     $("#greenlantern_cost").html(nFormatter(greenLantern.cost)).digits();
     $("#greenlantern_damage").html(nFormatter(Math.round(greenLantern.increment * greenLantern.amount * 10)/10)).digits();
     $("#greenlantern_amount").html(nFormatter(greenLantern.amount));
-    
+
     // update jonn jonzz
     $("#jonnjonzz_cost").html(nFormatter(jonnJonzz.cost)).digits();
     $("#jonnjonzz_damage").html(nFormatter(Math.round(jonnJonzz.increment * jonnJonzz.amount * 10)/10)).digits();
     $("#jonnjonzz_amount").html(nFormatter(jonnJonzz.amount));
-    
+
     // update wonder woman
     $("#wonderwoman_cost").html(nFormatter(wonderWoman.cost)).digits();
     $("#wonderwoman_damage").html(nFormatter(Math.round(wonderWoman.increment * wonderWoman.amount * 10)/10)).digits();
     $("#wonderwoman_amount").html(nFormatter(wonderWoman.amount));
-    
+
     // update superman
     $("#superman_cost").html(nFormatter(superman.cost)).digits();
     $("#superman_damage").html(nFormatter(Math.round(superman.increment * superman.amount * 10)/10)).digits();
     $("#superman_amount").html(nFormatter(superman.amount));
-    
+
 
     // update batgirl
     $("#batgirl_cost").html(nFormatter(batgirl.cost)).digits();
@@ -873,7 +854,7 @@ function save_game() {
     localStorage['btv_save[villainOn]'] = btoa(JSON.stringify(villainOn));
     localStorage['btv_save[villainOnId]'] = btoa(JSON.stringify(villainOnId));
     localStorage['btv_save[villainOnLife]'] = btoa(JSON.stringify(villainOn.life));
-    
+
     // save allies
     localStorage['btv_save[hawkman]'] = btoa(JSON.stringify(hawkman));
     localStorage['btv_save[huntress]'] = btoa(JSON.stringify(huntress));
@@ -917,7 +898,7 @@ function load_game() {
     var villainOn_save = JSON.parse(atob(localStorage['btv_save[villainOn]']));
     var villainOnId_save = JSON.parse(atob(localStorage['btv_save[villainOnId]']));
     var villainOnLife_save = JSON.parse(atob(localStorage['btv_save[villainOnLife]']));
-    
+
     // load allies
     var hawkman_save = JSON.parse(atob(localStorage['btv_save[hawkman]']));
     var huntress_save = JSON.parse(atob(localStorage['btv_save[huntress]']));
@@ -956,7 +937,7 @@ function load_game() {
     villainOn = villainOn_save;
     villainOnId = villainOnId_save;
     villainOn.life = villainOnLife_save;
-    
+
     // show item stats
     hawkman = hawkman_save;
     huntress = huntress_save;

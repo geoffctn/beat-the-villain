@@ -16,6 +16,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: row-reverse;
   width: 100%;
 }
 
@@ -50,15 +51,27 @@ h3 {
   color: #ffffff;
 }
 
+h4 {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #15bde0;
+  text-align: center;
+}
+
+p {
+  line-height: 1;
+}
+
 button {
   width: 100%;
-  height: 100px;
   padding: 0;
   border: none;
   box-shadow: none;
-  overflow: hidden;
   background: #222222;
   outline: none;
+  cursor: pointer;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   -ms-transition: all 300ms ease-in-out;
@@ -83,17 +96,11 @@ a:hover {
 }
 
 .header {
-  position: fixed;
-  width: 100%;
+  width: 25%;
+  height: 100vh;
   background: #111;
-  padding: 24px 0;
-  top: 0;
+  padding: 30px 0;
   z-index: 999999999;
-}
-
-#game_items {
-  position: relative;
-  top: 390px;
 }
 
 
@@ -101,14 +108,14 @@ a:hover {
 
 .villain_pic {
   margin: 0 auto;
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   -webkit-border-radius: 200px;
   -moz-border-radius: 200px;
   border-radius: 200px;
   overflow: hidden;
   cursor: url(../img/fist_cursor.png), auto;
-  opacity: .9;
+  opacity: .8;
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   -ms-transition: all 200ms ease-in-out;
@@ -129,59 +136,35 @@ a:hover {
   height: 100%;
 }
 
-.villain_life {
-  width: 320px;
-  height: 5px;
-  background: #444444;
+.villain_stats {
   margin: 0 auto;
+  color: #fff;
   text-align: center;
-  -webkit-border-radius: 200px;
-  -moz-border-radius: 200px;
-  border-radius: 200px;
-}
-
-.villain_life p {
-  position: relative;
-  z-index: 999999;
-  top: -40px;
-  color: #ffffff;
-}
-
-.villain_life span {
-  color: #ffffff;
-}
-
-.villain_life_jauge {
-  width: 100%;
-  position: relative;
-  height: 5px;
-  background: linear-gradient(#15bde0, #1d62f0);
-  display: block;
-  z-index: 1;
-  -webkit-border-radius: 200px;
-  -moz-border-radius: 200px;
-  border-radius: 200px;
 }
 
 .villain_life_stats, .villain_maxlife_stats {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 330%;
-  font-size: 90%;
+  line-height: 2.8;
+  font-size: 1em;
   font-weight: lighter;
   text-transform: uppercase;
-  color: #111111;
-  z-index: 999999;
-  text-align: center;
 }
 
-.villain_name {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 120%;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: #15bde0;
-  margin: 20px 0 30px 0;
-  text-align: center;
+.villain_life {
+  width: 70%;
+  height: 5px;
+  background: #444444;
+  margin: 0 auto;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
+}
+
+.villain_life_jauge {
+  height: 5px;
+  background: linear-gradient(#15bde0, #1d62f0);
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  border-radius: 200px;
 }
 
 .change_villain {
@@ -234,326 +217,172 @@ a:hover {
 
 .stats_block {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 30px 50px;
 }
 
 .stats_block > div {
-  width: 25%;
+  width: 100%;
   padding-left: 30px;
+  margin: 20px auto;
   border-left: 1px solid #201f1f;
 }
 
 
 /**************************************************************** SUPERHEROES & UPGRADES ****************************************************************/
 
-.idle_block {
-  width: 25%;
-  float: left;
+#game_items {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  padding: 30px;
+  overflow: auto;
+  color: #ffffff;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
+#game_items p, #game_items span {
+  font-size: 1em;
+  color: #fff;
+}
+
+#game_items img {
+  width: 100%;
+}
+
+/** HEROES BLOCK **/
 .heroes_block {
-  width: 50%;
-  float: left;
-}
-
-.upgrade_block {
-  width: 25%;
-  float: left;
-}
-
-.idle_card {
-  cursor: pointer;
-  width: 92%;
-  height: 80px;
-  background: #333 no-repeat center center fixed;
-  overflow: hidden;
-  padding: 0;
-  margin: 4%;
-  float: left;
-  opacity: .6;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-}
-
-.idle_card:hover {
-  opacity: 1;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  width: 33.333%;
+  padding: 0 5px;
 }
 
 .hero_card {
-  cursor: pointer;
-  width: 46%;
-  height: 80px;
-  background: #333 no-repeat center center fixed;
-  overflow: hidden;
-  padding: 0;
-  margin: 2%;
-  float: left;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 10px 0;
+  background-color: #333;
   opacity: .6;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
 }
 
 .hero_card:hover {
   opacity: 1;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
 }
 
-.upgrade_card {
-  cursor: pointer;
-  width: 92%;
-  height: 80px;
-  background: #333 no-repeat center center fixed;
+.superhero_pic {
+  width: 25%;
+  background: #111;
+}
+
+.superhero_carac {
+  width: 55%;
+}
+
+.superhero_stats {
+  width: 20%;
+  height: 100%;
+  background: #111;
+}
+
+/** ALLIES BLOCK **/
+.idle_block {
+  width: 33.333%;
+  padding: 0 5px;
+}
+
+.idle_card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 10px 0;
+  background: #333;
   overflow: hidden;
   padding: 0;
-  margin: 4%;
-  float: left;
   opacity: .6;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
 }
 
-.upgrade_card:hover {
+.idle_card:hover {
   opacity: 1;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -ms-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
 }
 
 .idle_pic {
-  cursor: pointer;
   width: 25%;
-  height: 100%;
   background: #111;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  float: left;
 }
 
 .idle_carac {
-  cursor: pointer;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  float: left;
+  width: 55%;
 }
 
 .idle_stats {
   display: block;
-  width: 25%;
+  width: 20%;
   height: 100%;
   background: #111;
   padding: 0;
   margin: 0;
-  float: right;
   line-height: 1.4;
 }
 
-.superhero_pic {
-  cursor: pointer;
-  width: 25%;
-  height: 100%;
-  background: #111;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  float: left;
+/** UPGRADES BLOCK **/
+.upgrade_block {
+  width: 33.333%;
+  padding: 0 5px;
 }
 
-.superhero_carac {
-  cursor: pointer;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  float: left;
-}
-
-.superhero_number {
-  line-height: 1.4;
-}
-
-.superhero_stats {
-  cursor: pointer;
-  width: 25%;
-  height: 100%;
-  background: #111;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  float: right;
-}
-
-.idle_card img {
+.upgrade_card {
+  display: flex;
+  flex-direction: row;
   width: 100%;
+  margin: 10px 0;
+  background-color: #333;
+  opacity: .6;
 }
 
-.hero_card img {
-  width: 100%;
-}
-
-span.cost {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-span.upgrade_cost {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-span.damage {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.idle_carac p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: lighter;
-}
-
-.idle_stats p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: bold;
-  margin: 22px 0 0 0;
-}
-
-.superhero_carac p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: lighter;
-}
-
-.superhero_stats p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: bold;
-  margin: 22px 0 0 0;
-}
-
-.upgrade_carac p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: lighter;
-}
-
-.upgrade_stats p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-  color: #ffffff;
-  font-weight: bold;
-  margin: 30px 0 0 0;
+.upgrade_card:hover {
+  opacity: 1;
 }
 
 .upgrade_carac {
-  cursor: pointer;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  float: left;
-}
-
-.upgrade_stats {
-  cursor: pointer;
-  width: 25%;
-  height: 100%;
-  background: #111;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  float: left;
 }
 
 
 /**************************************************************** MEDIA QUERIES ****************************************************************/
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 920px) {
+  #game_items {
+    flex-direction: column;
+  }
   .idle_block {
-      width: 50%;
+    width: 100%;
   }
   .heroes_block {
-      width: 100%;
+    width: 100%;
   }
   .upgrade_block {
-      width: 50%;
-  }
-  .idle_block h2 {
-      margin-top: 30px;
-  }
-  .upgrade_block h2 {
-      margin-top: 30px;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .idle_block {
-    width: 100%;
-  }
-  .heroes_block {
-    width: 100%;
-  }
-  .upgrade_block {
-    width: 100%;
-  }
-  .upgrade_block h2 {
-    margin-top: 30px;
-  }
-  .hero_card {
-    width: 92%;
-    height: 80px;
-    margin: 4%;
-  }
-}
-
-@media screen and (max-width: 480px) {
   .container {
     flex-direction: column;
   }
   .header {
     position: static;
+    width: 100%;
+    height: 100%;
+    margin: 0;
   }
   #game_items {
-    position: static;
-    padding-top: 20px;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
   }
   .stats_block {
     flex-direction: column;

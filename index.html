@@ -7,64 +7,66 @@ Name: Geoff Couten
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Beat the Villain | The Idle Game</title>
-  <link rel="stylesheet" type="text/css" href="css/reset.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <script type="text/javascript" src="js/jquery.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Beat the Villain | The Idle Game</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 
 <body>
 
-  <div class="container">
-      <div class="header">
-          <div class="villain_pic" id="power">
-              <img id="villain_avatar" src="" alt="villain cover" />
-          </div>
-          <h4 class="villain_name">Name</h4>
-          <div class="villain_life">
-              <span class="villain_life_jauge"></span>
-              <p><span class="villain_life_stats">0</span> / <span class="villain_maxlife_stats">0</span> HP</p>
-          </div>
-          <div class="change_villain">
-              <button id="left">Previous villain</button>
-              <button id="right">Next villain</button>
-          </div>
+    <div class="container">
+        <div class="header">
+            <div class="villain_pic" id="power">
+                <img id="villain_avatar" src="" alt="villain cover" />
+            </div>
+            <div class="villain_stats">
+                <h4 class="villain_name">Name</h4>
+                <p><span class="villain_life_stats">0</span> / <span class="villain_maxlife_stats">0</span> HP</p>
+            </div>
+            <div class="villain_life">
+                <div class="villain_life_jauge"></div>
+            </div>
+            <div class="change_villain">
+                <button id="left">Previous villain</button>
+                <button id="right">Next villain</button>
+            </div>
 
-          <div class="stats_block">
-              <div class="stats_block_1">
-                  <h1>Power</h1>
-                  <span id="power_indicator">0</span>
-                  <br />
-              </div>
+            <div class="stats_block">
+                <div class="stats_block_1">
+                    <h1>Power</h1>
+                    <span id="power_indicator">0</span>
+                    <br />
+                </div>
 
-              <div class="stats_block_2">
-                  <h1>Power/s</h1>
-                  <span id="power_seconde">0</span>
-                  <br />
-              </div>
+                <div class="stats_block_2">
+                    <h1>Power/s</h1>
+                    <span id="power_seconde">0</span>
+                    <br />
+                </div>
 
-              <div class="stats_block_3">
-                  <h1>Clicking Power</h1>
-                  <span id="power_click">0</span>
-                  <br />
-              </div>
+                <div class="stats_block_3">
+                    <h1>Clicking Power</h1>
+                    <span id="power_click">0</span>
+                    <br />
+                </div>
 
-              <div class="stats_block_4">
-                  <h1>DPS</h1>
-                  <span id="heroes_DPS">0</span>
-                  <br />
-              </div>
-          </div>
-      </div>
+                <div class="stats_block_4">
+                    <h1>DPS</h1>
+                    <span id="heroes_DPS">0</span>
+                    <br />
+                </div>
+            </div>
+        </div>
 
-      <div id="game_items">
-          <div class="heroes_block">
-              <h2>Heroes team</h2>
+        <div id="game_items">
+            <div class="heroes_block">
+                <h2>Heroes team</h2>
 
-              <!---------------- Batgirl ---------------->
-              <button class="hero_card" id="batgirl">
+                <!---------------- Batgirl ---------------->
+                <button class="hero_card" id="batgirl">
                   <div class="superhero_pic">
                       <img src="img/batgirl1.jpg" alt="batgirl" />
                   </div>
@@ -76,11 +78,10 @@ Name: Geoff Couten
                       <p>Level</p>
                       <span class="superhero_number" id="batgirl_amount">0</span>
                   </div>
+                </button>
 
-              </button>
-
-              <!---------------- Robin ---------------->
-              <button class="hero_card" id="robin">
+                <!---------------- Robin ---------------->
+                <button class="hero_card" id="robin">
                   <div class="superhero_pic">
                       <img src="img/robin1.jpg" alt="robin" />
                   </div>
@@ -92,11 +93,10 @@ Name: Geoff Couten
                       <p>Level</p>
                       <span class="superhero_number" id="robin_amount">0</span>
                   </div>
+                </button>
 
-              </button>
-
-              <!---------------- Gordon ---------------->
-              <button class="hero_card" id="gordon">
+                <!---------------- Gordon ---------------->
+                <button class="hero_card" id="gordon">
                   <div class="superhero_pic">
                       <img src="img/gordon1.jpg" alt="james gordon" />
                   </div>
@@ -111,8 +111,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- Batwing ---------------->
-              <button class="hero_card" id="batwing">
+                <!---------------- Batwing ---------------->
+                <button class="hero_card" id="batwing">
                   <div class="superhero_pic">
                       <img src="img/batwing1.jpg" alt="batwing" />
                   </div>
@@ -127,8 +127,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- Azrael ---------------->
-              <button class="hero_card" id="azrael">
+                <!---------------- Azrael ---------------->
+                <button class="hero_card" id="azrael">
                   <div class="superhero_pic">
                       <img src="img/azrael1.jpg" alt="azrael" />
                   </div>
@@ -143,8 +143,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- Catwoman ---------------->
-              <button class="hero_card" id="catwoman">
+                <!---------------- Catwoman ---------------->
+                <button class="hero_card" id="catwoman">
                   <div class="superhero_pic">
                       <img src="img/catwoman1.jpg" alt="catwoman" />
                   </div>
@@ -159,8 +159,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- Alfred ---------------->
-              <button class="hero_card" id="alfred">
+                <!---------------- Alfred ---------------->
+                <button class="hero_card" id="alfred">
                   <div class="superhero_pic">
                       <img src="img/alfred1.jpg" alt="alfred" />
                   </div>
@@ -175,8 +175,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- Batwoman ---------------->
-              <button class="hero_card" id="batwoman">
+                <!---------------- Batwoman ---------------->
+                <button class="hero_card" id="batwoman">
                   <div class="superhero_pic">
                       <img src="img/batwoman1.jpg" alt="batwoman" />
                   </div>
@@ -191,8 +191,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- Red Hood ---------------->
-              <button class="hero_card" id="redhood">
+                <!---------------- Red Hood ---------------->
+                <button class="hero_card" id="redhood">
                   <div class="superhero_pic">
                       <img src="img/redhood1.jpg" alt="redhood" />
                   </div>
@@ -207,8 +207,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- Nightwing ---------------->
-              <button class="hero_card" id="nightwing">
+                <!---------------- Nightwing ---------------->
+                <button class="hero_card" id="nightwing">
                   <div class="superhero_pic">
                       <img src="img/nightwing1.jpg" alt="nightwing" />
                   </div>
@@ -223,8 +223,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- Batman ---------------->
-              <button class="hero_card" id="batman">
+                <!---------------- Batman ---------------->
+                <button class="hero_card" id="batman">
                   <div class="superhero_pic">
                       <img src="img/batman1.jpg" alt="batman" />
                   </div>
@@ -237,13 +237,13 @@ Name: Geoff Couten
                       <span class="superhero_number" id="batman_amount">0</span>
                   </div>
               </button>
-          </div>
+            </div>
 
-          <div class="idle_block">
-              <h2>Allies</h2>
+            <div class="idle_block">
+                <h2>Allies</h2>
 
-              <!---------------- hawkman ---------------->
-              <button class="idle_card" id="hawkman">
+                <!---------------- hawkman ---------------->
+                <button class="idle_card" id="hawkman">
                   <div class="idle_pic">
                       <img src="img/hawkman1.jpg" alt="hawkman" />
                   </div>
@@ -258,8 +258,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- huntress ---------------->
-              <button class="idle_card" id="huntress">
+                <!---------------- huntress ---------------->
+                <button class="idle_card" id="huntress">
                   <div class="idle_pic">
                       <img src="img/huntress1.jpg" alt="huntress" />
                   </div>
@@ -274,8 +274,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- green arrow ---------------->
-              <button class="idle_card" id="greenarrow">
+                <!---------------- green arrow ---------------->
+                <button class="idle_card" id="greenarrow">
                   <div class="idle_pic">
                       <img src="img/greenarrow1.jpg" alt="greenarrow" />
                   </div>
@@ -290,8 +290,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- flash ---------------->
-              <button class="idle_card" id="flash">
+                <!---------------- flash ---------------->
+                <button class="idle_card" id="flash">
                   <div class="idle_pic">
                       <img src="img/flash1.jpg" alt="flash" />
                   </div>
@@ -306,8 +306,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- aquaman ---------------->
-              <button class="idle_card" id="aquaman">
+                <!---------------- aquaman ---------------->
+                <button class="idle_card" id="aquaman">
                   <div class="idle_pic">
                       <img src="img/aquaman1.jpg" alt="aquaman" />
                   </div>
@@ -322,8 +322,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- cyborg ---------------->
-              <button class="idle_card" id="cyborg">
+                <!---------------- cyborg ---------------->
+                <button class="idle_card" id="cyborg">
               <div class="idle_pic">
                   <img src="img/cyborg1.jpg" alt="cyborg" />
               </div>
@@ -337,8 +337,8 @@ Name: Geoff Couten
               </div>
           </button>
 
-              <!---------------- green lantern ---------------->
-              <button class="idle_card" id="greenlantern">
+                <!---------------- green lantern ---------------->
+                <button class="idle_card" id="greenlantern">
               <div class="idle_pic">
                   <img src="img/greenlantern1.jpg" alt="greenlantern" />
               </div>
@@ -352,8 +352,8 @@ Name: Geoff Couten
               </div>
           </button>
 
-              <!---------------- jonn jonzz ---------------->
-              <button class="idle_card" id="jonnjonzz">
+                <!---------------- jonn jonzz ---------------->
+                <button class="idle_card" id="jonnjonzz">
               <div class="idle_pic">
                   <img src="img/jonnjonzz1.jpg" alt="jonnjonzz" />
               </div>
@@ -368,8 +368,8 @@ Name: Geoff Couten
 
           </button>
 
-              <!---------------- wonder woman ---------------->
-              <button class="idle_card" id="wonderwoman">
+                <!---------------- wonder woman ---------------->
+                <button class="idle_card" id="wonderwoman">
                   <div class="idle_pic">
                       <img src="img/wonderwoman1.jpg" alt="wonderwoman" />
                   </div>
@@ -384,8 +384,8 @@ Name: Geoff Couten
 
               </button>
 
-              <!---------------- superman ---------------->
-              <button class="idle_card" id="superman">
+                <!---------------- superman ---------------->
+                <button class="idle_card" id="superman">
               <div class="idle_pic">
                   <img src="img/superman1.jpg" alt="superman" />
               </div>
@@ -399,13 +399,13 @@ Name: Geoff Couten
               </div>
           </button>
 
-          </div>
+            </div>
 
-          <div class="upgrade_block">
-              <h2>Upgrades <span style="font-size:50%; font-weight:lighter;">(will be updated soon...)</span></h2>
+            <div class="upgrade_block">
+                <h2>Upgrades</h2>
 
-              <!---------------- Double the Powerclicker ---------------->
-              <button class="upgrade_card" id="powerclick_2">
+                <!---------------- Double the Powerclicker ---------------->
+                <button class="upgrade_card" id="powerclick_2">
               <div class="upgrade_carac">
                   <h3>Double the power of your attack</h3>
                   <p><span class="upgrade_cost" id="powerclick_2_cost">0</span> P</p>
@@ -413,16 +413,16 @@ Name: Geoff Couten
 
           </button>
 
-              <!---------------- Upgrade PowerGain ---------------->
-              <button class="upgrade_card" id="powergain_plus">
+                <!---------------- Upgrade PowerGain ---------------->
+                <button class="upgrade_card" id="powergain_plus">
               <div class="upgrade_carac">
                   <h3>Add Power gain per click</h3>
                   <p><span class="upgrade_cost" id="powergain_plus_cost">0</span> P</p>
               </div>
 
           </button>
-          </div>
-      </div>
+            </div>
+        </div>
     </div>
 
 </body>
@@ -430,20 +430,20 @@ Name: Geoff Couten
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/animation.js"></script>
 <script>
-  (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-          (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-63646289-1', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-63646289-1', 'auto');
+    ga('send', 'pageview');
 </script>
 
 </html>
