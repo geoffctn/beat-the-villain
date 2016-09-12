@@ -87,6 +87,14 @@ button:hover {
   transition: all 300ms ease-in-out;
 }
 
+button:disabled {
+  opacity: .1;
+}
+
+button[disabled]:hover {
+  opacity: .1;
+}
+
 a {
   text-decoration: none;
 }
@@ -97,7 +105,7 @@ a:hover {
 
 .header {
   width: 25%;
-  height: 100vh;
+  height: inherit;
   background: #111;
   padding: 30px 0;
   z-index: 999999999;
@@ -264,9 +272,11 @@ a:hover {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 80px;
   margin: 10px 0;
   background-color: #333;
   opacity: .6;
+  overflow: hidden;
 }
 
 .hero_card:hover {
@@ -284,7 +294,8 @@ a:hover {
 
 .superhero_stats {
   width: 20%;
-  height: 100%;
+  height: 80px;
+  padding: 25px 0;
   background: #111;
 }
 
@@ -298,11 +309,13 @@ a:hover {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 80px;
   margin: 10px 0;
   background: #333;
   overflow: hidden;
   padding: 0;
   opacity: .6;
+  overflow: hidden;
 }
 
 .idle_card:hover {
@@ -319,13 +332,10 @@ a:hover {
 }
 
 .idle_stats {
-  display: block;
   width: 20%;
-  height: 100%;
+  height: 80px;
+  padding: 25px 0;
   background: #111;
-  padding: 0;
-  margin: 0;
-  line-height: 1.4;
 }
 
 /** UPGRADES BLOCK **/
@@ -338,9 +348,11 @@ a:hover {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 80px;
   margin: 10px 0;
   background-color: #333;
   opacity: .6;
+  overflow: hidden;
 }
 
 .upgrade_card:hover {
@@ -349,6 +361,7 @@ a:hover {
 
 .upgrade_carac {
   width: 100%;
+  height: inherit;
 }
 
 

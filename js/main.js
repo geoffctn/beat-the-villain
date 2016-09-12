@@ -1,263 +1,12 @@
-/*************** VILLAINS CARACTERISTICS ****************/
-
-// Variables
-var blackMask = {
-        name: "Black Mask",
-        color: "#ffffff",
-        maxlife: 500,
-        life: 500,
-        reward: 25,
-        cover: "img/blackmask1.jpg"
-    },
-    deadshot = {
-        name: "Deadshot",
-        color: "#af5838",
-        maxlife: 8000,
-        life: 8000,
-        reward: 400,
-        cover: "img/deadshot1.jpg"
-    },
-    poisonIvy = {
-        name: "Poison Ivy",
-        color: "#7ad321",
-        maxlife: 15000,
-        life: 15000,
-        reward: 1300,
-        cover: "img/poisonivy1.jpg"
-    },
-    killerCroc = {
-        name: "Killer Croc",
-        color: "#306d3c",
-        maxlife: 38000,
-        life: 38000,
-        reward: 3200,
-        cover: "img/killercroc1.jpg"
-    },
-    harleyQuinn = {
-        name: "Harley Quinn",
-        color: "#ff3333",
-        maxlife: 100000,
-        life: 100000,
-        reward: 14000,
-        cover: "img/harleyquinn1.jpg"
-    },
-    hugoStrange = {
-        name: "Hugo Strange",
-        color: "#d1d1d1",
-        maxlife: 350000,
-        life: 350000,
-        reward: 50000,
-        cover: "img/hugostrange1.jpg"
-    },
-    mrFreeze = {
-        name: "Mr Freeze",
-        color: "#5dd3ff",
-        maxlife: 800000,
-        life: 800000,
-        reward: 250000,
-        cover: "img/mrfreeze1.jpg"
-    },
-    pengouin = {
-        name: "The Penguin",
-        color: "#6f6f6f",
-        maxlife: 2000000,
-        life: 2000000,
-        reward: 900000,
-        cover: "img/penguin1.jpg"
-    },
-    deathstroke = {
-        name: "Deathstroke",
-        color: "#f0db36",
-        maxlife: 6000000,
-        life: 6000000,
-        reward: 2500000,
-        cover: "img/deathstroke1.jpg"
-    },
-    bane = {
-        name: "Bane",
-        color: "#47f413",
-        maxlife: 20000000,
-        life: 20000000,
-        reward: 12000000,
-        cover: "img/bane1.jpg"
-    },
-    rasAlGhul = {
-        name: "Ra's Al Ghul",
-        color: "#7cbc3b",
-        maxlife: 5000000000,
-        life: 5000000000,
-        reward: 50000000,
-        cover: "img/rasalghul1.jpg"
-    },
-    joker = {
-        name: "The Joker",
-        color: "#ff0000",
-        maxlife: 999999999,
-        life: 999999999,
-        reward: 999999999,
-        cover: "img/joker1.jpg"
-    };
-
-var villainOn = blackMask;
-var villainOnId = 0;
-
-
-/*************** SUPERHEROES CARACTERISTICS ****************/
-
-// Variables
-// function Superhero (name, amount, cost, increment, img) {
-//   this.name = name,
-//   this.amount = amount,
-//   this.cost = cost,
-//   this.increment = increment,
-//   this.img = img
-// }
-
-// var batgirl = new Superhero ("batgirl", 0, 150, 0.5);
-
-var batgirl = {
-        amount: 0,
-        cost: 150,
-        increment: 0.5
-    },
-    robin = {
-        amount: 0,
-        cost: 1200,
-        increment: 1
-    },
-    gordon = {
-        amount: 0,
-        cost: 8000,
-        increment: 2.5
-    },
-    batwing = {
-        amount: 0,
-        cost: 35000,
-        increment: 6
-    },
-    azrael = {
-        amount: 0,
-        cost: 100000,
-        increment: 16
-    },
-    catwoman = {
-        amount: 0,
-        cost: 250000,
-        increment: 35
-    },
-    alfred = {
-        amount: 0,
-        cost: 1000000,
-        increment: 80
-    },
-    batwoman = {
-        amount: 0,
-        cost: 5000000,
-        increment: 150
-    },
-    redHood = {
-        amount: 0,
-        cost: 15000000,
-        increment: 310
-    },
-    nightwing = {
-        amount: 0,
-        cost: 50000000,
-        increment: 640
-    },
-    batman = {
-        amount: 0,
-        cost: 200000000,
-        increment: 4000
-    };
-
-$('#batgirl').hide();
-$('#robin').hide();
-$('#gordon').hide();
-$('#batwing').hide();
-$('#azrael').hide();
-$('#catwoman').hide();
-$('#alfred').hide();
-$('#batwoman').hide();
-$('#redhood').hide();
-$('#nightwing').hide();
-$('#batman').hide();
-
-
-/*************** ALLIES CARACTERISTICS ****************/
-
-// Variables
-var hawkman = {
-        amount: 0,
-        cost: 10,
-        increment: 0.5
-    },
-    huntress = {
-        amount: 0,
-        cost: 100,
-        increment: 2
-    },
-    greenArrow = {
-        amount: 0,
-        cost: 500,
-        increment: 8
-    },
-    flash = {
-        amount: 0,
-        cost: 3000,
-        increment: 20
-    },
-    aquaman = {
-        amount: 0,
-        cost: 15000,
-        increment: 80
-    },
-    cyborg = {
-        amount: 0,
-        cost: 50000,
-        increment: 300
-    },
-    greenLantern = {
-        amount: 0,
-        cost: 200000,
-        increment: 1000
-    },
-    jonnJonzz = {
-        amount: 0,
-        cost: 1000000,
-        increment: 8000
-    },
-    wonderWoman = {
-        amount: 0,
-        cost: 15000000,
-        increment: 50000
-    },
-    superman = {
-        amount: 0,
-        cost: 800000000,
-        increment: 200000
-    };
-
-$('#hawkman').hide();
-$('#huntress').hide();
-$('#greenarrow').hide();
-$('#flash').hide();
-$('#aquaman').hide();
-$('#cyborg').hide();
-$('#greenlantern').hide();
-$('#jonnjonzz').hide();
-$('#wonderwoman').hide();
-$('#superman').hide();
+$('#game_items button').prop("disabled", true);
 
 
 /*************** NUMBERS FORMAT ****************/
-
 $.fn.digits = function () {
     return this.each(function () {
         $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
     })
 }
-
 function nFormatter(num) {
     if (num >= 1000000000) {
         return (num / 1000000000).toFixed(1) + 'G';
@@ -284,14 +33,14 @@ var PPS = 0;
 
 /* Attack the supervillain with power */
 $('#power').click(function () {
-    power_indicator = power_indicator + powerClick;
+    power_indicator += powerClick;
     villainLifePercentage();
-    villainOn.life = villainOn.life - powerClick;
+    villainOn.life -= powerClick;
     updateData();
     while (villainOn.life <= 0){
-        power_indicator = power_indicator + villainOn.reward;
+        power_indicator += villainOn.reward;
         villainOn.life = villainOn.maxlife;
-        nextVillain();
+        changeVillain();
         updateData();
     }
 });
@@ -305,15 +54,15 @@ function villainLifePercentage() {
 
 /* Run the superheroes attack */
 setInterval(function () {
-    villainOn.life = villainOn.life - heroesTeamDps;
-    power_indicator = power_indicator + PPS;
+    villainOn.life -= heroesTeamDps;
+    power_indicator += PPS;
     updateData();
     if (villainOn.life < 0) {
         villainOn.life = 0;
     }
     while (villainOn.life <= 0) {
-        power_indicator = power_indicator + villainOn.reward;
-        nextVillain();
+        power_indicator += villainOn.reward;
+        changeVillain();
         updateData();
         villainOn.life = villainOn.maxlife;
     }
@@ -324,30 +73,30 @@ $("#left").hide();
 $("#right").hide();
 
 function changeVillain() {
-    if (villainOnId == 0) {
+    if (villainOnId === 0) {
         villainOn = blackMask;
-    } else if (villainOnId == 1) {
+    } else if (villainOnId === 1) {
         villainOn = deadshot;
 //        $("#left").show();
-    } else if (villainOnId == 2) {
+    } else if (villainOnId === 2) {
         villainOn = poisonIvy;
-    } else if (villainOnId == 3) {
+    } else if (villainOnId === 3) {
         villainOn = killerCroc;
-    } else if (villainOnId == 4) {
+    } else if (villainOnId === 4) {
         villainOn = harleyQuinn;
-    } else if (villainOnId == 5) {
+    } else if (villainOnId === 5) {
         villainOn = hugoStrange;
-    } else if (villainOnId == 6) {
+    } else if (villainOnId === 6) {
         villainOn = mrFreeze;
-    } else if (villainOnId == 7) {
+    } else if (villainOnId === 7) {
         villainOn = pengouin;
-    } else if (villainOnId == 8) {
+    } else if (villainOnId === 8) {
         villainOn = deathstroke;
-    } else if (villainOnId == 9) {
+    } else if (villainOnId === 9) {
         villainOn = bane;
-    } else if (villainOnId == 10) {
+    } else if (villainOnId === 10) {
         villainOn = rasAlGhul;
-    } else if (villainOnId == 11) {
+    } else if (villainOnId === 11) {
         villainOn = joker;
     }
     return villainOnId;
@@ -359,34 +108,34 @@ function changeVillain() {
 /* Unlock allies */
 function alliesUnlock() {
     if (power_indicator >= hawkman.cost || hawkman.amount > 0) {
-        $('#hawkman').show();
+        $('#hawkman').prop("disabled", false);
     }
     if (power_indicator >= huntress.cost || huntress.amount > 0) {
-        $('#huntress').show();
+        $('#huntress').prop("disabled", false);
     }
     if (power_indicator >= greenArrow.cost || greenArrow.amount > 0) {
-        $('#greenarrow').show();
+        $('#greenarrow').prop("disabled", false);
     }
     if (power_indicator >= flash.cost || flash.amount > 0) {
-        $('#flash').show();
+        $('#flash').prop("disabled", false);
     }
     if (power_indicator >= aquaman.cost || aquaman.amount > 0) {
-        $('#aquaman').show();
+        $('#aquaman').prop("disabled", false);
     }
     if (power_indicator >= cyborg.cost || cyborg.amount > 0) {
-        $('#cyborg').show();
+        $('#cyborg').prop("disabled", false);
     }
     if (power_indicator >= greenLantern.cost || greenLantern.amount > 0) {
-        $('#greenlantern').show();
+        $('#greenlantern').prop("disabled", false);
     }
     if (power_indicator >= jonnJonzz.cost || jonnJonzz.amount > 0) {
-        $('#jonnjonzz').show();
+        $('#jonnjonzz').prop("disabled", false);
     }
     if (power_indicator >= wonderWoman.cost || wonderWoman.amount > 0) {
-        $('#wonderwoman').show();
+        $('#wonderwoman').prop("disabled", false);
     }
     if (power_indicator >= superman.cost || superman.amount > 0) {
-        $('#superman').show();
+        $('#superman').prop("disabled", false);
     }
 }
 
@@ -506,37 +255,37 @@ $('#superman').click(function () {
 /* Unlock superheroes */
 function superheroesUnlock() {
     if (power_indicator >= batgirl.cost) {
-        $('#batgirl').show();
+        $('#batgirl').prop("disabled", false);
     }
     if (power_indicator >= robin.cost) {
-        $('#robin').show();
+        $('#robin').prop("disabled", false);
     }
     if (power_indicator >= gordon.cost|| gordon.amount > 0) {
-        $('#gordon').show();
+        $('#gordon').prop("disabled", false);
     }
     if (power_indicator >= batwing.cost|| batwing.amount > 0) {
-        $('#batwing').show();
+        $('#batwing').prop("disabled", false);
     }
     if (power_indicator >= azrael.cost|| azrael.amount > 0) {
-        $('#azrael').show();
+        $('#azrael').prop("disabled", false);
     }
     if (power_indicator >= catwoman.cost|| catwoman.amount > 0) {
-        $('#catwoman').show();
+        $('#catwoman').prop("disabled", false);
     }
     if (power_indicator >= alfred.cost|| alfred.amount > 0) {
-        $('#alfred').show();
+        $('#alfred').prop("disabled", false);
     }
     if (power_indicator >= batwoman.cost|| batwoman.amount > 0) {
-        $('#batwoman').show();
+        $('#batwoman').prop("disabled", false);
     }
     if (power_indicator >= redHood.cost|| redHood.amount > 0) {
-        $('#redhood').show();
+        $('#redhood').prop("disabled", false);
     }
     if (power_indicator >= nightwing.cost|| nightwing.amount > 0) {
-        $('#nightwing').show();
+        $('#nightwing').prop("disabled", false);
     }
     if (power_indicator >= batman.cost|| batman.amount > 0) {
-        $('#batman').show();
+        $('#batman').prop("disabled", false);
     }
 }
 
@@ -662,21 +411,11 @@ $('#batman').click(function () {
 });
 
 
-/*************** UPGRADES ****************/
-
-// Variables
-var powerclick_x2 = {
-    amount: 0,
-    cost: 100,
-    multiplier: 2
-};
-
-$('#powerclick_2').hide();
-$('#powergain_plus').hide();
 
 /* Unlock upgrades */
 function upgradesUnlock() {
     if (power_indicator >= powerclick_x2.cost) {
+        $('#powerclick_2').prop("disabled", false);
         if (powerClick < 30000) {
             $('#powerclick_2').show();
         } else {
@@ -697,6 +436,8 @@ $('#powerclick_2').click(function () {
         $('#powerclick_2').hide();
     }
 });
+
+$("#powergain_plus").hide();
 
 
 /*************** ONLOAD UPDATE & TEST ****************/
