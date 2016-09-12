@@ -37,12 +37,6 @@ $('#power').click(function () {
     villainLifePercentage();
     villainOn.life -= powerClick;
     updateData();
-    while (villainOn.life <= 0){
-        power_indicator += villainOn.reward;
-        villainOn.life = villainOn.maxlife;
-        changeVillain();
-        updateData();
-    }
 });
 
 /* Villain Life Percentage */
@@ -59,12 +53,6 @@ setInterval(function () {
     updateData();
     if (villainOn.life < 0) {
         villainOn.life = 0;
-    }
-    while (villainOn.life <= 0) {
-        power_indicator += villainOn.reward;
-        changeVillain();
-        updateData();
-        villainOn.life = villainOn.maxlife;
     }
 }, tick)
 
@@ -427,11 +415,11 @@ function upgradesUnlock() {
 /* Buy Powerclick x2 */
 $('#powerclick_2').click(function () {
     if (power_indicator >= powerclick_x2.cost) {
-        power_indicator = power_indicator - powerclick_x2.cost;
+        power_indicator -= powerclick_x2.cost;
         powerclick_x2.amount++;
-        powerClick = powerClick * powerclick_x2.multiplier;
-        powerclick_x2.cost = powerclick_x2.cost * 2;
-        powerGain = powerGain * powerclick_x2.multiplier;
+        powerClick *= powerclick_x2.multiplier;
+        powerclick_x2.cost *= 4;
+        powerGain *= powerclick_x2.multiplier;
         updateData();
         $('#powerclick_2').hide();
     }
@@ -457,7 +445,13 @@ function updateData() {
     if(villainOn == joker && villainOn.life == 0){
         alert("Well played, you've reached the last villain of the game. More features will be added soon. Stay connected !");
     }
-
+    if(villainOn.life <= 0) {
+        power_indicator += villainOn.reward;
+        villainOnId ++;
+        changeVillain();
+        updateData();
+        villainOn.life = villainOn.maxlife;
+    }
 
     // update allies
     $("#power_seconde").html(nFormatter(Math.round(PPS * 10)/10)).digits();

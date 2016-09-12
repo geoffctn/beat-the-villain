@@ -1,9 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
-
-/**************************************************************** BASIC ****************************************************************/
+/** 
+  BASIC 
+**/
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   background: #222222;
   -webkit-touch-callout: none;
@@ -31,7 +31,7 @@ h1 {
   font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 10px;
-  color: #fff;
+  color: #555;
 }
 
 h2 {
@@ -40,10 +40,11 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0.714em;  /* 100 / 140 */
-  color: #ffffff;
+  color: #555;
 }
 
 h3 {
+  font-family: "Roboto Slab", sans-serif;
   line-height: 100%;
   font-size: 110%;
   font-weight: normal;
@@ -62,6 +63,13 @@ h4 {
 
 p {
   line-height: 1;
+}
+
+.info {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 0.9em;
+  color: #555;
+  text-align: center;
 }
 
 button {
@@ -89,6 +97,13 @@ button:hover {
 
 button:disabled {
   opacity: .1;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg); /* Firefox 4+ */
+  filter: gray; /* IE 6-9 */
 }
 
 button[disabled]:hover {
@@ -112,10 +127,12 @@ a:hover {
 }
 
 
-/**************************************************************** SUPERVILLAIN ****************************************************************/
+/** 
+  SUPERVILLAINS 
+**/
 
 .villain_pic {
-  margin: 0 auto;
+  margin: 20px auto;
   width: 120px;
   height: 120px;
   -webkit-border-radius: 200px;
@@ -142,6 +159,14 @@ a:hover {
 
 #villain_avatar {
   height: 100%;
+}
+
+#villain_avatar:active {
+  -webkit-filter: sepia(30%);
+  -moz-filter: sepia(30%);
+  -ms-filter: sepia(30%);
+  -o-filter: sepia(30%);
+  filter: sepia(30%);
 }
 
 .villain_stats {
@@ -184,7 +209,7 @@ a:hover {
   width: 130px;
   height: 40px;
   float: left;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 150%;
   font-weight: 300;
   text-transform: uppercase;
@@ -200,7 +225,7 @@ a:hover {
   width: 130px;
   height: 40px;
   float: right;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 150%;
   font-weight: 300;
   text-transform: uppercase;
@@ -234,6 +259,10 @@ a:hover {
   padding-left: 30px;
   margin: 20px auto;
   border-left: 1px solid #201f1f;
+}
+
+.stats_block span {
+  font-size: 1.4em;
 }
 
 
@@ -373,12 +402,15 @@ a:hover {
   }
   .idle_block {
     width: 100%;
+    padding: 0;
   }
   .heroes_block {
     width: 100%;
+    padding: 0;
   }
   .upgrade_block {
     width: 100%;
+    padding: 0;
   }
 }
 
