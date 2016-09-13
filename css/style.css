@@ -273,7 +273,6 @@ a:hover {
   flex-direction: row;
   width: 75%;
   padding: 30px;
-  overflow: auto;
   color: #ffffff;
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;

@@ -9,7 +9,7 @@ var hawkman = {
     huntress = {
         amount: 0,
         cost: 100,
-        increment: 2
+        increment: 2.5
     },
     greenArrow = {
         amount: 0,
@@ -18,36 +18,36 @@ var hawkman = {
     },
     flash = {
         amount: 0,
-        cost: 3000,
+        cost: 1500,
         increment: 20
     },
     aquaman = {
         amount: 0,
-        cost: 15000,
+        cost: 5000,
         increment: 80
     },
     cyborg = {
         amount: 0,
-        cost: 50000,
+        cost: 10500,
         increment: 300
     },
     greenLantern = {
         amount: 0,
-        cost: 200000,
+        cost: 25000,
         increment: 1000
     },
     jonnJonzz = {
         amount: 0,
-        cost: 1000000,
+        cost: 100000,
         increment: 8000
     },
     wonderWoman = {
         amount: 0,
-        cost: 15000000,
+        cost: 300000,
         increment: 50000
     },
     superman = {
         amount: 0,
-        cost: 800000000,
+        cost: 900000,
         increment: 200000
     };

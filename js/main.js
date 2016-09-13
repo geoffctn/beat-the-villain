@@ -260,9 +260,6 @@ function superheroesUnlock() {
     if (power_indicator >= catwoman.cost|| catwoman.amount > 0) {
         $('#catwoman').prop("disabled", false);
     }
-    if (power_indicator >= alfred.cost|| alfred.amount > 0) {
-        $('#alfred').prop("disabled", false);
-    }
     if (power_indicator >= batwoman.cost|| batwoman.amount > 0) {
         $('#batwoman').prop("disabled", false);
     }
@@ -339,17 +336,6 @@ $('#catwoman').click(function () {
         catwoman.amount++;
         catwoman.cost = Math.round(catwoman.cost * 1.6);
         heroesTeamDps += catwoman.increment;
-        updateData();
-    }
-});
-
-/* Buy Alfred */
-$('#alfred').click(function () {
-    if (power_indicator >= alfred.cost) {
-        power_indicator = power_indicator - alfred.cost;
-        alfred.amount++;
-        alfred.cost = Math.round(alfred.cost * 1.7);
-        heroesTeamDps += alfred.increment;
         updateData();
     }
 });
@@ -543,12 +529,7 @@ function updateData() {
     $("#catwoman_damage").html(nFormatter(Math.round(catwoman.increment * catwoman.amount))).digits();
     $("#catwoman_amount").html(nFormatter(catwoman.amount));
 
-    // update alfred
-    $("#alfred_cost").html(nFormatter(alfred.cost)).digits();
-    $("#alfred_damage").html(nFormatter(Math.round(alfred.increment * alfred.amount))).digits();
-    $("#alfred_amount").html(nFormatter(alfred.amount));
-
-    // update alfred
+    // update batwoman
     $("#batwoman_cost").html(nFormatter(batwoman.cost)).digits();
     $("#batwoman_damage").html(nFormatter(Math.round(batwoman.increment * batwoman.amount))).digits();
     $("#batwoman_amount").html(nFormatter(batwoman.amount));
@@ -610,7 +591,6 @@ function save_game() {
     localStorage['btv_save[batwing]'] = btoa(JSON.stringify(batwing));
     localStorage['btv_save[azrael]'] = btoa(JSON.stringify(azrael));
     localStorage['btv_save[catwoman]'] = btoa(JSON.stringify(catwoman));
-    localStorage['btv_save[alfred]'] = btoa(JSON.stringify(alfred));
     localStorage['btv_save[batwoman]'] = btoa(JSON.stringify(batwoman));
     localStorage['btv_save[redHood]'] = btoa(JSON.stringify(redHood));
     localStorage['btv_save[nightwing]'] = btoa(JSON.stringify(nightwing));
@@ -624,7 +604,7 @@ function save_game() {
 
 function load_game() {
 
-    if (!localStorage['btv_save[power_indicator]']) return;
+    // if (!localStorage['btv_save[power_indicator]']) return;
 
     // load power stats
     var power_indicator_save = JSON.parse(atob(localStorage['btv_save[power_indicator]']));
@@ -654,7 +634,6 @@ function load_game() {
     var batwing_save = JSON.parse(atob(localStorage['btv_save[batwing]']));
     var azrael_save = JSON.parse(atob(localStorage['btv_save[azrael]']));
     var catwoman_save = JSON.parse(atob(localStorage['btv_save[catwoman]']));
-    var alfred_save = JSON.parse(atob(localStorage['btv_save[alfred]']));
     var batwoman_save = JSON.parse(atob(localStorage['btv_save[batwoman]']));
     var redHood_save = JSON.parse(atob(localStorage['btv_save[redHood]']));
     var nightwing_save = JSON.parse(atob(localStorage['btv_save[nightwing]']));
@@ -693,7 +672,6 @@ function load_game() {
     batwing = batwing_save;
     azrael = azrael_save;
     catwoman = catwoman_save;
-    alfred = alfred_save;
     batwoman = batwoman_save;
     redHood = redHood_save;
     nightwing = nightwing_save;
@@ -704,7 +682,6 @@ function load_game() {
     powerclick_x2 = powerclick_x2_save;
 
     updateData();
-
 }
 
 
